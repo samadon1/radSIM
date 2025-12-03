@@ -43,7 +43,19 @@ def vtk_to_itk_image(vtk_image: Dict):
                 f"Failed to map vtkImageData pixel type {pixel_js_datatype}"
             )
 
-        pixel_data = np.frombuffer(pixel_data_array["values"], dtype=pixel_dtype)
+        # Handle both bytes (from binary transfer) and list (from JSON serialization)
+        pixel_values = pixel_data_array["values"]
+        if isinstance(pixel_values, bytes):
+            pixel_data = np.frombuffer(pixel_values, dtype=pixel_dtype)
+        else:
+            pixel_data = np.array(pixel_values, dtype=pixel_dtype)
+
+        # Handle multi-component images (e.g., RGB with 3 components)
+        # Extract first component only, as ITK scalar images expect single values
+        num_components = pixel_data_array.get("numberOfComponents", 1)
+        if num_components > 1:
+            pixel_data = pixel_data[::num_components]  # Take every nth value (first component)
+
         itk_image = itk.GetImageFromArray(np.reshape(pixel_data, dims))
 
         # https://discourse.itk.org/t/set-image-direction-from-numpy-array/844/10

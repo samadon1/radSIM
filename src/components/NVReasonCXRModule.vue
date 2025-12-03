@@ -146,6 +146,17 @@ const resetAllChats = () => {
   chatHistory.value = [];
 };
 
+// Watch for image changes and clear chat history
+watch(
+  currentImageID,
+  (newImageId, oldImageId) => {
+    // Only clear if we're switching to a different image (not initial load)
+    if (oldImageId && newImageId !== oldImageId) {
+      resetAllChats();
+    }
+  }
+);
+
 const appendMessage = (text: string, sender: 'user' | 'bot') => {
   const message: Message = {
     id: Date.now(),
