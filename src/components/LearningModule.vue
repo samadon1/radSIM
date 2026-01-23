@@ -354,6 +354,9 @@ function initializeChat() {
   learningStore.clearAnnotationAttachment();
   learningStore.clearGroundTruthAnnotations();
 
+  // Start timing this case
+  learningStore.startCase();
+
   // Reset diagnostic flow state
   diagnosticStep.value = 'normal_abnormal';
   diagnosticScore.value = 0;

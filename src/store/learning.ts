@@ -310,6 +310,9 @@ export const useLearningStore = defineStore('learning', () => {
     // Reset session state
     currentCaseIndex.value = 0;
     resetSessionStats();
+
+    // Start timing the first case
+    startCase();
   }
 
   async function startMixedSession(caseCount: number = 20) {
@@ -325,6 +328,9 @@ export const useLearningStore = defineStore('learning', () => {
     // Reset session state
     currentCaseIndex.value = 0;
     resetSessionStats();
+
+    // Start timing the first case
+    startCase();
   }
 
   function selectCasesForMixedMode(count: number): RadiologyCaseMetadata[] {
