@@ -1,0 +1,5302 @@
+{
+  "metadata": {
+    "name": "RADSIM Pneumothorax Learning Cases",
+    "version": "1.0.0",
+    "description": "NIH chest X-ray cases with Pneumothorax",
+    "lastUpdated": "2026-01-08"
+  },
+  "cases": [
+    {
+      "id": "nih-pneumothorax-0867",
+      "title": "Pneumothorax - Learning Case 0867",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 58,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 570.5955555555561,
+            "y": 119.789045138889,
+            "width": 254.862222222222,
+            "height": 98.9866666666667
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00019892_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00019892_003.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00019892_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0868",
+      "title": "Pneumothorax - Learning Case 0868",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 15,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 539.875555555556,
+            "y": 268.83793402777803,
+            "width": 94.4355555555556,
+            "height": 73.95555555555549
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00030162_026.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00030162_026.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00030162_026.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0869",
+      "title": "Pneumothorax - Learning Case 0869",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 62,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 291.84,
+            "y": 84.5179340277778,
+            "width": 106.951111111111,
+            "height": 50.0622222222222
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013659_019.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013659_019.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013659_019.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0870",
+      "title": "Pneumothorax - Learning Case 0870",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 37,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 196.266666666667,
+            "y": 186.917934027778,
+            "width": 170.666666666667,
+            "height": 129.706666666667
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026586_009.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026586_009.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026586_009.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0871",
+      "title": "Pneumothorax - Learning Case 0871",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 76,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 270.222222222222,
+            "y": 132.30460069444402,
+            "width": 88.7466666666667,
+            "height": 28.4444444444444
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00020000_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00020000_000.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00020000_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0872",
+      "title": "Pneumothorax - Learning Case 0872",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 30,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 637.724444444444,
+            "y": 428.12682291666704,
+            "width": 129.706666666667,
+            "height": 154.737777777778
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00002106_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00002106_000.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00002106_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0873",
+      "title": "Pneumothorax - Learning Case 0873",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 25,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 608.142222222222,
+            "y": 57.2112673611111,
+            "width": 241.20888888888905,
+            "height": 228.69333333333304
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00003400_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00003400_003.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003400_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0874",
+      "title": "Pneumothorax - Learning Case 0874",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 57,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 117.76,
+            "y": 177.815711805556,
+            "width": 311.751111111111,
+            "height": 591.6444444444439
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00010767_016.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00010767_016.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00010767_016.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0875",
+      "title": "Pneumothorax - Learning Case 0875",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 15,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 663.893333333333,
+            "y": 247.22015625,
+            "width": 91.0222222222222,
+            "height": 204.8
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00017972_026.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00017972_026.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00017972_026.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0876",
+      "title": "Pneumothorax - Learning Case 0876",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 69,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 209.92,
+            "y": 133.442378472222,
+            "width": 144.497777777778,
+            "height": 92.16
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018865_008.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018865_008.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018865_008.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0877",
+      "title": "Pneumothorax - Learning Case 0877",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 73,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 167.822222222222,
+            "y": 168.713489583333,
+            "width": 233.244444444444,
+            "height": 89.88444444444441
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00029909_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00029909_003.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00029909_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0878",
+      "title": "Pneumothorax - Learning Case 0878",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 64,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 595.626666666667,
+            "y": 128.891267361111,
+            "width": 202.524444444444,
+            "height": 195.697777777778
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018366_029.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018366_029.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018366_029.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0879",
+      "title": "Pneumothorax - Learning Case 0879",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 24,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 101.831111111111,
+            "y": 520.286822916667,
+            "width": 36.408888888888896,
+            "height": 124.017777777778
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00029579_014.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00029579_014.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00029579_014.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0880",
+      "title": "Pneumothorax - Learning Case 0880",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 60,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 715.093333333333,
+            "y": 543.042378472222,
+            "width": 220.728888888889,
+            "height": 116.053333333333
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00020318_007.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00020318_007.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00020318_007.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0881",
+      "title": "Pneumothorax - Learning Case 0881",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 66,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 315.733333333333,
+            "y": 122.064600694444,
+            "width": 121.742222222222,
+            "height": 43.2355555555556
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013807_009.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013807_009.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013807_009.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0882",
+      "title": "Pneumothorax - Learning Case 0882",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 58,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 264.533333333333,
+            "y": 12.8379340277778,
+            "width": 84.19555555555559,
+            "height": 21.6177777777778
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00010767_007.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00010767_007.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00010767_007.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0883",
+      "title": "Pneumothorax - Learning Case 0883",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 83,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 368.071111111111,
+            "y": 281.35348958333304,
+            "width": 68.2666666666667,
+            "height": 106.951111111111
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00009368_006.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00009368_006.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00009368_006.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0884",
+      "title": "Pneumothorax - Learning Case 0884",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 20,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 550.115555555556,
+            "y": 74.27793402777779,
+            "width": 167.253333333333,
+            "height": 54.6133333333333
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021748_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021748_000.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021748_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0885",
+      "title": "Pneumothorax - Learning Case 0885",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 58,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 203.09333333333305,
+            "y": 191.46904513888904,
+            "width": 164.977777777778,
+            "height": 142.222222222222
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00010767_008.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00010767_008.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00010767_008.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0886",
+      "title": "Pneumothorax - Learning Case 0886",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 26,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 640.0,
+            "y": 610.171267361111,
+            "width": 277.61777777777803,
+            "height": 133.12
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014083_023.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014083_023.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014083_023.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0887",
+      "title": "Pneumothorax - Learning Case 0887",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 36,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 180.337777777778,
+            "y": 66.31348958333331,
+            "width": 245.76,
+            "height": 80.7822222222222
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00005869_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00005869_001.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00005869_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0888",
+      "title": "Pneumothorax - Learning Case 0888",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 30,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 650.24,
+            "y": 639.753489583333,
+            "width": 145.63555555555598,
+            "height": 262.826666666667
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00025252_053.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00025252_053.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00025252_053.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0889",
+      "title": "Pneumothorax - Learning Case 0889",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 64,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 95.0044444444444,
+            "y": 661.371267361111,
+            "width": 130.844444444444,
+            "height": 112.64
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00023078_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00023078_003.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00023078_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0890",
+      "title": "Pneumothorax - Learning Case 0890",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 35,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 203.09333333333305,
+            "y": 681.851267361111,
+            "width": 71.68,
+            "height": 182.044444444444
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00010071_008.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00010071_008.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00010071_008.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0891",
+      "title": "Pneumothorax - Learning Case 0891",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 63,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 129.13777777777798,
+            "y": 693.229045138889,
+            "width": 270.791111111111,
+            "height": 98.9866666666667
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013471_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013471_002.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013471_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0892",
+      "title": "Pneumothorax - Learning Case 0892",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 63,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 577.422222222222,
+            "y": 111.824600694444,
+            "width": 145.63555555555598,
+            "height": 105.813333333333
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012094_040.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012094_040.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012094_040.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0893",
+      "title": "Pneumothorax - Learning Case 0893",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 48,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 584.248888888889,
+            "y": 81.10460069444441,
+            "width": 192.284444444444,
+            "height": 86.47111111111109
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00008841_025.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00008841_025.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00008841_025.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0894",
+      "title": "Pneumothorax - Learning Case 0894",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 55,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 374.897777777778,
+            "y": 143.682378472222,
+            "width": 119.466666666667,
+            "height": 55.7511111111111
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012376_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012376_010.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012376_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0895",
+      "title": "Pneumothorax - Learning Case 0895",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 48,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 224.711111111111,
+            "y": 197.15793402777803,
+            "width": 234.382222222222,
+            "height": 676.977777777778
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026886_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026886_002.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026886_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0896",
+      "title": "Pneumothorax - Learning Case 0896",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 38,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 174.64888888888902,
+            "y": 165.30015625,
+            "width": 232.106666666667,
+            "height": 137.671111111111
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00010936_016.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00010936_016.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00010936_016.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0897",
+      "title": "Pneumothorax - Learning Case 0897",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 30,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 659.342222222222,
+            "y": 720.535711805556,
+            "width": 144.497777777778,
+            "height": 225.28
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00025252_054.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00025252_054.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00025252_054.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0898",
+      "title": "Pneumothorax - Learning Case 0898",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 51,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 118.897777777778,
+            "y": 139.131267361111,
+            "width": 293.54666666666697,
+            "height": 339.057777777778
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00019124_104.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00019124_104.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00019124_104.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0899",
+      "title": "Pneumothorax - Learning Case 0899",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 73,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 570.5955555555561,
+            "y": 166.437934027778,
+            "width": 209.35111111111095,
+            "height": 812.373333333333
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00027213_044.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00027213_044.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00027213_044.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0900",
+      "title": "Pneumothorax - Learning Case 0900",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 21,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 187.164444444444,
+            "y": 66.31348958333331,
+            "width": 203.662222222222,
+            "height": 614.4
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00015530_147.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00015530_147.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00015530_147.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0901",
+      "title": "Pneumothorax - Learning Case 0901",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 19,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 289.564444444444,
+            "y": 396.269045138889,
+            "width": 72.81777777777779,
+            "height": 154.737777777778
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00001946_029.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00001946_029.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00001946_029.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0902",
+      "title": "Pneumothorax - Learning Case 0902",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 48,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 170.097777777778,
+            "y": 147.095711805556,
+            "width": 287.85777777777804,
+            "height": 475.591111111111
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00017137_016.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00017137_016.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00017137_016.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0903",
+      "title": "Pneumothorax - Learning Case 0903",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 62,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 644.551111111111,
+            "y": 205.122378472222,
+            "width": 194.56,
+            "height": 623.502222222222
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014822_039.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014822_039.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014822_039.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0904",
+      "title": "Pneumothorax - Learning Case 0904",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 13,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 192.853333333333,
+            "y": 79.9668229166667,
+            "width": 263.964444444444,
+            "height": 257.137777777778
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00023162_025.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00023162_025.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00023162_025.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0905",
+      "title": "Pneumothorax - Learning Case 0905",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 52,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 295.253333333333,
+            "y": 642.029045138889,
+            "width": 122.88,
+            "height": 95.5733333333333
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026451_068.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026451_068.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026451_068.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0906",
+      "title": "Pneumothorax - Learning Case 0906",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 74,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 190.577777777778,
+            "y": 123.202378472222,
+            "width": 285.58222222222196,
+            "height": 234.382222222222
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013209_018.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013209_018.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013209_018.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0907",
+      "title": "Pneumothorax - Learning Case 0907",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 58,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 193.991111111111,
+            "y": 209.673489583333,
+            "width": 186.595555555556,
+            "height": 566.613333333333
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013310_059.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013310_059.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013310_059.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0908",
+      "title": "Pneumothorax - Learning Case 0908",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 51,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 593.351111111111,
+            "y": 97.0334895833333,
+            "width": 157.013333333333,
+            "height": 251.448888888889
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00030111_007.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00030111_007.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00030111_007.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0909",
+      "title": "Pneumothorax - Learning Case 0909",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 30,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 756.053333333333,
+            "y": 681.851267361111,
+            "width": 201.386666666667,
+            "height": 242.34666666666695
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00025252_032.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00025252_032.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00025252_032.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0910",
+      "title": "Pneumothorax - Learning Case 0910",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 28,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 611.555555555556,
+            "y": 180.091267361111,
+            "width": 54.6133333333333,
+            "height": 251.448888888889
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00025787_050.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00025787_050.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00025787_050.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0911",
+      "title": "Pneumothorax - Learning Case 0911",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 24,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 124.586666666667,
+            "y": 759.22015625,
+            "width": 34.133333333333304,
+            "height": 39.8222222222222
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00009889_018.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00009889_018.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00009889_018.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0912",
+      "title": "Pneumothorax - Learning Case 0912",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 32,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 543.288888888889,
+            "y": 41.282378472222206,
+            "width": 103.537777777778,
+            "height": 59.1644444444444
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00022141_030.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00022141_030.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00022141_030.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0913",
+      "title": "Pneumothorax - Learning Case 0913",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 22,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 181.475555555556,
+            "y": 562.384600694444,
+            "width": 296.96,
+            "height": 230.968888888889
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00020146_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00020146_005.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00020146_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0914",
+      "title": "Pneumothorax - Learning Case 0914",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 47,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 147.342222222222,
+            "y": 93.62015625,
+            "width": 380.017777777778,
+            "height": 568.888888888889
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00016429_015.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00016429_015.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00016429_015.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0915",
+      "title": "Pneumothorax - Learning Case 0915",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 21,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 563.768888888889,
+            "y": 110.686822916667,
+            "width": 316.302222222222,
+            "height": 256.0
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026392_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026392_005.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026392_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0916",
+      "title": "Pneumothorax - Learning Case 0916",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 32,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 644.551111111111,
+            "y": 97.0334895833333,
+            "width": 212.764444444444,
+            "height": 129.706666666667
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00022141_023.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00022141_023.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00022141_023.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0917",
+      "title": "Pneumothorax - Learning Case 0917",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 33,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 229.262222222222,
+            "y": 174.40237847222198,
+            "width": 201.386666666667,
+            "height": 158.151111111111
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00017747_008.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00017747_008.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00017747_008.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0918",
+      "title": "Pneumothorax - Learning Case 0918",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 85,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 613.831111111111,
+            "y": 110.686822916667,
+            "width": 172.94222222222197,
+            "height": 103.537777777778
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00000732_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00000732_005.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00000732_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0919",
+      "title": "Pneumothorax - Learning Case 0919",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 70,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 572.871111111111,
+            "y": 125.477934027778,
+            "width": 223.004444444444,
+            "height": 94.4355555555556
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018496_007.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018496_007.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018496_007.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0920",
+      "title": "Pneumothorax - Learning Case 0920",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 61,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 125.697354497355,
+            "y": 262.230687830688,
+            "width": 139.784126984127,
+            "height": 446.442328042328
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00005140_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00005140_001.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00005140_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0921",
+      "title": "Pneumothorax - Learning Case 0921",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 33,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 567.805291005291,
+            "y": 94.2730158730159,
+            "width": 253.56190476190497,
+            "height": 167.957671957672
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00001248_038.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00001248_038.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00001248_038.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0922",
+      "title": "Pneumothorax - Learning Case 0922",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 64,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 134.366137566138,
+            "y": 132.198941798942,
+            "width": 342.416931216931,
+            "height": 470.281481481482
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018055_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018055_005.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018055_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0923",
+      "title": "Pneumothorax - Learning Case 0923",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 63,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 666.412698412698,
+            "y": 143.034920634921,
+            "width": 134.366137566138,
+            "height": 152.787301587302
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012094_047.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012094_047.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012094_047.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0924",
+      "title": "Pneumothorax - Learning Case 0924",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 51,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 147.369312169312,
+            "y": 47.67830687830689,
+            "width": 323.995767195767,
+            "height": 165.790476190476
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00008841_044.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00008841_044.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00008841_044.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0925",
+      "title": "Pneumothorax - Learning Case 0925",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 41,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 537.46455026455,
+            "y": 113.777777777778,
+            "width": 231.889947089947,
+            "height": 143.034920634921
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00028876_027.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00028876_027.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00028876_027.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0926",
+      "title": "Pneumothorax - Learning Case 0926",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 68,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 258.979894179894,
+            "y": 188.546031746032,
+            "width": 107.27619047619,
+            "height": 115.944973544974
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00002176_007.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00002176_007.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00002176_007.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0927",
+      "title": "Pneumothorax - Learning Case 0927",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 35,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 787.775661375661,
+            "y": 386.844444444444,
+            "width": 112.69417989418,
+            "height": 291.487830687831
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00029259_027.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00029259_027.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00029259_027.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0928",
+      "title": "Pneumothorax - Learning Case 0928",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 42,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 151.703703703704,
+            "y": 122.446560846561,
+            "width": 318.577777777778,
+            "height": 271.983068783069
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00025368_018.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00025368_018.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00025368_018.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0929",
+      "title": "Pneumothorax - Learning Case 0929",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 48,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 190.713227513228,
+            "y": 44.4275132275132,
+            "width": 203.716402116402,
+            "height": 271.983068783069
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021321_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021321_002.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021321_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0930",
+      "title": "Pneumothorax - Learning Case 0930",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 55,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 153.870899470899,
+            "y": 47.67830687830689,
+            "width": 310.992592592593,
+            "height": 277.401058201058
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00027278_007.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00027278_007.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00027278_007.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0931",
+      "title": "Pneumothorax - Learning Case 0931",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 56,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 235.140740740741,
+            "y": 82.35343915343921,
+            "width": 240.55873015873,
+            "height": 172.29206349206402
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011831_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011831_010.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011831_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0932",
+      "title": "Pneumothorax - Learning Case 0932",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 68,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 260.063492063492,
+            "y": 88.85502645502649,
+            "width": 187.462433862434,
+            "height": 156.038095238095
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00002176_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00002176_005.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00002176_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0933",
+      "title": "Pneumothorax - Learning Case 0933",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 63,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 164.706878306878,
+            "y": 82.35343915343921,
+            "width": 356.503703703704,
+            "height": 302.32380952381
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00029807_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00029807_003.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00029807_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0934",
+      "title": "Pneumothorax - Learning Case 0934",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 59,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 156.038095238095,
+            "y": 243.809523809524,
+            "width": 83.437037037037,
+            "height": 302.32380952381
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00009166_004.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00009166_004.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00009166_004.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0935",
+      "title": "Pneumothorax - Learning Case 0935",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 42,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 759.602116402117,
+            "y": 279.568253968254,
+            "width": 198.29841269841305,
+            "height": 193.964021164021
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00025368_033.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00025368_033.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00025368_033.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0936",
+      "title": "Pneumothorax - Learning Case 0936",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 46,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 161.45608465608498,
+            "y": 72.60105820105821,
+            "width": 288.237037037037,
+            "height": 393.34603174603205
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00020408_058.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00020408_058.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00020408_058.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0937",
+      "title": "Pneumothorax - Learning Case 0937",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 57,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 197.214814814815,
+            "y": 92.1058201058201,
+            "width": 274.15026455026504,
+            "height": 250.311111111111
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00025954_025.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00025954_025.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00025954_025.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0938",
+      "title": "Pneumothorax - Learning Case 0938",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 31,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 133.28253968254,
+            "y": 99.69100529100533,
+            "width": 222.137566137566,
+            "height": 442.107936507937
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021782_028.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021782_028.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021782_028.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0939",
+      "title": "Pneumothorax - Learning Case 0939",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 39,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 99.69100529100533,
+            "y": 91.0222222222222,
+            "width": 254.645502645503,
+            "height": 589.477248677249
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00016568_026.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00016568_026.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00016568_026.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0940",
+      "title": "Pneumothorax - Learning Case 0940",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 24,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 656.660317460318,
+            "y": 134.366137566138,
+            "width": 250.311111111111,
+            "height": 229.722751322751
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00029075_013.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00029075_013.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00029075_013.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0941",
+      "title": "Pneumothorax - Learning Case 0941",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 32,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 763.9365079365081,
+            "y": 167.957671957672,
+            "width": 81.2698412698413,
+            "height": 126.780952380952
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012622_016.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012622_016.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012622_016.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0942",
+      "title": "Pneumothorax - Learning Case 0942",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 47,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 185.295238095238,
+            "y": 360.83809523809504,
+            "width": 136.533333333333,
+            "height": 422.603174603175
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00004342_050.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00004342_050.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00004342_050.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0943",
+      "title": "Pneumothorax - Learning Case 0943",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 40,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 137.616931216931,
+            "y": 150.620105820106,
+            "width": 319.661375661376,
+            "height": 506.040211640212
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026221_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026221_001.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026221_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0944",
+      "title": "Pneumothorax - Learning Case 0944",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 24,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 581.8920634920639,
+            "y": 47.67830687830689,
+            "width": 291.487830687831,
+            "height": 300.156613756614
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00028861_009.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00028861_009.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00028861_009.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0945",
+      "title": "Pneumothorax - Learning Case 0945",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 58,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 587.3100529100531,
+            "y": 83.437037037037,
+            "width": 201.549206349206,
+            "height": 165.790476190476
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021700_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021700_010.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021700_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0946",
+      "title": "Pneumothorax - Learning Case 0946",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 60,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 551.551322751323,
+            "y": 86.6878306878307,
+            "width": 276.31746031746,
+            "height": 239.475132275132
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00020318_022.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00020318_022.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00020318_022.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0947",
+      "title": "Pneumothorax - Learning Case 0947",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 59,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 540.715343915344,
+            "y": 106.192592592593,
+            "width": 333.748148148148,
+            "height": 483.284656084656
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00007471_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00007471_003.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00007471_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0948",
+      "title": "Pneumothorax - Learning Case 0948",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 20,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 606.814814814815,
+            "y": 98.6074074074074,
+            "width": 211.30158730158695,
+            "height": 322.912169312169
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00028628_008.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00028628_008.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00028628_008.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0949",
+      "title": "Pneumothorax - Learning Case 0949",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 35,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 500.622222222222,
+            "y": 52.012698412698406,
+            "width": 428.021164021164,
+            "height": 454.027513227513
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011355_011.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011355_011.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011355_011.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0950",
+      "title": "Pneumothorax - Learning Case 0950",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 59,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 550.467724867725,
+            "y": 31.424338624338603,
+            "width": 236.224338624339,
+            "height": 161.45608465608498
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00030606_006.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00030606_006.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00030606_006.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0951",
+      "title": "Pneumothorax - Learning Case 0951",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 49,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 75.8518518518519,
+            "y": 202.632804232804,
+            "width": 145.202116402116,
+            "height": 514.708994708995
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00027652_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00027652_003.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00027652_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0952",
+      "title": "Pneumothorax - Learning Case 0952",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 53,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 238.391534391534,
+            "y": 137.616931216931,
+            "width": 226.471957671958,
+            "height": 214.552380952381
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021896_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021896_003.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021896_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0953",
+      "title": "Pneumothorax - Learning Case 0953",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 35,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 560.220105820106,
+            "y": 137.616931216931,
+            "width": 320.74497354497396,
+            "height": 273.066666666667
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011355_027.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011355_027.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011355_027.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0954",
+      "title": "Pneumothorax - Learning Case 0954",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 14,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 21.6719576719577,
+            "y": 291.487830687831,
+            "width": 124.613756613757,
+            "height": 564.554497354497
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00017243_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00017243_010.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00017243_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0955",
+      "title": "Pneumothorax - Learning Case 0955",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 73,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 730.3449735449741,
+            "y": 225.38835978836,
+            "width": 124.613756613757,
+            "height": 260.063492063492
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00028924_009.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00028924_009.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00028924_009.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0956",
+      "title": "Pneumothorax - Learning Case 0956",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 28,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 86.6878306878307,
+            "y": 98.6074074074074,
+            "width": 183.128042328042,
+            "height": 569.9724867724871
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00025787_039.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00025787_039.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00025787_039.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0957",
+      "title": "Pneumothorax - Learning Case 0957",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 64,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 125.697354497355,
+            "y": 287.15343915343897,
+            "width": 88.85502645502649,
+            "height": 211.30158730158695
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018055_038.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018055_038.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018055_038.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0958",
+      "title": "Pneumothorax - Learning Case 0958",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 51,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 172.29206349206402,
+            "y": 83.437037037037,
+            "width": 265.48148148148204,
+            "height": 206.967195767196
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00016937_014.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00016937_014.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00016937_014.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0959",
+      "title": "Pneumothorax - Learning Case 0959",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 34,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 576.474074074074,
+            "y": 89.93862433862441,
+            "width": 152.787301587302,
+            "height": 119.195767195767
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00019706_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00019706_002.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00019706_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0960",
+      "title": "Pneumothorax - Learning Case 0960",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 39,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 219.97037037037003,
+            "y": 391.178835978836,
+            "width": 192.880423280423,
+            "height": 215.63597883597905
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00020671_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00020671_010.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00020671_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0961",
+      "title": "Pneumothorax - Learning Case 0961",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Trauma with chest pain and shortness of breath",
+      "demographics": {
+        "age": 15,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 621.9851851851851,
+            "y": 167.957671957672,
+            "width": 203.716402116402,
+            "height": 159.288888888889
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00030162_029.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00030162_029.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00030162_029.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0962",
+      "title": "Pneumothorax - Learning Case 0962",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 44,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 271.983068783069,
+            "y": 134.366137566138,
+            "width": 101.858201058201,
+            "height": 150.620105820106
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014626_017.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014626_017.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014626_017.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0963",
+      "title": "Pneumothorax - Learning Case 0963",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Spontaneous pneumothorax, acute respiratory distress",
+      "demographics": {
+        "age": 52,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 527.7121693121691,
+            "y": 63.9322751322751,
+            "width": 345.667724867725,
+            "height": 295.82222222222197
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00019124_006.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00019124_006.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00019124_006.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumothorax-0964",
+      "title": "Pneumothorax - Learning Case 0964",
+      "description": "Chest X-ray demonstrating pneumothorax",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Sudden onset chest pain and dyspnea",
+      "demographics": {
+        "age": 64,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumothorax",
+      "findings": [
+        {
+          "name": "Pneumothorax",
+          "roi": {
+            "x": 89.93862433862441,
+            "y": 309.908994708995,
+            "width": 44.4275132275132,
+            "height": 98.6074074074074
+          }
+        }
+      ],
+      "differential": [
+        "Bullous emphysema",
+        "Pneumomediastinum"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018055_045.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018055_045.png"
+      },
+      "tags": [
+        "pneumothorax",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018055_045.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    }
+  ]
+}

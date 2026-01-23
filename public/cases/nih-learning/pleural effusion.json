@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "name": "RADSIM Pleural Effusion Learning Cases",
+    "version": "1.0.0",
+    "description": "Learning cases for pleural effusion",
+    "lastUpdated": "2026-01-07"
+  },
+  "cases": [
+    {
+      "id": "cxr-012",
+      "title": "Effusion - Case 012",
+      "description": "Chest X-ray demonstrating pleural effusion",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Patient with shortness of breath and decreased breath sounds on right",
+      "diagnosis": "Pleural effusion",
+      "findings": [
+        {
+          "name": "effusion_right",
+          "description": "Moderate right pleural effusion with meniscus sign",
+          "location": "Right hemithorax",
+          "roi": {
+            "x": 300,
+            "y": 300,
+            "width": 200,
+            "height": 200
+          }
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00000180_002.png",
+        "thumbnailPath": "cases/thumbnails/00000180_002.png"
+      },
+      "tags": [
+        "effusion",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00000180_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 64
+      }
+    }
+  ]
+}

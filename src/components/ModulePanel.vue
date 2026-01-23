@@ -4,18 +4,20 @@
       <v-tabs
         id="module-switcher-tabs"
         v-model="selectedModuleIndex"
-        icons-and-text
+        density="comfortable"
         show-arrows
+        slider-color="white"
+        class="enterprise-tabs"
       >
         <v-tab
           v-for="item in modules"
           :key="item.name"
           :data-testid="`module-tab-${item.name}`"
           :disabled="item.disabled"
+          class="enterprise-tab"
         >
           <div class="tab-content">
-            <span class="mb-0 mt-1 module-text">{{ item.name }}</span>
-            <v-icon>mdi-{{ item.icon }}</v-icon>
+            <span class="module-text">{{ item.name }}</span>
           </div>
         </v-tab>
       </v-tabs>
@@ -47,9 +49,11 @@ import DataBrowser from './DataBrowser.vue';
 import RenderingModule from './RenderingModule.vue';
 import AnnotationsModule from './AnnotationsModule.vue';
 // import ServerModule from './ServerModule.vue';
-import NVSegmentCTModule from './NVSegmentCTModule.vue';
-import NVReasonCXRModule from './NVReasonCXRModule.vue';
-import NVGenerateCTModule from './NVGenerateCTModule.vue';
+import EducationModule from './EducationModule.vue';
+// Removed NVIDIA modules - not needed for RADSIM
+// import NVSegmentCTModule from './NVSegmentCTModule.vue';
+// import NVReasonCXRModule from './NVReasonCXRModule.vue';
+// import NVGenerateCTModule from './NVGenerateCTModule.vue';
 import ProbeView from './ProbeView.vue';
 import { useToolStore } from '../store/tools';
 import { Tools } from '../store/tools/types';
@@ -63,25 +67,32 @@ interface Module {
 
 const Modules: Module[] = [
   {
-    name: 'Data',
-    icon: 'database',
-    component: DataBrowser,
+    name: 'RADSIM AI',
+    icon: 'head-lightbulb',
+    component: EducationModule,
   },
-  {
-    name: 'Segment',
-    icon: 'brain',
-    component: NVSegmentCTModule,
-  },
-  {
-    name: 'Reason',
-    icon: 'chat',
-    component: NVReasonCXRModule,
-  },
-  {
-    name: 'Generate',
-    icon: 'magic-staff',
-    component: NVGenerateCTModule,
-  },
+  // Removed Data tab - not needed for RADSIM
+  // {
+  //   name: 'Data',
+  //   icon: 'database',
+  //   component: DataBrowser,
+  // },
+  // Removed NVIDIA AI modules - not needed for RADSIM educational focus
+  // {
+  //   name: 'Segment',
+  //   icon: 'brain',
+  //   component: NVSegmentCTModule,
+  // },
+  // {
+  //   name: 'Reason',
+  //   icon: 'chat',
+  //   component: NVReasonCXRModule,
+  // },
+  // {
+  //   name: 'Generate',
+  //   icon: 'magic-staff',
+  //   component: NVGenerateCTModule,
+  // },
   {
     name: 'Annotations',
     icon: 'pencil',
@@ -117,7 +128,7 @@ export default defineComponent({
       () => toolStore.currentTool,
       (newTool) => {
         if (autoSwitchToAnnotationsTools.includes(newTool))
-          selectedModuleIndex.value = 1;
+          selectedModuleIndex.value = 1; // Annotations is now at position 1 (Learn=0, Annotations=1)
       }
     );
 
@@ -150,49 +161,78 @@ export default defineComponent({
 <style scoped>
 #module-switcher {
   display: relative;
-  flex: 0 2;
-  /* roughly match vuetify's dark/light transition */
-  transition: border-bottom 0.3s;
-  border-bottom: 2px solid rgb(var(--v-theme-on-surface-variant));
-}
-
-#close-btn {
-  position: absolute;
-  top: 1.5em;
-  left: 0.5em;
-  z-index: 10;
+  flex: 0 0 auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: transparent;
 }
 
 #module-container {
   position: relative;
-  flex: 2;
+  flex: 1;
   overflow: auto;
+  background: #0a0a0a;
 }
 
-.module-text {
-  font-size: 0.6rem;
-  white-space: pre;
+/* Enterprise Tab Styles */
+:deep(.enterprise-tabs) {
+  height: 48px;
+  background: transparent;
+}
+
+:deep(.enterprise-tabs .v-tabs__container) {
+  height: 48px;
+}
+
+:deep(.enterprise-tab) {
+  min-height: 48px;
+  padding: 0 32px;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+:deep(.enterprise-tab:hover) {
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.01);
+}
+
+:deep(.enterprise-tab.v-tab--selected) {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+}
+
+:deep(.enterprise-tab[disabled]) {
+  opacity: 0.3;
+}
+
+:deep(.v-tabs__slider) {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 0.8;
 }
 
 .tab-content {
   display: flex;
-  justify-content: flex-end;
-  flex-direction: column-reverse;
-  height: 100%;
   align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
+.module-text {
+  font-size: 12px;
+  line-height: 1;
+}
+
+/* Center tabs and hide navigation arrows when not needed */
 #module-switcher-tabs :deep(.v-slide-group__content) {
   justify-content: center;
 }
 
-#module-switcher-tabs
-  :deep(.v-slide-group__prev.v-slide-group__prev--disabled) {
-  visibility: hidden;
-}
-
-#module-switcher-tabs
-  :deep(.v-slide-group__next.v-slide-group__next--disabled) {
+#module-switcher-tabs :deep(.v-slide-group__prev.v-slide-group__prev--disabled),
+#module-switcher-tabs :deep(.v-slide-group__next.v-slide-group__next--disabled) {
   visibility: hidden;
 }
 </style>

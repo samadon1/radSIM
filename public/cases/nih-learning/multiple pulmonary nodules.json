@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "name": "RADSIM Multiple Pulmonary Nodules Learning Cases",
+    "version": "1.0.0",
+    "description": "Learning cases for multiple pulmonary nodules",
+    "lastUpdated": "2026-01-07"
+  },
+  "cases": [
+    {
+      "id": "cxr-020",
+      "title": "Nodule - Case 020",
+      "description": "Chest X-ray demonstrating multiple nodules",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Patient with history of malignancy for metastatic workup",
+      "diagnosis": "Multiple pulmonary nodules",
+      "findings": [
+        {
+          "name": "mass_nodule",
+          "description": "Multiple bilateral pulmonary nodules of varying sizes",
+          "location": "Bilateral lung fields",
+          "roi": {
+            "x": 300,
+            "y": 300,
+            "width": 200,
+            "height": 200
+          }
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00001738_003.png",
+        "thumbnailPath": "cases/thumbnails/00001738_003.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00001738_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 45
+      }
+    }
+  ]
+}

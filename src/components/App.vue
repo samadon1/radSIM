@@ -11,20 +11,13 @@
           width="500"
           id="left-nav"
         >
-          <module-panel @close="leftSideBar = false" />
+          <module-panel ref="modulePanelRef" @close="leftSideBar = false" />
         </v-navigation-drawer>
         <v-main id="content-main">
           <div class="fill-height d-flex flex-row flex-grow-1">
             <controls-strip :has-data="hasData"></controls-strip>
             <div class="d-flex flex-column flex-grow-1">
-              <layout-grid v-show="hasData" :layout="layout" />
-              <welcome-page
-                v-if="!hasData"
-                :loading="showLoading"
-                class="clickable"
-                @click="loadUserPromptedFiles"
-              >
-              </welcome-page>
+              <layout-grid :layout="layout" />
             </div>
           </div>
         </v-main>
@@ -53,7 +46,7 @@ import { computed, defineComponent, onMounted, ref, watch } from 'vue';
 import { storeToRefs } from 'pinia';
 import { UrlParams } from '@vueuse/core';
 import vtkURLExtract from '@kitware/vtk.js/Common/Core/URLExtract';
-import { useDisplay } from 'vuetify';
+import { useRouter } from 'vue-router';
 import useLoadDataStore from '@/src/store/load-data';
 import { useViewStore } from '@/src/store/views';
 import useRemoteSaveStateStore from '@/src/store/remote-save-state';
@@ -64,7 +57,6 @@ import {
   loadUserPromptedFiles,
   loadUrls,
 } from '@/src/actions/loadUserFiles';
-import WelcomePage from '@/src/components/WelcomePage.vue';
 import { useDICOMStore } from '@/src/store/datasets-dicom';
 import LayoutGrid from '@/src/components/LayoutGrid.vue';
 import ModulePanel from '@/src/components/ModulePanel.vue';
@@ -75,6 +67,8 @@ import { useImageStore } from '@/src/store/datasets-images';
 import { useServerStore as useServerStore1 } from '@/src/store/server-1';
 import { useServerStore as useServerStore2 } from '@/src/store/server-2';
 import { useServerStore as useServerStore3 } from '@/src/store/server-3';
+import { useCaseLibraryStore } from '@/src/store/case-library';
+import { useLearningStore } from '@/src/store/learning';
 import { useGlobalErrorHook } from '@/src/composables/useGlobalErrorHook';
 import { useKeyboardShortcuts } from '@/src/composables/useKeyboardShortcuts';
 import { useCurrentImage } from '@/src/composables/useCurrentImage';
@@ -94,13 +88,15 @@ export default defineComponent({
     ModulePanel,
     PersistentOverlay,
     ControlsModal,
-    WelcomePage,
     AppBar,
   },
 
   setup() {
+    const router = useRouter();
     const imageStore = useImageStore();
     const dicomStore = useDICOMStore();
+    const caseLibraryStore = useCaseLibraryStore();
+    const learningStore = useLearningStore();
 
     useGlobalErrorHook();
     useKeyboardShortcuts();
@@ -119,6 +115,21 @@ export default defineComponent({
     const showLoading = computed(
       () => loadDataStore.isLoading || hasData.value
     );
+
+    // Redirect to dashboard if no data and not loading URLs
+    const urlParams = vtkURLExtract.extractURLParameters() as UrlParams;
+    const hasUrlsToLoad = !!urlParams.urls;
+
+    // Check if there's a saved session to restore (don't redirect if so)
+    // Use a ref so we can update it during restoration
+    const isRestoringSession = ref(!!localStorage.getItem('radsim_active_session'));
+
+    watch(hasData, (newHasData) => {
+      // Don't redirect while restoring a session - wait for the image to load
+      if (!newHasData && !loadDataStore.isLoading && !hasUrlsToLoad && !isRestoringSession.value) {
+        router.replace('/dashboard');
+      }
+    }, { immediate: true });
 
     const { currentImageMetadata, isImageLoading } = useCurrentImage();
     const defaultImageMetadataName = defaultImageMetadata().name;
@@ -139,14 +150,53 @@ export default defineComponent({
     populateAuthorizationToken();
     stripTokenFromUrl();
 
-    const urlParams = vtkURLExtract.extractURLParameters() as UrlParams;
-
     onMounted(() => {
       if (!urlParams.urls) {
         return;
       }
 
       loadUrls(urlParams);
+    });
+
+    // --- sidebar (declared early for session restoration) --- //
+
+    const leftSideBar = ref(caseLibraryStore.hasCurrentCase);
+    const modulePanelRef = ref<any>(null);
+
+    // --- session restoration --- //
+
+    onMounted(async () => {
+      // Try to restore a saved learning session
+      if (!isRestoringSession.value) return;
+
+      try {
+        const hasRestoredSession = learningStore.loadActiveSession();
+
+        if (hasRestoredSession) {
+          console.log('[App] Restored learning session, loading current case');
+          const currentCase = learningStore.currentCase;
+
+          if (currentCase) {
+            // Select the case in the library store
+            caseLibraryStore.selectCaseByMetadata(currentCase);
+
+            // Load the case image
+            const imagePaths = Array.isArray(currentCase.files.imagePath)
+              ? currentCase.files.imagePath
+              : [currentCase.files.imagePath];
+
+            await loadUrls({ urls: imagePaths });
+
+            // Open the sidebar to show the learning module
+            leftSideBar.value = true;
+          }
+        }
+      } catch (error) {
+        console.error('[App] Failed to restore session:', error);
+      } finally {
+        // Clear the restoring flag - either success or failure
+        isRestoringSession.value = false;
+      }
     });
 
     // --- remote server --- //
@@ -169,12 +219,18 @@ export default defineComponent({
 
     const { layout } = storeToRefs(useViewStore());
 
-    // --- //
+    // --- sidebar watch --- //
 
-    const display = useDisplay();
+    // Watch for case selection changes to open sidebar
+    watch(() => caseLibraryStore.hasCurrentCase, (hasCase) => {
+      if (hasCase && !leftSideBar.value) {
+        leftSideBar.value = true;
+      }
+    });
 
     return {
-      leftSideBar: ref(!display.mobile.value),
+      leftSideBar,
+      modulePanelRef,
       loadUserPromptedFiles,
       loadFiles,
       hasData,

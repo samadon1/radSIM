@@ -75,3 +75,6 @@ export interface LayoutViewProps {
   id: string;
   type: string;
 }
+
+// Export educational types
+export * from './education';

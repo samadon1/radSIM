@@ -1,0 +1,130 @@
+{
+  "metadata": {
+    "name": "RADSIM Normal Learning Cases",
+    "version": "1.0.0",
+    "description": "Learning cases for normal",
+    "lastUpdated": "2026-01-07"
+  },
+  "cases": [
+    {
+      "id": "cxr-001",
+      "title": "Normal chest radiograph - Case 001",
+      "description": "Chest X-ray demonstrating normal chest radiograph",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "To be added during manual curation",
+      "diagnosis": "Normal chest radiograph",
+      "findings": [],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00001529_003.png",
+        "thumbnailPath": "cases/thumbnails/00001529_003.png"
+      },
+      "tags": [
+        "normal",
+        "chest",
+        "radiograph",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00001529_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 52
+      }
+    },
+    {
+      "id": "cxr-002",
+      "title": "Normal chest radiograph - Case 002",
+      "description": "Chest X-ray demonstrating normal chest radiograph",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "To be added during manual curation",
+      "diagnosis": "Normal chest radiograph",
+      "findings": [],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00002344_004.png",
+        "thumbnailPath": "cases/thumbnails/00002344_004.png"
+      },
+      "tags": [
+        "normal",
+        "chest",
+        "radiograph",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00002344_004.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 20
+      }
+    },
+    {
+      "id": "cxr-003",
+      "title": "Normal chest radiograph - Case 003",
+      "description": "Chest X-ray demonstrating normal chest radiograph",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "To be added during manual curation",
+      "diagnosis": "Normal chest radiograph",
+      "findings": [],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00003659_015.png",
+        "thumbnailPath": "cases/thumbnails/00003659_015.png"
+      },
+      "tags": [
+        "normal",
+        "chest",
+        "radiograph",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003659_015.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 56
+      }
+    }
+  ]
+}

@@ -21,6 +21,18 @@ export function useKeyboardShortcuts() {
         const lastKey = individualKeys[individualKeys.length - 1];
 
         return whenever(keys[key], () => {
+          // Ignore shortcuts when typing in input fields (e.g., AI chat)
+          const activeElement = document.activeElement;
+          const isTypingInInput = activeElement && (
+            activeElement.tagName === 'INPUT' ||
+            activeElement.tagName === 'TEXTAREA' ||
+            activeElement.hasAttribute('contenteditable')
+          );
+
+          if (isTypingInInput) {
+            return; // Don't trigger shortcuts while typing
+          }
+
           const shiftPressed = keys.current.has('shift');
           const lastPressedKey = Array.from(keys.current).pop();
           const currentKeyWithCase = shiftPressed

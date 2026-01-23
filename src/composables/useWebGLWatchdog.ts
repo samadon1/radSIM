@@ -31,7 +31,12 @@ function getVolumeMapperContext(view: View) {
 }
 
 export function useWebGLWatchdog(view: MaybeRef<Maybe<View>>) {
-  const reportError = useThrottleFn(() => {
+  const reportError = useThrottleFn((event?: Event) => {
+    // Prevent default to allow context restoration
+    if (event) {
+      event.preventDefault();
+    }
+
     const messageStore = useMessageStore();
     messageStore.addError(Messages.WebGLLost.title, Messages.WebGLLost.details);
 
@@ -44,7 +49,27 @@ export function useWebGLWatchdog(view: MaybeRef<Maybe<View>>) {
     captureMessage('WebGL2 context was lost', { contexts });
   }, THROTTLE_THRESHOLD);
 
+  const handleContextRestored = useThrottleFn(() => {
+    const messageStore = useMessageStore();
+    messageStore.addSuccess('WebGL Context Restored', 'The 3D viewer has been restored. You may need to reload your data.');
+
+    const viewVal = unref(view);
+    if (viewVal) {
+      // Force re-render when context is restored
+      try {
+        viewVal.requestRender({ immediate: true });
+      } catch (error) {
+        console.error('Failed to restore render:', error);
+      }
+    }
+
+    captureMessage('WebGL2 context was restored');
+  }, THROTTLE_THRESHOLD);
+
   const renWinView = computed(() => unref(view)?.renderWindowView);
   const canvas = vtkFieldRef(renWinView, 'canvas');
+
+  // Listen for both context loss and restoration
   useEventListener(canvas, 'webglcontextlost', reportError);
+  useEventListener(canvas, 'webglcontextrestored', handleContextRestored);
 }

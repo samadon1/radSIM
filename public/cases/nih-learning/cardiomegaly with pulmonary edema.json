@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "name": "RADSIM Cardiomegaly With Pulmonary Edema Learning Cases",
+    "version": "1.0.0",
+    "description": "Learning cases for cardiomegaly with pulmonary edema",
+    "lastUpdated": "2026-01-07"
+  },
+  "cases": [
+    {
+      "id": "cxr-010",
+      "title": "Cardiomegaly with Pulmonary Edema - Case 010",
+      "description": "Chest X-ray demonstrating cardiomegaly with signs of heart failure",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Patient with history of heart failure presenting with dyspnea",
+      "diagnosis": "Cardiomegaly with pulmonary edema",
+      "findings": [
+        {
+          "name": "cardiomegaly",
+          "description": "Enlarged cardiac silhouette with cardiothoracic ratio > 0.5",
+          "location": "Heart",
+          "roi": {
+            "x": 300,
+            "y": 300,
+            "width": 200,
+            "height": 200
+          }
+        },
+        {
+          "name": "pulmonary_edema",
+          "description": "Bilateral perihilar haziness and vascular congestion",
+          "location": "Bilateral lung fields",
+          "roi": {
+            "x": 300,
+            "y": 300,
+            "width": 200,
+            "height": 200
+          }
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00002742_000.png",
+        "thumbnailPath": "cases/thumbnails/00002742_000.png"
+      },
+      "tags": [
+        "cardiomegaly",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00002742_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 36
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "name": "RADSIM Pneumonia With Atelectasis Learning Cases",
+    "version": "1.0.0",
+    "description": "Learning cases for pneumonia with atelectasis",
+    "lastUpdated": "2026-01-07"
+  },
+  "cases": [
+    {
+      "id": "cxr-007",
+      "title": "Pneumonia - Case 007",
+      "description": "Chest X-ray demonstrating pneumonia with atelectasis",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever and dyspnea in hospitalized patient",
+      "diagnosis": "Pneumonia with atelectasis",
+      "findings": [
+        {
+          "name": "consolidation",
+          "description": "Multifocal consolidation in bilateral lower lobes",
+          "location": "Bilateral lower lobes",
+          "roi": {
+            "x": 300,
+            "y": 300,
+            "width": 200,
+            "height": 200
+          }
+        },
+        {
+          "name": "atelectasis",
+          "description": "Subsegmental atelectasis in left base",
+          "location": "Left lung base",
+          "roi": {
+            "x": 300,
+            "y": 300,
+            "width": 200,
+            "height": 200
+          }
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00001018_005.png",
+        "thumbnailPath": "cases/thumbnails/00001018_005.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00001018_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 59
+      }
+    }
+  ]
+}

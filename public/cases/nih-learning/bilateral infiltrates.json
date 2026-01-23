@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "name": "RADSIM Bilateral Infiltrates Learning Cases",
+    "version": "1.0.0",
+    "description": "Learning cases for bilateral infiltrates",
+    "lastUpdated": "2026-01-07"
+  },
+  "cases": [
+    {
+      "id": "cxr-015",
+      "title": "Infiltration - Case 015",
+      "description": "Chest X-ray demonstrating pulmonary infiltrates",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Immunocompromised patient with fever",
+      "diagnosis": "Bilateral infiltrates",
+      "findings": [
+        {
+          "name": "consolidation",
+          "description": "Patchy bilateral infiltrates consistent with opportunistic infection",
+          "location": "Bilateral lung fields",
+          "roi": {
+            "x": 300,
+            "y": 300,
+            "width": 200,
+            "height": 200
+          }
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00002505_009.png",
+        "thumbnailPath": "cases/thumbnails/00002505_009.png"
+      },
+      "tags": [
+        "infiltration",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00002505_009.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 28
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "name": "RADSIM Solitary Pulmonary Nodule Learning Cases",
+    "version": "1.0.0",
+    "description": "Learning cases for solitary pulmonary nodule",
+    "lastUpdated": "2026-01-07"
+  },
+  "cases": [
+    {
+      "id": "cxr-019",
+      "title": "Nodule - Case 019",
+      "description": "Chest X-ray demonstrating solitary pulmonary nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "diagnosis": "Solitary pulmonary nodule",
+      "findings": [
+        {
+          "name": "mass_nodule",
+          "description": "Well-circumscribed 1.5 cm nodule in left upper lobe",
+          "location": "Left upper lobe",
+          "roi": {
+            "x": 300,
+            "y": 300,
+            "width": 200,
+            "height": 200
+          }
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00002194_000.png",
+        "thumbnailPath": "cases/thumbnails/00002194_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00002194_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 66
+      }
+    }
+  ]
+}

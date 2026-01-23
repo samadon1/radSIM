@@ -1,0 +1,6610 @@
+{
+  "metadata": {
+    "name": "RADSIM Pneumonia Learning Cases",
+    "version": "1.0.0",
+    "description": "NIH chest X-ray cases with Pneumonia",
+    "lastUpdated": "2026-01-08"
+  },
+  "cases": [
+    {
+      "id": "nih-pneumonia-0747",
+      "title": "Pneumonia - Learning Case 0747",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 102\u00b0F",
+      "demographics": {
+        "age": 31,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 574.008888888889,
+            "y": 574.90015625,
+            "width": 229.831111111111,
+            "height": 166.115555555556
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011136_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011136_002.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011136_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0748",
+      "title": "Pneumonia - Learning Case 0748",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 4 days",
+      "demographics": {
+        "age": 52,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 614.968888888889,
+            "y": 558.971267361111,
+            "width": 223.004444444444,
+            "height": 197.97333333333304
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00020259_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00020259_002.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00020259_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0749",
+      "title": "Pneumonia - Learning Case 0749",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 102\u00b0F",
+      "demographics": {
+        "age": 25,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 660.48,
+            "y": 190.331267361111,
+            "width": 192.284444444444,
+            "height": 451.697777777778
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012021_081.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012021_081.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012021_081.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0750",
+      "title": "Pneumonia - Learning Case 0750",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 42,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 208.782222222222,
+            "y": 403.0957118055561,
+            "width": 572.302222222222,
+            "height": 392.53333333333296
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013993_077.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013993_077.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013993_077.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0751",
+      "title": "Pneumonia - Learning Case 0751",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 102\u00b0F",
+      "demographics": {
+        "age": 62,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 550.115555555556,
+            "y": 463.3979340277781,
+            "width": 171.80444444444402,
+            "height": 275.342222222222
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013659_019.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013659_019.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013659_019.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0752",
+      "title": "Pneumonia - Learning Case 0752",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 102\u00b0F",
+      "demographics": {
+        "age": 60,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 642.275555555556,
+            "y": 423.575711805556,
+            "width": 265.102222222222,
+            "height": 223.004444444444
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00010277_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00010277_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00010277_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0753",
+      "title": "Pneumonia - Learning Case 0753",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 58,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 203.09333333333305,
+            "y": 209.673489583333,
+            "width": 244.622222222222,
+            "height": 533.617777777778
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00022290_015.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00022290_015.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00022290_015.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0754",
+      "title": "Pneumonia - Learning Case 0754",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 2 days",
+      "demographics": {
+        "age": 64,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 279.324444444444,
+            "y": 317.762378472222,
+            "width": 683.804444444444,
+            "height": 377.742222222222
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00028208_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00028208_005.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00028208_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0755",
+      "title": "Pneumonia - Learning Case 0755",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 47,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 613.831111111111,
+            "y": 466.811267361111,
+            "width": 160.42666666666702,
+            "height": 201.386666666667
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018393_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018393_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018393_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0756",
+      "title": "Pneumonia - Learning Case 0756",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 5 days",
+      "demographics": {
+        "age": 44,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 120.035555555556,
+            "y": 147.095711805556,
+            "width": 253.724444444444,
+            "height": 596.195555555556
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00017710_009.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00017710_009.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00017710_009.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0757",
+      "title": "Pneumonia - Learning Case 0757",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 5 days",
+      "demographics": {
+        "age": 79,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 581.973333333333,
+            "y": 167.57571180555598,
+            "width": 290.13333333333304,
+            "height": 439.182222222222
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00003894_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00003894_005.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003894_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0758",
+      "title": "Pneumonia - Learning Case 0758",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 64,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 315.733333333333,
+            "y": 584.002378472222,
+            "width": 139.946666666667,
+            "height": 162.702222222222
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026196_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026196_001.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026196_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0759",
+      "title": "Pneumonia - Learning Case 0759",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 2 days",
+      "demographics": {
+        "age": 63,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 201.955555555556,
+            "y": 160.74904513888902,
+            "width": 604.16,
+            "height": 530.204444444444
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00029861_013.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00029861_013.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00029861_013.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0760",
+      "title": "Pneumonia - Learning Case 0760",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 6 days",
+      "demographics": {
+        "age": 41,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 607.004444444444,
+            "y": 529.3890451388891,
+            "width": 240.07111111111095,
+            "height": 161.564444444444
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021670_004.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021670_004.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021670_004.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0761",
+      "title": "Pneumonia - Learning Case 0761",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 60,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 270.222222222222,
+            "y": 421.30015625,
+            "width": 715.662222222222,
+            "height": 600.746666666667
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011366_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011366_002.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011366_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0762",
+      "title": "Pneumonia - Learning Case 0762",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 3 days",
+      "demographics": {
+        "age": 65,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 189.44,
+            "y": 440.642378472222,
+            "width": 218.453333333333,
+            "height": 410.7377777777781
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00029431_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00029431_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00029431_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0763",
+      "title": "Pneumonia - Learning Case 0763",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 101\u00b0F",
+      "demographics": {
+        "age": 46,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 552.391111111111,
+            "y": 458.846822916667,
+            "width": 196.835555555556,
+            "height": 176.35555555555598
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011514_015.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011514_015.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011514_015.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0764",
+      "title": "Pneumonia - Learning Case 0764",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 53,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 591.075555555556,
+            "y": 519.149045138889,
+            "width": 245.76,
+            "height": 201.386666666667
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00015090_006.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00015090_006.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00015090_006.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0765",
+      "title": "Pneumonia - Learning Case 0765",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 102\u00b0F",
+      "demographics": {
+        "age": 49,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 206.50666666666697,
+            "y": 399.682378472222,
+            "width": 691.768888888889,
+            "height": 458.524444444444
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00010120_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00010120_010.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00010120_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0766",
+      "title": "Pneumonia - Learning Case 0766",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 3 days",
+      "demographics": {
+        "age": 66,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 125.724444444444,
+            "y": 203.984600694444,
+            "width": 729.315555555556,
+            "height": 622.364444444444
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013625_069.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013625_069.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013625_069.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0767",
+      "title": "Pneumonia - Learning Case 0767",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 25,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 201.955555555556,
+            "y": 227.877934027778,
+            "width": 649.671111111111,
+            "height": 508.58666666666704
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00015069_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00015069_001.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00015069_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0768",
+      "title": "Pneumonia - Learning Case 0768",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 100\u00b0F",
+      "demographics": {
+        "age": 45,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 101.831111111111,
+            "y": 314.349045138889,
+            "width": 307.2,
+            "height": 364.088888888889
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013391_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013391_005.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013391_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0769",
+      "title": "Pneumonia - Learning Case 0769",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 36,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 175.78666666666695,
+            "y": 292.731267361111,
+            "width": 178.63111111111098,
+            "height": 279.89333333333303
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00005869_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00005869_001.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00005869_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0770",
+      "title": "Pneumonia - Learning Case 0770",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 102\u00b0F",
+      "demographics": {
+        "age": 32,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 610.417777777778,
+            "y": 339.38015625,
+            "width": 196.835555555556,
+            "height": 302.648888888889
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00029808_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00029808_003.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00029808_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0771",
+      "title": "Pneumonia - Learning Case 0771",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 100\u00b0F",
+      "demographics": {
+        "age": 55,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 703.7155555555561,
+            "y": 616.997934027778,
+            "width": 218.453333333333,
+            "height": 249.173333333333
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00000193_019.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00000193_019.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00000193_019.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0772",
+      "title": "Pneumonia - Learning Case 0772",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 25,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 696.888888888889,
+            "y": 317.762378472222,
+            "width": 91.0222222222222,
+            "height": 235.52
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00016705_006.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00016705_006.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00016705_006.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0773",
+      "title": "Pneumonia - Learning Case 0773",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 80,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 617.244444444444,
+            "y": 477.051267361111,
+            "width": 219.591111111111,
+            "height": 194.56
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00016732_027.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00016732_027.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00016732_027.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0774",
+      "title": "Pneumonia - Learning Case 0774",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 7 days",
+      "demographics": {
+        "age": 19,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 660.48,
+            "y": 456.571267361111,
+            "width": 210.488888888889,
+            "height": 333.368888888889
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00028285_014.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00028285_014.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00028285_014.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0775",
+      "title": "Pneumonia - Learning Case 0775",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 101\u00b0F",
+      "demographics": {
+        "age": 43,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 591.075555555556,
+            "y": 388.304600694444,
+            "width": 244.622222222222,
+            "height": 271.928888888889
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012045_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012045_005.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012045_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0776",
+      "title": "Pneumonia - Learning Case 0776",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 6 days",
+      "demographics": {
+        "age": 28,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 566.044444444444,
+            "y": 230.15348958333303,
+            "width": 260.55111111111097,
+            "height": 582.542222222222
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00000506_013.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00000506_013.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00000506_013.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0777",
+      "title": "Pneumonia - Learning Case 0777",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 3 days",
+      "demographics": {
+        "age": 36,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 538.737777777778,
+            "y": 558.971267361111,
+            "width": 279.89333333333303,
+            "height": 257.137777777778
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00003064_035.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00003064_035.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003064_035.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0778",
+      "title": "Pneumonia - Learning Case 0778",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 101\u00b0F",
+      "demographics": {
+        "age": 17,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 250.88,
+            "y": 348.48237847222197,
+            "width": 144.497777777778,
+            "height": 111.502222222222
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018032_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018032_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018032_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0779",
+      "title": "Pneumonia - Learning Case 0779",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 102\u00b0F",
+      "demographics": {
+        "age": 41,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 548.977777777778,
+            "y": 201.709045138889,
+            "width": 174.08,
+            "height": 190.008888888889
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00005532_022.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00005532_022.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00005532_022.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0780",
+      "title": "Pneumonia - Learning Case 0780",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 100\u00b0F",
+      "demographics": {
+        "age": 50,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 548.977777777778,
+            "y": 486.153489583333,
+            "width": 218.453333333333,
+            "height": 225.28
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00023283_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00023283_005.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00023283_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0781",
+      "title": "Pneumonia - Learning Case 0781",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 103\u00b0F",
+      "demographics": {
+        "age": 34,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 184.888888888889,
+            "y": 216.50015625,
+            "width": 714.5244444444439,
+            "height": 591.6444444444439
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00008291_011.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00008291_011.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00008291_011.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0782",
+      "title": "Pneumonia - Learning Case 0782",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 7 days",
+      "demographics": {
+        "age": 48,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 209.92,
+            "y": 347.34460069444395,
+            "width": 763.448888888889,
+            "height": 468.764444444444
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00022084_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00022084_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00022084_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0783",
+      "title": "Pneumonia - Learning Case 0783",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 4 days",
+      "demographics": {
+        "age": 54,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 533.048888888889,
+            "y": 619.273489583333,
+            "width": 240.07111111111095,
+            "height": 267.377777777778
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00016291_020.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00016291_020.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00016291_020.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0784",
+      "title": "Pneumonia - Learning Case 0784",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 64,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 263.395555555556,
+            "y": 591.9668229166671,
+            "width": 585.955555555556,
+            "height": 296.96
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00002980_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00002980_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00002980_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0785",
+      "title": "Pneumonia - Learning Case 0785",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 5 days",
+      "demographics": {
+        "age": 60,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 635.448888888889,
+            "y": 494.117934027778,
+            "width": 183.182222222222,
+            "height": 161.564444444444
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021458_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021458_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021458_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0786",
+      "title": "Pneumonia - Learning Case 0786",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 56,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 204.231111111111,
+            "y": 405.371267361111,
+            "width": 204.8,
+            "height": 339.057777777778
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011237_006.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011237_006.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011237_006.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0787",
+      "title": "Pneumonia - Learning Case 0787",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 102\u00b0F",
+      "demographics": {
+        "age": 28,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 157.582222222222,
+            "y": 125.477934027778,
+            "width": 711.111111111111,
+            "height": 821.4755555555561
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013461_011.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013461_011.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013461_011.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0788",
+      "title": "Pneumonia - Learning Case 0788",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 2 days",
+      "demographics": {
+        "age": 45,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 575.146666666667,
+            "y": 395.131267361111,
+            "width": 263.964444444444,
+            "height": 348.16
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00010828_023.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00010828_023.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00010828_023.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0789",
+      "title": "Pneumonia - Learning Case 0789",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 103\u00b0F",
+      "demographics": {
+        "age": 34,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 129.13777777777798,
+            "y": 449.744600694444,
+            "width": 233.244444444444,
+            "height": 310.613333333333
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00007728_013.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00007728_013.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00007728_013.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0790",
+      "title": "Pneumonia - Learning Case 0790",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 103\u00b0F",
+      "demographics": {
+        "age": 59,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 195.128888888889,
+            "y": 465.673489583333,
+            "width": 270.791111111111,
+            "height": 278.755555555556
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012576_004.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012576_004.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012576_004.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0791",
+      "title": "Pneumonia - Learning Case 0791",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 8,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 183.751111111111,
+            "y": 223.326822916667,
+            "width": 639.431111111111,
+            "height": 342.471111111111
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018319_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018319_001.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018319_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0792",
+      "title": "Pneumonia - Learning Case 0792",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 7 days",
+      "demographics": {
+        "age": 52,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 198.542222222222,
+            "y": 215.362378472222,
+            "width": 220.728888888889,
+            "height": 440.32
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00017952_008.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00017952_008.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00017952_008.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0793",
+      "title": "Pneumonia - Learning Case 0793",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 31,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 526.222222222222,
+            "y": 386.029045138889,
+            "width": 253.724444444444,
+            "height": 227.555555555556
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021489_013.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021489_013.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021489_013.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0794",
+      "title": "Pneumonia - Learning Case 0794",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 101\u00b0F",
+      "demographics": {
+        "age": 42,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 599.04,
+            "y": 189.19348958333305,
+            "width": 360.675555555556,
+            "height": 588.231111111111
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014956_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014956_010.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014956_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0795",
+      "title": "Pneumonia - Learning Case 0795",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 100\u00b0F",
+      "demographics": {
+        "age": 34,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 75.6622222222222,
+            "y": 186.917934027778,
+            "width": 721.351111111111,
+            "height": 659.911111111111
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00008291_009.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00008291_009.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00008291_009.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0796",
+      "title": "Pneumonia - Learning Case 0796",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 61,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 564.906666666667,
+            "y": 505.495711805556,
+            "width": 213.902222222222,
+            "height": 144.497777777778
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00022961_008.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00022961_008.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00022961_008.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0797",
+      "title": "Pneumonia - Learning Case 0797",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 2 days",
+      "demographics": {
+        "age": 62,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 98.4177777777778,
+            "y": 150.509045138889,
+            "width": 747.52,
+            "height": 581.4044444444439
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021772_011.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021772_011.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021772_011.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0798",
+      "title": "Pneumonia - Learning Case 0798",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 41,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 272.497777777778,
+            "y": 569.211267361111,
+            "width": 100.124444444444,
+            "height": 93.2977777777778
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00003789_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00003789_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003789_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0799",
+      "title": "Pneumonia - Learning Case 0799",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 60,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 628.622222222222,
+            "y": 512.322378472222,
+            "width": 241.20888888888905,
+            "height": 216.177777777778
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012261_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012261_001.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012261_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0800",
+      "title": "Pneumonia - Learning Case 0800",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 102\u00b0F",
+      "demographics": {
+        "age": 18,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 533.048888888889,
+            "y": 305.246822916667,
+            "width": 248.035555555556,
+            "height": 210.488888888889
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00025962_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00025962_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00025962_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0801",
+      "title": "Pneumonia - Learning Case 0801",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 7 days",
+      "demographics": {
+        "age": 28,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 253.155555555556,
+            "y": 293.869045138889,
+            "width": 556.373333333333,
+            "height": 434.631111111111
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014125_042.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014125_042.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014125_042.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0802",
+      "title": "Pneumonia - Learning Case 0802",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 4 days",
+      "demographics": {
+        "age": 60,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 453.404444444444,
+            "y": 591.9668229166671,
+            "width": 267.377777777778,
+            "height": 200.248888888889
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011402_007.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011402_007.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011402_007.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0803",
+      "title": "Pneumonia - Learning Case 0803",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 7 days",
+      "demographics": {
+        "age": 30,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 612.232804232804,
+            "y": 352.169312169312,
+            "width": 204.8,
+            "height": 294.738624338624
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014839_017.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014839_017.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014839_017.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0804",
+      "title": "Pneumonia - Learning Case 0804",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 30,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 480.033862433862,
+            "y": 425.853968253968,
+            "width": 219.97037037037003,
+            "height": 369.506878306878
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00009608_037.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00009608_037.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00009608_037.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0805",
+      "title": "Pneumonia - Learning Case 0805",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 102\u00b0F",
+      "demographics": {
+        "age": 67,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 617.650793650794,
+            "y": 582.975661375661,
+            "width": 255.729100529101,
+            "height": 204.8
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011583_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011583_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011583_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0806",
+      "title": "Pneumonia - Learning Case 0806",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 4 days",
+      "demographics": {
+        "age": 55,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 223.221164021164,
+            "y": 551.551322751323,
+            "width": 216.719576719577,
+            "height": 238.391534391534
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021303_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021303_005.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021303_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0807",
+      "title": "Pneumonia - Learning Case 0807",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 67,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 232.973544973545,
+            "y": 659.911111111111,
+            "width": 148.45291005291,
+            "height": 153.870899470899
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00022178_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00022178_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00022178_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0808",
+      "title": "Pneumonia - Learning Case 0808",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 103\u00b0F",
+      "demographics": {
+        "age": 46,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 644.740740740741,
+            "y": 308.825396825397,
+            "width": 185.295238095238,
+            "height": 354.33650793650804
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00003528_024.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00003528_024.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003528_024.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0809",
+      "title": "Pneumonia - Learning Case 0809",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 3 days",
+      "demographics": {
+        "age": 52,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 631.737566137566,
+            "y": 465.9470899470901,
+            "width": 174.459259259259,
+            "height": 178.793650793651
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00007629_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00007629_001.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00007629_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0810",
+      "title": "Pneumonia - Learning Case 0810",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 2 days",
+      "demographics": {
+        "age": 28,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 200.465608465608,
+            "y": 439.940740740741,
+            "width": 185.295238095238,
+            "height": 290.404232804233
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00010610_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00010610_003.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00010610_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0811",
+      "title": "Pneumonia - Learning Case 0811",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 1 days",
+      "demographics": {
+        "age": 15,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 271.983068783069,
+            "y": 426.937566137566,
+            "width": 217.80317460317505,
+            "height": 163.62328042328002
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013721_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013721_005.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013721_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0812",
+      "title": "Pneumonia - Learning Case 0812",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 1 days",
+      "demographics": {
+        "age": 35,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 166.874074074074,
+            "y": 503.873015873016,
+            "width": 241.642328042328,
+            "height": 190.713227513228
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00019863_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00019863_010.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00019863_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0813",
+      "title": "Pneumonia - Learning Case 0813",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 101\u00b0F",
+      "demographics": {
+        "age": 37,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 700.004232804233,
+            "y": 527.7121693121691,
+            "width": 178.793650793651,
+            "height": 162.539682539683
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014294_011.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014294_011.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014294_011.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0814",
+      "title": "Pneumonia - Learning Case 0814",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 102\u00b0F",
+      "demographics": {
+        "age": 63,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 213.46878306878295,
+            "y": 255.729100529101,
+            "width": 201.549206349206,
+            "height": 377.092063492064
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012094_011.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012094_011.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012094_011.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0815",
+      "title": "Pneumonia - Learning Case 0815",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 5 days",
+      "demographics": {
+        "age": 53,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 608.9820105820111,
+            "y": 562.387301587302,
+            "width": 148.45291005291,
+            "height": 190.713227513228
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00005567_025.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00005567_025.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00005567_025.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0816",
+      "title": "Pneumonia - Learning Case 0816",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 4 days",
+      "demographics": {
+        "age": 55,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 601.3968253968251,
+            "y": 595.978835978836,
+            "width": 215.63597883597905,
+            "height": 180.96084656084705
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00000150_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00000150_002.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00000150_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0817",
+      "title": "Pneumonia - Learning Case 0817",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 101\u00b0F",
+      "demographics": {
+        "age": 60,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 232.973544973545,
+            "y": 475.69947089947095,
+            "width": 171.208465608466,
+            "height": 286.069841269841
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013992_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013992_005.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013992_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0818",
+      "title": "Pneumonia - Learning Case 0818",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 100\u00b0F",
+      "demographics": {
+        "age": 32,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 211.30158730158695,
+            "y": 538.548148148148,
+            "width": 147.369312169312,
+            "height": 162.539682539683
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00015605_051.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00015605_051.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00015605_051.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0819",
+      "title": "Pneumonia - Learning Case 0819",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 4 days",
+      "demographics": {
+        "age": 31,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 113.777777777778,
+            "y": 200.465608465608,
+            "width": 227.555555555556,
+            "height": 381.426455026455
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00005353_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00005353_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00005353_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0820",
+      "title": "Pneumonia - Learning Case 0820",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 103\u00b0F",
+      "demographics": {
+        "age": 53,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 628.486772486773,
+            "y": 358.670899470899,
+            "width": 187.462433862434,
+            "height": 232.973544973545
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00022215_012.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00022215_012.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00022215_012.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0821",
+      "title": "Pneumonia - Learning Case 0821",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 102\u00b0F",
+      "demographics": {
+        "age": 22,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 201.549206349206,
+            "y": 695.669841269841,
+            "width": 190.713227513228,
+            "height": 175.54285714285703
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026848_007.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026848_007.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026848_007.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0822",
+      "title": "Pneumonia - Learning Case 0822",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 6 days",
+      "demographics": {
+        "age": 33,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 200.465608465608,
+            "y": 532.046560846561,
+            "width": 160.37248677248698,
+            "height": 153.870899470899
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00004893_070.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00004893_070.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00004893_070.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0823",
+      "title": "Pneumonia - Learning Case 0823",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 57,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 267.64867724867696,
+            "y": 493.03703703703695,
+            "width": 154.954497354497,
+            "height": 93.189417989418
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00022021_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00022021_002.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00022021_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0824",
+      "title": "Pneumonia - Learning Case 0824",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 4 days",
+      "demographics": {
+        "age": 30,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 284.98624338624296,
+            "y": 284.98624338624296,
+            "width": 187.462433862434,
+            "height": 356.503703703704
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00027093_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00027093_002.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00027093_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0825",
+      "title": "Pneumonia - Learning Case 0825",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 102\u00b0F",
+      "demographics": {
+        "age": 58,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 120.279365079365,
+            "y": 503.873015873016,
+            "width": 238.391534391534,
+            "height": 275.233862433862
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00028454_016.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00028454_016.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00028454_016.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0826",
+      "title": "Pneumonia - Learning Case 0826",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 101\u00b0F",
+      "demographics": {
+        "age": 31,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 584.0592592592591,
+            "y": 421.519576719577,
+            "width": 209.134391534392,
+            "height": 295.82222222222197
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00007735_018.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00007735_018.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00007735_018.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0827",
+      "title": "Pneumonia - Learning Case 0827",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 101\u00b0F",
+      "demographics": {
+        "age": 56,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 238.391534391534,
+            "y": 341.33333333333303,
+            "width": 144.118518518519,
+            "height": 232.973544973545
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011831_008.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011831_008.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011831_008.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0828",
+      "title": "Pneumonia - Learning Case 0828",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 54,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 146.285714285714,
+            "y": 575.390476190476,
+            "width": 202.632804232804,
+            "height": 235.140740740741
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00016291_012.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00016291_012.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00016291_012.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0829",
+      "title": "Pneumonia - Learning Case 0829",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 100\u00b0F",
+      "demographics": {
+        "age": 71,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 195.047619047619,
+            "y": 787.775661375661,
+            "width": 211.30158730158695,
+            "height": 132.198941798942
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00019765_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00019765_010.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00019765_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0830",
+      "title": "Pneumonia - Learning Case 0830",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 3 days",
+      "demographics": {
+        "age": 40,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 170.12486772486798,
+            "y": 327.246560846561,
+            "width": 260.063492063492,
+            "height": 510.37460317460295
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00023138_009.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00023138_009.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00023138_009.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0831",
+      "title": "Pneumonia - Learning Case 0831",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 100\u00b0F",
+      "demographics": {
+        "age": 51,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 611.149206349206,
+            "y": 532.046560846561,
+            "width": 219.97037037037003,
+            "height": 307.741798941799
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013272_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013272_005.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013272_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0832",
+      "title": "Pneumonia - Learning Case 0832",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 1 days",
+      "demographics": {
+        "age": 47,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 254.645502645503,
+            "y": 299.073015873016,
+            "width": 171.208465608466,
+            "height": 392.262433862434
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00004344_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00004344_002.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00004344_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0833",
+      "title": "Pneumonia - Learning Case 0833",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 1 days",
+      "demographics": {
+        "age": 62,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 620.901587301587,
+            "y": 660.9947089947091,
+            "width": 332.66455026455003,
+            "height": 195.047619047619
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014197_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014197_010.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014197_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0834",
+      "title": "Pneumonia - Learning Case 0834",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 100\u00b0F",
+      "demographics": {
+        "age": 58,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 252.478306878307,
+            "y": 525.544973544974,
+            "width": 222.137566137566,
+            "height": 368.42328042327995
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00003028_006.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00003028_006.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003028_006.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0835",
+      "title": "Pneumonia - Learning Case 0835",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 2 days",
+      "demographics": {
+        "age": 50,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 209.134391534392,
+            "y": 340.249735449735,
+            "width": 215.63597883597905,
+            "height": 376.00846560846605
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00027837_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00027837_001.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00027837_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0836",
+      "title": "Pneumonia - Learning Case 0836",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 4 days",
+      "demographics": {
+        "age": 43,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 204.8,
+            "y": 562.387301587302,
+            "width": 212.385185185185,
+            "height": 105.108994708995
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00010652_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00010652_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00010652_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0837",
+      "title": "Pneumonia - Learning Case 0837",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 103\u00b0F",
+      "demographics": {
+        "age": 40,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 314.243386243386,
+            "y": 372.757671957672,
+            "width": 182.044444444444,
+            "height": 262.230687830688
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00009863_058.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00009863_058.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00009863_058.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0838",
+      "title": "Pneumonia - Learning Case 0838",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 2 days",
+      "demographics": {
+        "age": 51,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 173.375661375661,
+            "y": 532.046560846561,
+            "width": 218.886772486773,
+            "height": 182.044444444444
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00020845_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00020845_002.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00020845_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0839",
+      "title": "Pneumonia - Learning Case 0839",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 57,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 591.6444444444451,
+            "y": 264.397883597884,
+            "width": 287.15343915343897,
+            "height": 483.284656084656
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00019157_008.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00019157_008.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00019157_008.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0840",
+      "title": "Pneumonia - Learning Case 0840",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 3 days",
+      "demographics": {
+        "age": 36,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 204.8,
+            "y": 556.9693121693119,
+            "width": 198.29841269841305,
+            "height": 152.787301587302
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00009229_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00009229_003.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00009229_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0841",
+      "title": "Pneumonia - Learning Case 0841",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 39,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 626.3195767195771,
+            "y": 418.268783068783,
+            "width": 229.722751322751,
+            "height": 241.642328042328
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00007444_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00007444_003.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00007444_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0842",
+      "title": "Pneumonia - Learning Case 0842",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 102\u00b0F",
+      "demographics": {
+        "age": 40,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 554.802116402116,
+            "y": 578.64126984127,
+            "width": 175.54285714285703,
+            "height": 193.964021164021
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00001933_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00001933_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00001933_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0843",
+      "title": "Pneumonia - Learning Case 0843",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 102\u00b0F",
+      "demographics": {
+        "age": 14,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 187.462433862434,
+            "y": 376.00846560846605,
+            "width": 274.15026455026504,
+            "height": 374.924867724868
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00002711_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00002711_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00002711_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0844",
+      "title": "Pneumonia - Learning Case 0844",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 6 days",
+      "demographics": {
+        "age": 46,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 175.54285714285703,
+            "y": 305.574603174603,
+            "width": 238.391534391534,
+            "height": 405.265608465608
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00009107_006.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00009107_006.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00009107_006.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0845",
+      "title": "Pneumonia - Learning Case 0845",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 5 days",
+      "demographics": {
+        "age": 49,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 223.221164021164,
+            "y": 500.622222222222,
+            "width": 239.475132275132,
+            "height": 123.530158730159
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00027758_004.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00027758_004.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00027758_004.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0846",
+      "title": "Pneumonia - Learning Case 0846",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 101\u00b0F",
+      "demographics": {
+        "age": 15,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 363.005291005291,
+            "y": 418.268783068783,
+            "width": 145.202116402116,
+            "height": 279.568253968254
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013249_033.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013249_033.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013249_033.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0847",
+      "title": "Pneumonia - Learning Case 0847",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 100\u00b0F",
+      "demographics": {
+        "age": 59,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 158.205291005291,
+            "y": 521.210582010582,
+            "width": 169.04126984126998,
+            "height": 124.613756613757
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00023089_004.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00023089_004.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00023089_004.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0848",
+      "title": "Pneumonia - Learning Case 0848",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 46,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 136.533333333333,
+            "y": 568.888888888889,
+            "width": 230.80634920634895,
+            "height": 175.54285714285703
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021860_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021860_003.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021860_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0849",
+      "title": "Pneumonia - Learning Case 0849",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 102\u00b0F",
+      "demographics": {
+        "age": 42,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 589.477248677249,
+            "y": 422.603174603175,
+            "width": 184.21164021163997,
+            "height": 235.140740740741
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013993_013.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013993_013.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013993_013.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0850",
+      "title": "Pneumonia - Learning Case 0850",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 103\u00b0F",
+      "demographics": {
+        "age": 63,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 160.37248677248698,
+            "y": 551.551322751323,
+            "width": 232.973544973545,
+            "height": 228.63915343915295
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00010447_018.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00010447_018.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00010447_018.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0851",
+      "title": "Pneumonia - Learning Case 0851",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 54,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 205.883597883598,
+            "y": 694.5862433862429,
+            "width": 237.307936507937,
+            "height": 215.63597883597905
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00008727_009.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00008727_009.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00008727_009.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0852",
+      "title": "Pneumonia - Learning Case 0852",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 46,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 40.0931216931217,
+            "y": 435.606349206349,
+            "width": 308.825396825397,
+            "height": 366.25608465608497
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00017236_075.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00017236_075.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00017236_075.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0853",
+      "title": "Pneumonia - Learning Case 0853",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 58,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 561.303703703704,
+            "y": 189.62962962963,
+            "width": 230.80634920634895,
+            "height": 437.773544973545
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00023178_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00023178_002.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00023178_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0854",
+      "title": "Pneumonia - Learning Case 0854",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 37,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 600.313227513228,
+            "y": 297.989417989418,
+            "width": 264.397883597884,
+            "height": 297.989417989418
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021818_026.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021818_026.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021818_026.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0855",
+      "title": "Pneumonia - Learning Case 0855",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 7 days",
+      "demographics": {
+        "age": 55,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 227.555555555556,
+            "y": 450.77671957672,
+            "width": 247.060317460317,
+            "height": 208.050793650794
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00016064_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00016064_010.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00016064_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0856",
+      "title": "Pneumonia - Learning Case 0856",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 6 days",
+      "demographics": {
+        "age": 412,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 566.721693121693,
+            "y": 577.5576719576719,
+            "width": 243.809523809524,
+            "height": 252.478306878307
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00005567_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00005567_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00005567_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0857",
+      "title": "Pneumonia - Learning Case 0857",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 7,
+        "sex": "F"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 282.819047619048,
+            "y": 387.928042328042,
+            "width": 185.295238095238,
+            "height": 173.375661375661
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018063_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018063_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018063_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0858",
+      "title": "Pneumonia - Learning Case 0858",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 100\u00b0F",
+      "demographics": {
+        "age": 39,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 697.837037037037,
+            "y": 241.642328042328,
+            "width": 242.725925925926,
+            "height": 456.194708994709
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014177_009.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014177_009.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014177_009.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0859",
+      "title": "Pneumonia - Learning Case 0859",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 38,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 135.449735449735,
+            "y": 237.307936507937,
+            "width": 289.320634920635,
+            "height": 363.005291005291
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00004808_090.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00004808_090.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00004808_090.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0860",
+      "title": "Pneumonia - Learning Case 0860",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 5 days",
+      "demographics": {
+        "age": 66,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 617.650793650794,
+            "y": 729.2613756613761,
+            "width": 177.71005291005298,
+            "height": 253.56190476190497
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014022_054.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014022_054.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014022_054.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0861",
+      "title": "Pneumonia - Learning Case 0861",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 101\u00b0F",
+      "demographics": {
+        "age": 33,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 568.888888888889,
+            "y": 260.063492063492,
+            "width": 266.565079365079,
+            "height": 423.686772486772
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012834_113.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012834_113.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012834_113.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0862",
+      "title": "Pneumonia - Learning Case 0862",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 103\u00b0F",
+      "demographics": {
+        "age": 31,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 579.724867724868,
+            "y": 209.134391534392,
+            "width": 242.725925925926,
+            "height": 379.259259259259
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012141_013.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012141_013.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012141_013.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0863",
+      "title": "Pneumonia - Learning Case 0863",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Community-acquired pneumonia symptoms, fever 101\u00b0F",
+      "demographics": {
+        "age": 51,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 553.718518518519,
+            "y": 328.330158730159,
+            "width": 312.07619047619096,
+            "height": 416.101587301587
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00022572_073.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00022572_073.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00022572_073.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0864",
+      "title": "Pneumonia - Learning Case 0864",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 55,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 310.992592592593,
+            "y": 242.725925925926,
+            "width": 221.053968253968,
+            "height": 360.83809523809504
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00003391_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00003391_001.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003391_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0865",
+      "title": "Pneumonia - Learning Case 0865",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Cough with purulent sputum, pleuritic chest pain",
+      "demographics": {
+        "age": 60,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 212.385185185185,
+            "y": 617.650793650794,
+            "width": 260.063492063492,
+            "height": 169.04126984126998
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00009507_004.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00009507_004.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00009507_004.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-pneumonia-0866",
+      "title": "Pneumonia - Learning Case 0866",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever, productive cough, and dyspnea for 2 days",
+      "demographics": {
+        "age": 59,
+        "sex": "M"
+      },
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "Pneumonia",
+          "roi": {
+            "x": 469.197883597884,
+            "y": 465.9470899470901,
+            "width": 374.924867724868,
+            "height": 373.84126984127
+          }
+        }
+      ],
+      "differential": [
+        "Atelectasis",
+        "Pulmonary edema",
+        "Lung cancer"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00029469_009.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00029469_009.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00029469_009.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    }
+  ]
+}

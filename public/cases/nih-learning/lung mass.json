@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "name": "RADSIM Lung Mass Learning Cases",
+    "version": "1.0.0",
+    "description": "Learning cases for lung mass",
+    "lastUpdated": "2026-01-07"
+  },
+  "cases": [
+    {
+      "id": "cxr-017",
+      "title": "Mass - Case 017",
+      "description": "Chest X-ray demonstrating lung mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Smoker with weight loss and hemoptysis",
+      "diagnosis": "Lung mass",
+      "findings": [
+        {
+          "name": "mass_nodule",
+          "description": "Spiculated mass in right upper lobe measuring approximately 4 cm",
+          "location": "Right upper lobe",
+          "roi": {
+            "x": 300,
+            "y": 300,
+            "width": 200,
+            "height": 200
+          }
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00003423_010.png",
+        "thumbnailPath": "cases/thumbnails/00003423_010.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003423_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 57
+      }
+    }
+  ]
+}

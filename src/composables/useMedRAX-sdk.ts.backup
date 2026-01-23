@@ -1,0 +1,212 @@
+/**
+ * Composable for interacting with MedRAX2 AI backend using Gradio Client SDK
+ */
+
+import { ref } from 'vue';
+
+// Configuration - Use the HF Space format for authentication
+const SPACE_URL = 'samwell/medrax2';  // HF format: username/spacename
+
+// State
+const isLoading = ref(false);
+const error = ref<string | null>(null);
+const connected = ref(false);
+
+// Types
+export interface MedRAXMessage {
+  text: string;
+  files?: File[];
+}
+
+export type MedRAXMode = 'Assistant Mode' | 'Tutor Mode';
+
+export interface MedRAXResponse {
+  message: string;
+  chatHistory?: any[];
+  visualization?: string | null;
+}
+
+/**
+ * Get HF token from environment
+ */
+const getHfToken = (): string | undefined => {
+  const token = import.meta.env.VITE_HF_TOKEN;
+  console.log('[useMedRAX] Token available:', !!token);
+  return token;
+};
+
+
+/**
+ * Send message using Gradio Client SDK with proper file handling
+ */
+const sendMessage = async (
+  message: MedRAXMessage,
+  chatHistory: any[] = [],
+  mode: MedRAXMode = 'Tutor Mode'
+): Promise<MedRAXResponse> => {
+  isLoading.value = true;
+  error.value = null;
+
+  try {
+    const token = getHfToken();
+    if (!token) {
+      throw new Error('No HF token set. Please configure your token first.');
+    }
+
+    console.log('[useMedRAX] Sending message:', message.text);
+    console.log('[useMedRAX] Files count:', message.files?.length || 0);
+    console.log('[useMedRAX] Chat history length:', chatHistory.length);
+    console.log('[useMedRAX] Mode:', mode);
+
+    // Dynamically import Gradio client
+    const { Client } = await import('https://cdn.jsdelivr.net/npm/@gradio/client/dist/index.min.js');
+
+    console.log('[useMedRAX] Connecting to Gradio client...');
+    console.log('[useMedRAX] Using token:', token ? 'Yes (length: ' + token.length + ')' : 'No');
+
+    // Try connecting without token first to see if space is public
+    let client;
+    try {
+      // Try without token (public space)
+      console.log('[useMedRAX] Attempting connection as public space...');
+      client = await Client.connect(SPACE_URL);
+      console.log('[useMedRAX] Connected as public space');
+    } catch (publicError) {
+      // If fails, try with token (private space)
+      console.log('[useMedRAX] Public connection failed, trying with token...');
+      console.log('[useMedRAX] Error was:', publicError);
+
+      client = await Client.connect(
+        SPACE_URL,
+        {
+          hf_token: token  // Pass token for authentication
+        }
+      );
+      console.log('[useMedRAX] Connected as private space with token');
+    }
+
+    console.log('[useMedRAX] Connected to Gradio client');
+
+    // Build the message parameter
+    const messageParam: any = { text: message.text };
+
+    // If there are files, handle them properly for Gradio
+    if (message.files && message.files.length > 0) {
+      console.log('[useMedRAX] Processing', message.files.length, 'file(s)...');
+
+      // The Gradio Client SDK should handle File objects directly
+      // It will automatically upload them and convert to FileData format
+      console.log('[useMedRAX] Passing File objects directly to Gradio SDK for automatic upload...');
+
+      // Just pass the File objects directly - the SDK handles the upload
+      messageParam.files = message.files;
+
+      // Log file details for debugging
+      message.files.forEach((file, index) => {
+        console.log(`[useMedRAX] File ${index}:`, {
+          name: file.name,
+          size: file.size,
+          type: file.type,
+          isFile: file instanceof File,
+          isBlob: file instanceof Blob,
+        });
+      });
+
+      console.log('[useMedRAX] Files array set, count:', messageParam.files.length);
+    }
+
+    console.log('[useMedRAX] Calling predict with parameters...');
+    console.log('[useMedRAX] - message:', messageParam);
+    console.log('[useMedRAX] - chatHistory:', chatHistory);
+    console.log('[useMedRAX] - mode:', mode);
+
+    // The API expects exactly 4 parameters including state
+    console.log('[useMedRAX] Calling with 4 positional args: [messageParam, chatHistory, mode, null]');
+
+    // Add timeout
+    const timeout = new Promise((_, reject) => {
+      setTimeout(() => reject(new Error('Request timeout after 60 seconds')), 60000);
+    });
+
+    // Use positional arguments as per Gradio API - 4 params needed!
+    const prediction = client.predict('/respond', [
+      messageParam,  // message
+      chatHistory,   // chat_history
+      mode,          // mode
+      null           // state (current_image_state)
+    ]);
+
+    console.log('[useMedRAX] Waiting for response...');
+    const result = await Promise.race([prediction, timeout]);
+
+    console.log('[useMedRAX] API response received:', result);
+    console.log('[useMedRAX] Response type:', typeof result);
+    console.log('[useMedRAX] Response data:', result.data);
+
+    // Extract response data
+    const [messageOutput, chatHistoryOutput, visualizationOutput] = result.data || [];
+
+    // Extract AI message from chat history
+    let aiMessage = '';
+    if (chatHistoryOutput && chatHistoryOutput.length > 0) {
+      const lastMessage = chatHistoryOutput[chatHistoryOutput.length - 1];
+
+      if (lastMessage.role === 'assistant' && lastMessage.content) {
+        const firstContent = lastMessage.content[0];
+        if (firstContent && firstContent.type === 'text') {
+          aiMessage = firstContent.text;
+        }
+      }
+    }
+
+    connected.value = true;
+
+    return {
+      message: aiMessage || extractMessageText(messageOutput),
+      chatHistory: chatHistoryOutput,
+      visualization: visualizationOutput,
+    };
+  } catch (err) {
+    console.error('MedRAX2 error:', err);
+    console.error('MedRAX2 error details:', JSON.stringify(err, null, 2));
+
+    const errorMessage = err instanceof Error ? err.message : 'Unknown error';
+    error.value = errorMessage;
+    connected.value = false;
+    throw err;
+  } finally {
+    isLoading.value = false;
+  }
+};
+
+/**
+ * Extract text from message output
+ */
+const extractMessageText = (messageOutput: any): string => {
+  if (typeof messageOutput === 'string') {
+    return messageOutput;
+  }
+
+  if (messageOutput?.text) {
+    return messageOutput.text;
+  }
+
+  if (messageOutput?.content && Array.isArray(messageOutput.content)) {
+    const textContent = messageOutput.content.find((c: any) => c.type === 'text');
+    return textContent?.text || '';
+  }
+
+  return '';
+};
+
+/**
+ * Export composable
+ */
+export function useMedRAX() {
+  return {
+    sendMessage,
+    isLoading,
+    error,
+    connected,
+  };
+}

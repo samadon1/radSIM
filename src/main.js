@@ -15,7 +15,8 @@ import { setPipelinesBaseUrl, setPipelineWorkerUrl } from 'itk-wasm';
 import { setPipelinesBaseUrl as imageIoSetPipelinesBaseUrl } from '@itk-wasm/image-io';
 import itkConfig from '@/src/io/itk/itkConfig';
 
-import App from './components/App.vue';
+import Root from './components/Root.vue';
+import router from './router';
 import vuetify from './plugins/vuetify';
 import { FILE_READERS } from './io';
 import { registerAllReaders } from './io/readers';
@@ -48,11 +49,12 @@ const pinia = createPinia();
 pinia.use(CorePiniaProviderPlugin({}));
 pinia.use(StoreRegistry);
 
-const app = createApp(App);
+const app = createApp(Root);
 
 initErrorReporting(app);
 
 app.use(pinia);
 app.use(VueToast);
 app.use(vuetify);
+app.use(router);
 app.mount('#app');

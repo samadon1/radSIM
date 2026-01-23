@@ -29,45 +29,103 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="overflow-y-auto mx-2 mt-1 fill-height">
+  <div class="rendering-container fill-height">
     <template v-if="hasCurrentImage">
-      <v-skeleton-loader v-if="isImageLoading" type="image">
+      <v-skeleton-loader v-if="isImageLoading" type="image" class="skeleton-loader">
       </v-skeleton-loader>
       <volume-rendering v-else />
-      <v-expansion-panels v-model="panels" multiple variant="accordion">
-        <v-expansion-panel value="preset">
-          <v-expansion-panel-title>
-            <v-icon class="flex-grow-0 mr-4">mdi-palette</v-icon>
-            Color Presets
+      <v-expansion-panels v-model="panels" multiple variant="accordion" class="enterprise-panels">
+        <v-expansion-panel value="preset" class="enterprise-panel">
+          <v-expansion-panel-title class="enterprise-panel-title">
+            <span class="panel-title-text">COLOR PRESETS</span>
           </v-expansion-panel-title>
-          <v-expansion-panel-text>
+          <v-expansion-panel-text class="enterprise-panel-content">
             <volume-presets />
           </v-expansion-panel-text>
         </v-expansion-panel>
 
-        <v-expansion-panel value="properties">
-          <v-expansion-panel-title>
-            <v-icon class="flex-grow-0 mr-4">mdi-cube-scan</v-icon>
-            Cinematic Rendering
+        <v-expansion-panel value="properties" class="enterprise-panel">
+          <v-expansion-panel-title class="enterprise-panel-title">
+            <span class="panel-title-text">CINEMATIC RENDERING</span>
           </v-expansion-panel-title>
-          <v-expansion-panel-text>
+          <v-expansion-panel-text class="enterprise-panel-content">
             <volume-properties />
           </v-expansion-panel-text>
         </v-expansion-panel>
 
-        <v-expansion-panel v-if="hasLayers" value="layers">
-          <v-expansion-panel-title>
-            <v-icon class="flex-grow-0 mr-4">mdi-layers</v-icon>
-            Layers
+        <v-expansion-panel v-if="hasLayers" value="layers" class="enterprise-panel">
+          <v-expansion-panel-title class="enterprise-panel-title">
+            <span class="panel-title-text">LAYERS</span>
           </v-expansion-panel-title>
-          <v-expansion-panel-text>
+          <v-expansion-panel-text class="enterprise-panel-content">
             <layer-list />
           </v-expansion-panel-text>
         </v-expansion-panel>
       </v-expansion-panels>
     </template>
     <template v-else>
-      <div class="text-center pt-12 text-subtitle-1">No image selected</div>
+      <div class="no-image-text">NO IMAGE SELECTED</div>
     </template>
   </div>
 </template>
+
+<style scoped>
+.rendering-container {
+  padding: 12px;
+  background: #0a0a0a;
+}
+
+/* Enterprise Panels */
+.enterprise-panels {
+  background: #0a0a0a;
+}
+
+:deep(.enterprise-panel) {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 8px;
+}
+
+:deep(.enterprise-panel-title) {
+  min-height: 42px;
+  padding: 0 16px;
+  background: rgba(255, 255, 255, 0.01);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.panel-title-text {
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+:deep(.enterprise-panel-content) {
+  padding: 16px;
+  background: #0a0a0a;
+}
+
+/* Expansion panel icon styling */
+:deep(.v-expansion-panel-title__icon) {
+  opacity: 0.4;
+}
+
+:deep(.v-expansion-panel-title:hover .v-expansion-panel-title__icon) {
+  opacity: 0.6;
+}
+
+/* No image text */
+.no-image-text {
+  text-align: center;
+  padding-top: 48px;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* Skeleton loader */
+.skeleton-loader {
+  margin: 12px 0;
+}
+</style>

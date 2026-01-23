@@ -1,0 +1,898 @@
+{
+  "metadata": {
+    "name": "RADSIM Chest X-Ray Case Library",
+    "version": "1.0.0",
+    "description": "Curated collection of educational chest X-ray cases from NIH dataset",
+    "lastUpdated": "2025-12-23"
+  },
+  "cases": [
+    {
+      "id": "cxr-001",
+      "title": "Normal chest radiograph - Case 001",
+      "description": "Chest X-ray demonstrating normal chest radiograph",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "To be added during manual curation",
+      "diagnosis": "Normal chest radiograph",
+      "findings": [],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00001529_003.png",
+        "thumbnailPath": "cases/thumbnails/00001529_003.png"
+      },
+      "tags": [
+        "normal",
+        "chest",
+        "radiograph",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00001529_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 52
+      }
+    },
+    {
+      "id": "cxr-002",
+      "title": "Normal chest radiograph - Case 002",
+      "description": "Chest X-ray demonstrating normal chest radiograph",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "To be added during manual curation",
+      "diagnosis": "Normal chest radiograph",
+      "findings": [],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00002344_004.png",
+        "thumbnailPath": "cases/thumbnails/00002344_004.png"
+      },
+      "tags": [
+        "normal",
+        "chest",
+        "radiograph",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00002344_004.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 20
+      }
+    },
+    {
+      "id": "cxr-003",
+      "title": "Normal chest radiograph - Case 003",
+      "description": "Chest X-ray demonstrating normal chest radiograph",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "To be added during manual curation",
+      "diagnosis": "Normal chest radiograph",
+      "findings": [],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00003659_015.png",
+        "thumbnailPath": "cases/thumbnails/00003659_015.png"
+      },
+      "tags": [
+        "normal",
+        "chest",
+        "radiograph",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003659_015.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 56
+      }
+    },
+    {
+      "id": "cxr-004",
+      "title": "Pneumonia - Case 004",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Patient with cough and fever for 3 days",
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "consolidation",
+          "description": "Consolidation in the left lower lobe consistent with pneumonia",
+          "location": "Left lower lobe"
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00001529_005.png",
+        "thumbnailPath": "cases/thumbnails/00001529_005.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00001529_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 54
+      }
+    },
+    {
+      "id": "cxr-005",
+      "title": "Pneumonia - Case 005",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Productive cough and pleuritic chest pain",
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "consolidation",
+          "description": "Right middle lobe consolidation with air bronchograms",
+          "location": "Right middle lobe"
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00003092_000.png",
+        "thumbnailPath": "cases/thumbnails/00003092_000.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003092_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 53
+      }
+    },
+    {
+      "id": "cxr-006",
+      "title": "Pneumonia - Case 006",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Patient presents with fever, cough, and shortness of breath",
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "consolidation",
+          "description": "Consolidation in the right lower lobe consistent with pneumonia",
+          "location": "Right lower lobe"
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00003510_010.png",
+        "thumbnailPath": "cases/thumbnails/00003510_010.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003510_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 37
+      }
+    },
+    {
+      "id": "cxr-007",
+      "title": "Pneumonia - Case 007",
+      "description": "Chest X-ray demonstrating pneumonia with atelectasis",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Fever and dyspnea in hospitalized patient",
+      "diagnosis": "Pneumonia with atelectasis",
+      "findings": [
+        {
+          "name": "consolidation",
+          "description": "Multifocal consolidation in bilateral lower lobes",
+          "location": "Bilateral lower lobes"
+        },
+        {
+          "name": "atelectasis",
+          "description": "Subsegmental atelectasis in left base",
+          "location": "Left lung base"
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00001018_005.png",
+        "thumbnailPath": "cases/thumbnails/00001018_005.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00001018_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 59
+      }
+    },
+    {
+      "id": "cxr-008",
+      "title": "Pneumonia - Case 008",
+      "description": "Chest X-ray demonstrating pneumonia",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Young patient with acute onset respiratory symptoms",
+      "diagnosis": "Pneumonia",
+      "findings": [
+        {
+          "name": "consolidation",
+          "description": "Dense consolidation in right upper lobe",
+          "location": "Right upper lobe"
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00003248_007.png",
+        "thumbnailPath": "cases/thumbnails/00003248_007.png"
+      },
+      "tags": [
+        "pneumonia",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003248_007.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 18
+      }
+    },
+    {
+      "id": "cxr-009",
+      "title": "Cardiomegaly - Case 009",
+      "description": "Chest X-ray demonstrating cardiomegaly",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Patient with known hypertension and dyspnea on exertion",
+      "diagnosis": "Cardiomegaly",
+      "findings": [
+        {
+          "name": "cardiomegaly",
+          "description": "Enlarged cardiac silhouette with cardiothoracic ratio of 0.55",
+          "location": "Heart"
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00003283_000.png",
+        "thumbnailPath": "cases/thumbnails/00003283_000.png"
+      },
+      "tags": [
+        "cardiomegaly",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003283_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 58
+      }
+    },
+    {
+      "id": "cxr-010",
+      "title": "Cardiomegaly with Pulmonary Edema - Case 010",
+      "description": "Chest X-ray demonstrating cardiomegaly with signs of heart failure",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Patient with history of heart failure presenting with dyspnea",
+      "diagnosis": "Cardiomegaly with pulmonary edema",
+      "findings": [
+        {
+          "name": "cardiomegaly",
+          "description": "Enlarged cardiac silhouette with cardiothoracic ratio > 0.5",
+          "location": "Heart"
+        },
+        {
+          "name": "pulmonary_edema",
+          "description": "Bilateral perihilar haziness and vascular congestion",
+          "location": "Bilateral lung fields"
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00002742_000.png",
+        "thumbnailPath": "cases/thumbnails/00002742_000.png"
+      },
+      "tags": [
+        "cardiomegaly",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00002742_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 36
+      }
+    },
+    {
+      "id": "cxr-011",
+      "title": "Cardiomegaly - Case 011",
+      "description": "Chest X-ray demonstrating cardiomegaly",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Young patient with congenital heart disease",
+      "diagnosis": "Cardiomegaly",
+      "findings": [
+        {
+          "name": "cardiomegaly",
+          "description": "Moderate cardiomegaly with left ventricular predominance",
+          "location": "Heart"
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00003163_001.png",
+        "thumbnailPath": "cases/thumbnails/00003163_001.png"
+      },
+      "tags": [
+        "cardiomegaly",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003163_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 19
+      }
+    },
+    {
+      "id": "cxr-012",
+      "title": "Effusion - Case 012",
+      "description": "Chest X-ray demonstrating pleural effusion",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Patient with shortness of breath and decreased breath sounds on right",
+      "diagnosis": "Pleural effusion",
+      "findings": [
+        {
+          "name": "effusion_right",
+          "description": "Moderate right pleural effusion with meniscus sign",
+          "location": "Right hemithorax"
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00000180_002.png",
+        "thumbnailPath": "cases/thumbnails/00000180_002.png"
+      },
+      "tags": [
+        "effusion",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00000180_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 64
+      }
+    },
+    {
+      "id": "cxr-013",
+      "title": "Effusion - Case 013",
+      "description": "Chest X-ray demonstrating bilateral pleural effusions",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Elderly patient with congestive heart failure",
+      "diagnosis": "Bilateral pleural effusions",
+      "findings": [
+        {
+          "name": "effusion_left",
+          "description": "Small left pleural effusion with blunting of costophrenic angle",
+          "location": "Left hemithorax"
+        },
+        {
+          "name": "effusion_right",
+          "description": "Small right pleural effusion",
+          "location": "Right hemithorax"
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00000372_012.png",
+        "thumbnailPath": "cases/thumbnails/00000372_012.png"
+      },
+      "tags": [
+        "effusion",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00000372_012.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 80
+      }
+    },
+    {
+      "id": "cxr-014",
+      "title": "Effusion - Case 014",
+      "description": "Chest X-ray demonstrating large pleural effusion",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "beginner",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Patient with malignancy and progressive dyspnea",
+      "diagnosis": "Large pleural effusion",
+      "findings": [
+        {
+          "name": "effusion_left",
+          "description": "Large left pleural effusion causing mediastinal shift",
+          "location": "Left hemithorax"
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00000116_009.png",
+        "thumbnailPath": "cases/thumbnails/00000116_009.png"
+      },
+      "tags": [
+        "effusion",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00000116_009.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 74
+      }
+    },
+    {
+      "id": "cxr-015",
+      "title": "Infiltration - Case 015",
+      "description": "Chest X-ray demonstrating pulmonary infiltrates",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Immunocompromised patient with fever",
+      "diagnosis": "Bilateral infiltrates",
+      "findings": [
+        {
+          "name": "consolidation",
+          "description": "Patchy bilateral infiltrates consistent with opportunistic infection",
+          "location": "Bilateral lung fields"
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00002505_009.png",
+        "thumbnailPath": "cases/thumbnails/00002505_009.png"
+      },
+      "tags": [
+        "infiltration",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00002505_009.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 28
+      }
+    },
+    {
+      "id": "cxr-016",
+      "title": "Infiltration - Case 016",
+      "description": "Chest X-ray demonstrating interstitial infiltrates",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Patient with chronic lung disease",
+      "diagnosis": "Interstitial infiltrates with fibrosis",
+      "findings": [
+        {
+          "name": "fibrosis",
+          "description": "Reticular interstitial pattern suggestive of pulmonary fibrosis",
+          "location": "Bilateral lower lobes"
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00003028_038.png",
+        "thumbnailPath": "cases/thumbnails/00003028_038.png"
+      },
+      "tags": [
+        "infiltration",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003028_038.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 57
+      }
+    },
+    {
+      "id": "cxr-017",
+      "title": "Mass - Case 017",
+      "description": "Chest X-ray demonstrating lung mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Smoker with weight loss and hemoptysis",
+      "diagnosis": "Lung mass",
+      "findings": [
+        {
+          "name": "mass_nodule",
+          "description": "Spiculated mass in right upper lobe measuring approximately 4 cm",
+          "location": "Right upper lobe"
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00003423_010.png",
+        "thumbnailPath": "cases/thumbnails/00003423_010.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003423_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 57
+      }
+    },
+    {
+      "id": "cxr-018",
+      "title": "Mass - Case 018",
+      "description": "Chest X-ray demonstrating mediastinal mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Elderly patient with dysphagia and cough",
+      "diagnosis": "Mediastinal mass",
+      "findings": [
+        {
+          "name": "widened",
+          "description": "Widened mediastinum with soft tissue mass",
+          "location": "Mediastinum"
+        },
+        {
+          "name": "mass_nodule",
+          "description": "Large central mass causing tracheal deviation",
+          "location": "Central mediastinum"
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00003221_007.png",
+        "thumbnailPath": "cases/thumbnails/00003221_007.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003221_007.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 70
+      }
+    },
+    {
+      "id": "cxr-019",
+      "title": "Nodule - Case 019",
+      "description": "Chest X-ray demonstrating solitary pulmonary nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "diagnosis": "Solitary pulmonary nodule",
+      "findings": [
+        {
+          "name": "mass_nodule",
+          "description": "Well-circumscribed 1.5 cm nodule in left upper lobe",
+          "location": "Left upper lobe"
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00002194_000.png",
+        "thumbnailPath": "cases/thumbnails/00002194_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00002194_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 66
+      }
+    },
+    {
+      "id": "cxr-020",
+      "title": "Nodule - Case 020",
+      "description": "Chest X-ray demonstrating multiple nodules",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Patient with history of malignancy for metastatic workup",
+      "diagnosis": "Multiple pulmonary nodules",
+      "findings": [
+        {
+          "name": "mass_nodule",
+          "description": "Multiple bilateral pulmonary nodules of varying sizes",
+          "location": "Bilateral lung fields"
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00001738_003.png",
+        "thumbnailPath": "cases/thumbnails/00001738_003.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00001738_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 45
+      }
+    }
+  ]
+}

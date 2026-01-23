@@ -110,7 +110,7 @@ export const DefaultViewSpec = InitViewSpecs[InitViewIDs.Axial];
 /**
  * The default layout.
  */
-export const DefaultLayoutName = 'Quad View';
+export const DefaultLayoutName = 'Axial Only';
 
 /**
  * Defines the default layouts.
@@ -503,3 +503,75 @@ export const CATEGORICAL_COLORS = [
   [89, 38, 119],
   [105, 47, 61],
 ] as const;
+
+// ===== RADSIM Educational Configuration =====
+
+// Skill levels for user proficiency
+export const SKILL_LEVELS = {
+  beginner: {
+    label: 'Beginner',
+    description: 'Medical Student - New to radiology',
+    icon: 'mdi-account-school',
+    color: 'success',
+  },
+  intermediate: {
+    label: 'Intermediate',
+    description: 'Resident - Building expertise',
+    icon: 'mdi-account-tie',
+    color: 'warning',
+  },
+  advanced: {
+    label: 'Advanced',
+    description: 'Fellow/Attending - Expert level',
+    icon: 'mdi-account-star',
+    color: 'error',
+  },
+} as const;
+
+// Educational modes that change system behavior
+export const EDUCATIONAL_MODES = {
+  tutorial: {
+    label: 'Tutorial',
+    description: 'Guided learning with step-by-step instructions',
+    icon: 'mdi-human-male-board',
+    hintsEnabled: true,
+    hintsAutomatic: true,
+    validationRealtime: true,
+    tutorActive: true,
+    allowRetry: true,
+  },
+  practice: {
+    label: 'Practice',
+    description: 'Self-paced exploration with on-demand help',
+    icon: 'mdi-dumbbell',
+    hintsEnabled: true,
+    hintsAutomatic: false,
+    validationRealtime: false,
+    tutorActive: true,
+    allowRetry: true,
+  },
+  assessment: {
+    label: 'Assessment',
+    description: 'Formal testing without assistance',
+    icon: 'mdi-certificate',
+    hintsEnabled: false,
+    hintsAutomatic: false,
+    validationRealtime: false,
+    tutorActive: false,
+    allowRetry: false,
+  },
+} as const;
+
+// Default educational settings
+export const DEFAULT_EDUCATION_SETTINGS = {
+  defaultSkillLevel: 'beginner',
+  defaultMode: 'tutorial',
+  sessionTimeout: 3600, // 1 hour in seconds
+  minInteractionTime: 60, // Minimum time before assessment submission
+  hintDelay: {
+    tutorial: 5000, // 5 seconds
+    practice: 10000, // 10 seconds
+  },
+  assessmentTimeLimit: 1800, // 30 minutes
+  passingScore: 70, // 70% to pass assessment
+} as const;

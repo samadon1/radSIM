@@ -1,0 +1,71 @@
+{
+  "metadata": {
+    "name": "RADSIM Mediastinal Mass Learning Cases",
+    "version": "1.0.0",
+    "description": "Learning cases for mediastinal mass",
+    "lastUpdated": "2026-01-07"
+  },
+  "cases": [
+    {
+      "id": "cxr-018",
+      "title": "Mass - Case 018",
+      "description": "Chest X-ray demonstrating mediastinal mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Elderly patient with dysphagia and cough",
+      "diagnosis": "Mediastinal mass",
+      "findings": [
+        {
+          "name": "widened",
+          "description": "Widened mediastinum with soft tissue mass",
+          "location": "Mediastinum",
+          "roi": {
+            "x": 300,
+            "y": 300,
+            "width": 200,
+            "height": 200
+          }
+        },
+        {
+          "name": "mass_nodule",
+          "description": "Large central mass causing tracheal deviation",
+          "location": "Central mediastinum",
+          "roi": {
+            "x": 300,
+            "y": 300,
+            "width": 200,
+            "height": 200
+          }
+        }
+      ],
+      "differential": [],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/images/00003221_007.png",
+        "thumbnailPath": "cases/thumbnails/00003221_007.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003221_007.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2025-12-23",
+        "curator": "RADSIM Team",
+        "version": "1.0"
+      },
+      "demographics": {
+        "age": 70
+      }
+    }
+  ]
+}

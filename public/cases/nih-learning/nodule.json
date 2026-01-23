@@ -1,0 +1,4355 @@
+{
+  "metadata": {
+    "name": "RADSIM Nodule Learning Cases",
+    "version": "1.0.0",
+    "description": "NIH chest X-ray cases with Nodule",
+    "lastUpdated": "2026-01-08"
+  },
+  "cases": [
+    {
+      "id": "nih-nodule-0668",
+      "title": "Nodule - Learning Case 0668",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 59,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 667.496296296296,
+            "y": 276.31746031746,
+            "width": 122.446560846561,
+            "height": 150.620105820106
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00001688_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00001688_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00001688_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0669",
+      "title": "Nodule - Learning Case 0669",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 55,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 899.386243386243,
+            "y": 690.2518518518519,
+            "width": 53.0962962962963,
+            "height": 58.514285714285705
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00004547_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00004547_003.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00004547_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0670",
+      "title": "Nodule - Learning Case 0670",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 64,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 741.180952380952,
+            "y": 687.001058201058,
+            "width": 52.012698412698406,
+            "height": 48.761904761904795
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00023078_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00023078_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00023078_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0671",
+      "title": "Nodule - Learning Case 0671",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 72,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 351.08571428571406,
+            "y": 747.68253968254,
+            "width": 35.7587301587302,
+            "height": 33.5915343915344
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00023068_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00023068_003.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00023068_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0672",
+      "title": "Nodule - Learning Case 0672",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 67,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 118.112169312169,
+            "y": 483.284656084656,
+            "width": 85.6042328042328,
+            "height": 101.858201058201
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013911_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013911_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013911_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0673",
+      "title": "Nodule - Learning Case 0673",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 57,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 739.013756613757,
+            "y": 391.178835978836,
+            "width": 52.012698412698406,
+            "height": 61.7650793650794
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00027927_009.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00027927_009.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00027927_009.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0674",
+      "title": "Nodule - Learning Case 0674",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 55,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 696.753439153439,
+            "y": 319.661375661376,
+            "width": 54.1798941798942,
+            "height": 57.4306878306878
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014116_009.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014116_009.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014116_009.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0675",
+      "title": "Nodule - Learning Case 0675",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 59,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 350.00211640211603,
+            "y": 458.361904761905,
+            "width": 92.1058201058201,
+            "height": 140.867724867725
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00019058_004.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00019058_004.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00019058_004.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0676",
+      "title": "Nodule - Learning Case 0676",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 63,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 640.406349206349,
+            "y": 692.419047619048,
+            "width": 87.77142857142859,
+            "height": 79.1026455026455
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00016487_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00016487_002.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00016487_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0677",
+      "title": "Nodule - Learning Case 0677",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 66,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 68.2666666666667,
+            "y": 649.075132275132,
+            "width": 48.761904761904795,
+            "height": 44.4275132275132
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00015794_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00015794_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00015794_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0678",
+      "title": "Nodule - Learning Case 0678",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 34,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 655.57671957672,
+            "y": 256.81269841269796,
+            "width": 82.35343915343921,
+            "height": 80.1862433862434
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012374_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012374_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012374_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0679",
+      "title": "Nodule - Learning Case 0679",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 63,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 281.73544973545,
+            "y": 305.574603174603,
+            "width": 102.941798941799,
+            "height": 127.86455026455
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00003948_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00003948_001.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003948_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0680",
+      "title": "Nodule - Learning Case 0680",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 64,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 190.713227513228,
+            "y": 607.898412698413,
+            "width": 63.9322751322751,
+            "height": 69.3502645502646
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018366_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018366_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018366_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0681",
+      "title": "Nodule - Learning Case 0681",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 72,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 237.307936507937,
+            "y": 332.66455026455003,
+            "width": 52.012698412698406,
+            "height": 48.761904761904795
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014778_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014778_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014778_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0682",
+      "title": "Nodule - Learning Case 0682",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 40,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 199.382010582011,
+            "y": 728.177777777778,
+            "width": 102.941798941799,
+            "height": 115.944973544974
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026221_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026221_001.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026221_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0683",
+      "title": "Nodule - Learning Case 0683",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 55,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 267.64867724867696,
+            "y": 293.655026455026,
+            "width": 79.1026455026455,
+            "height": 78.0190476190476
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00015792_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00015792_005.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00015792_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0684",
+      "title": "Nodule - Learning Case 0684",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 60,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 623.0687830687831,
+            "y": 182.044444444444,
+            "width": 66.0994708994709,
+            "height": 58.514285714285705
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00030394_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00030394_001.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00030394_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0685",
+      "title": "Nodule - Learning Case 0685",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 73,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 614.4,
+            "y": 808.364021164021,
+            "width": 74.768253968254,
+            "height": 75.8518518518519
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00001555_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00001555_002.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00001555_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0686",
+      "title": "Nodule - Learning Case 0686",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 42,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 763.9365079365081,
+            "y": 389.01164021164,
+            "width": 74.768253968254,
+            "height": 86.6878306878307
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00028876_060.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00028876_060.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00028876_060.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0687",
+      "title": "Nodule - Learning Case 0687",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 60,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 819.2,
+            "y": 345.667724867725,
+            "width": 52.012698412698406,
+            "height": 57.4306878306878
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014280_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014280_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014280_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0688",
+      "title": "Nodule - Learning Case 0688",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 52,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 770.4380952380949,
+            "y": 472.448677248677,
+            "width": 45.5111111111111,
+            "height": 46.594708994708995
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00006736_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00006736_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00006736_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0689",
+      "title": "Nodule - Learning Case 0689",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 43,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 241.642328042328,
+            "y": 642.573544973545,
+            "width": 66.0994708994709,
+            "height": 63.9322751322751
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00022977_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00022977_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00022977_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0690",
+      "title": "Nodule - Learning Case 0690",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 48,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 825.7015873015871,
+            "y": 309.908994708995,
+            "width": 72.60105820105821,
+            "height": 115.944973544974
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018984_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018984_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018984_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0691",
+      "title": "Nodule - Learning Case 0691",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 39,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 668.579894179894,
+            "y": 652.325925925926,
+            "width": 121.362962962963,
+            "height": 79.1026455026455
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026319_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026319_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026319_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0692",
+      "title": "Nodule - Learning Case 0692",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 49,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 711.92380952381,
+            "y": 357.587301587302,
+            "width": 58.514285714285705,
+            "height": 47.67830687830689
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00008386_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00008386_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00008386_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0693",
+      "title": "Nodule - Learning Case 0693",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 57,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 175.54285714285703,
+            "y": 445.35873015873,
+            "width": 74.768253968254,
+            "height": 66.0994708994709
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00006751_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00006751_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00006751_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0694",
+      "title": "Nodule - Learning Case 0694",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 49,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 626.3195767195771,
+            "y": 385.760846560847,
+            "width": 32.5079365079365,
+            "height": 26.006349206349203
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00001836_041.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00001836_041.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00001836_041.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0695",
+      "title": "Nodule - Learning Case 0695",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 52,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 159.288888888889,
+            "y": 437.773544973545,
+            "width": 100.774603174603,
+            "height": 68.2666666666667
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00020274_021.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00020274_021.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00020274_021.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0696",
+      "title": "Nodule - Learning Case 0696",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 40,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 552.6349206349211,
+            "y": 190.713227513228,
+            "width": 68.2666666666667,
+            "height": 72.60105820105821
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026983_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026983_001.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026983_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0697",
+      "title": "Nodule - Learning Case 0697",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 29,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 701.087830687831,
+            "y": 482.20105820105795,
+            "width": 80.1862433862434,
+            "height": 74.768253968254
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026132_016.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026132_016.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026132_016.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0698",
+      "title": "Nodule - Learning Case 0698",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 46,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 150.620105820106,
+            "y": 435.606349206349,
+            "width": 81.2698412698413,
+            "height": 70.43386243386242
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013673_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013673_001.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013673_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0699",
+      "title": "Nodule - Learning Case 0699",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 48,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 695.669841269841,
+            "y": 319.661375661376,
+            "width": 100.774603174603,
+            "height": 88.85502645502649
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00004911_018.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00004911_018.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00004911_018.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0700",
+      "title": "Nodule - Learning Case 0700",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 58,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 792.1100529100529,
+            "y": 417.185185185185,
+            "width": 55.263492063492095,
+            "height": 53.0962962962963
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026769_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026769_010.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026769_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0701",
+      "title": "Nodule - Learning Case 0701",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 55,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 266.565079365079,
+            "y": 550.467724867725,
+            "width": 58.514285714285705,
+            "height": 57.4306878306878
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013051_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013051_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013051_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0702",
+      "title": "Nodule - Learning Case 0702",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 58,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 229.722751322751,
+            "y": 623.0687830687831,
+            "width": 74.768253968254,
+            "height": 63.9322751322751
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00020332_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00020332_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00020332_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0703",
+      "title": "Nodule - Learning Case 0703",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 14,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 76.93544973544971,
+            "y": 602.480423280423,
+            "width": 88.85502645502649,
+            "height": 83.437037037037
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00017243_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00017243_010.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00017243_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0704",
+      "title": "Nodule - Learning Case 0704",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 57,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 827.8687830687829,
+            "y": 639.3227513227511,
+            "width": 50.9291005291005,
+            "height": 57.4306878306878
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00025662_006.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00025662_006.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00025662_006.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0705",
+      "title": "Nodule - Learning Case 0705",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 66,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 399.847619047619,
+            "y": 500.622222222222,
+            "width": 94.2730158730159,
+            "height": 73.6846560846561
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00027470_006.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00027470_006.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00027470_006.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0706",
+      "title": "Nodule - Learning Case 0706",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 43,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 783.44126984127,
+            "y": 558.05291005291,
+            "width": 48.761904761904795,
+            "height": 45.5111111111111
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00019013_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00019013_002.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00019013_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0707",
+      "title": "Nodule - Learning Case 0707",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 46,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 796.444444444444,
+            "y": 603.564021164021,
+            "width": 50.9291005291005,
+            "height": 66.0994708994709
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00015141_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00015141_002.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00015141_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0708",
+      "title": "Nodule - Learning Case 0708",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 49,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 364.088888888889,
+            "y": 265.48148148148204,
+            "width": 48.761904761904795,
+            "height": 46.594708994708995
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026398_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026398_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026398_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0709",
+      "title": "Nodule - Learning Case 0709",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 80,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 746.598941798942,
+            "y": 377.092063492064,
+            "width": 121.362962962963,
+            "height": 105.108994708995
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021374_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021374_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021374_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0710",
+      "title": "Nodule - Learning Case 0710",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 45,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 773.688888888889,
+            "y": 682.666666666667,
+            "width": 70.43386243386242,
+            "height": 74.768253968254
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00017199_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00017199_005.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00017199_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0711",
+      "title": "Nodule - Learning Case 0711",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 62,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 678.332275132275,
+            "y": 340.249735449735,
+            "width": 47.67830687830689,
+            "height": 35.7587301587302
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00015583_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00015583_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00015583_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0712",
+      "title": "Nodule - Learning Case 0712",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 67,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 300.156613756614,
+            "y": 284.98624338624296,
+            "width": 58.514285714285705,
+            "height": 76.93544973544971
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00017098_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00017098_003.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00017098_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0713",
+      "title": "Nodule - Learning Case 0713",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 62,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 282.819047619048,
+            "y": 257.896296296296,
+            "width": 98.6074074074074,
+            "height": 110.526984126984
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00019177_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00019177_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00019177_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0714",
+      "title": "Nodule - Learning Case 0714",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 15,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 327.246560846561,
+            "y": 381.426455026455,
+            "width": 68.2666666666667,
+            "height": 73.6846560846561
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00030162_029.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00030162_029.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00030162_029.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0715",
+      "title": "Nodule - Learning Case 0715",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 66,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 905.887830687831,
+            "y": 824.6179894179901,
+            "width": 47.67830687830689,
+            "height": 47.67830687830689
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026285_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026285_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026285_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0716",
+      "title": "Nodule - Learning Case 0716",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 36,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 796.444444444444,
+            "y": 327.246560846561,
+            "width": 78.0190476190476,
+            "height": 59.59788359788361
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00002578_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00002578_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00002578_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0717",
+      "title": "Nodule - Learning Case 0717",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 63,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 301.240211640212,
+            "y": 266.565079365079,
+            "width": 62.848677248677305,
+            "height": 49.845502645502606
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013951_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013951_001.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013951_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0718",
+      "title": "Nodule - Learning Case 0718",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 42,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 237.307936507937,
+            "y": 227.555555555556,
+            "width": 75.8518518518519,
+            "height": 70.43386243386242
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00020393_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00020393_001.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00020393_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0719",
+      "title": "Nodule - Learning Case 0719",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 39,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 805.113227513228,
+            "y": 360.83809523809504,
+            "width": 55.263492063492095,
+            "height": 57.4306878306878
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00015018_004.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00015018_004.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00015018_004.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0720",
+      "title": "Nodule - Learning Case 0720",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 64,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 744.4317460317461,
+            "y": 351.08571428571406,
+            "width": 70.43386243386242,
+            "height": 73.6846560846561
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011832_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011832_002.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011832_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0721",
+      "title": "Nodule - Learning Case 0721",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 29,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 787.775661375661,
+            "y": 271.983068783069,
+            "width": 70.43386243386242,
+            "height": 76.93544973544971
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021420_014.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021420_014.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021420_014.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0722",
+      "title": "Nodule - Learning Case 0722",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 52,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 873.379894179894,
+            "y": 615.483597883598,
+            "width": 28.173544973545,
+            "height": 33.5915343915344
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00017346_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00017346_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00017346_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0723",
+      "title": "Nodule - Learning Case 0723",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 39,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 212.385185185185,
+            "y": 490.869841269841,
+            "width": 79.1026455026455,
+            "height": 60.681481481481505
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00010959_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00010959_010.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00010959_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0724",
+      "title": "Nodule - Learning Case 0724",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 65,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 436.689947089947,
+            "y": 273.066666666667,
+            "width": 43.3439153439153,
+            "height": 44.4275132275132
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013885_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013885_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013885_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0725",
+      "title": "Nodule - Learning Case 0725",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 59,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 229.722751322751,
+            "y": 477.866666666667,
+            "width": 60.681481481481505,
+            "height": 62.848677248677305
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00020774_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00020774_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00020774_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0726",
+      "title": "Nodule - Learning Case 0726",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 41,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 190.713227513228,
+            "y": 341.33333333333303,
+            "width": 65.015873015873,
+            "height": 72.60105820105821
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00028876_035.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00028876_035.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00028876_035.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0727",
+      "title": "Nodule - Learning Case 0727",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 54,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 145.202116402116,
+            "y": 579.724867724868,
+            "width": 76.93544973544971,
+            "height": 58.514285714285705
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00017028_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00017028_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00017028_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0728",
+      "title": "Nodule - Learning Case 0728",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 57,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 748.766137566138,
+            "y": 417.185185185185,
+            "width": 75.8518518518519,
+            "height": 52.012698412698406
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00009403_006.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00009403_006.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00009403_006.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0729",
+      "title": "Nodule - Learning Case 0729",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 62,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 171.208465608466,
+            "y": 192.880423280423,
+            "width": 91.0222222222222,
+            "height": 82.35343915343921
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021772_016.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021772_016.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021772_016.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0730",
+      "title": "Nodule - Learning Case 0730",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 51,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 656.660317460318,
+            "y": 494.120634920635,
+            "width": 95.35661375661378,
+            "height": 75.8518518518519
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00019124_090.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00019124_090.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00019124_090.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0731",
+      "title": "Nodule - Learning Case 0731",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 46,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 755.2677248677251,
+            "y": 407.432804232804,
+            "width": 70.43386243386242,
+            "height": 58.514285714285705
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00016587_069.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00016587_069.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00016587_069.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0732",
+      "title": "Nodule - Learning Case 0732",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 57,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 645.824338624339,
+            "y": 637.155555555556,
+            "width": 72.60105820105821,
+            "height": 72.60105820105821
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00009403_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00009403_002.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00009403_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0733",
+      "title": "Nodule - Learning Case 0733",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 44,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 398.764021164021,
+            "y": 534.213756613757,
+            "width": 74.768253968254,
+            "height": 86.6878306878307
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012415_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012415_002.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012415_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0734",
+      "title": "Nodule - Learning Case 0734",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 46,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 734.679365079365,
+            "y": 495.204232804233,
+            "width": 97.5238095238095,
+            "height": 96.4402116402116
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011450_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011450_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011450_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0735",
+      "title": "Nodule - Learning Case 0735",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 29,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 688.0846560846561,
+            "y": 514.708994708995,
+            "width": 100.774603174603,
+            "height": 93.189417989418
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018814_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018814_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018814_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0736",
+      "title": "Nodule - Learning Case 0736",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 10,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 347.83492063492105,
+            "y": 307.741798941799,
+            "width": 85.6042328042328,
+            "height": 95.35661375661378
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026911_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026911_005.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026911_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0737",
+      "title": "Nodule - Learning Case 0737",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 61,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 711.92380952381,
+            "y": 537.46455026455,
+            "width": 92.1058201058201,
+            "height": 81.2698412698413
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00025707_015.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00025707_015.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00025707_015.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0738",
+      "title": "Nodule - Learning Case 0738",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 44,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 423.686772486772,
+            "y": 493.03703703703695,
+            "width": 55.263492063492095,
+            "height": 55.263492063492095
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012045_019.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012045_019.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012045_019.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0739",
+      "title": "Nodule - Learning Case 0739",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 38,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 260.063492063492,
+            "y": 717.341798941799,
+            "width": 63.9322751322751,
+            "height": 47.67830687830689
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00002290_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00002290_001.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00002290_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0740",
+      "title": "Nodule - Learning Case 0740",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 64,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 771.5216931216929,
+            "y": 527.7121693121691,
+            "width": 86.6878306878307,
+            "height": 66.0994708994709
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012592_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012592_005.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012592_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0741",
+      "title": "Nodule - Learning Case 0741",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 49,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 166.874074074074,
+            "y": 527.7121693121691,
+            "width": 109.443386243386,
+            "height": 101.858201058201
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00027937_004.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00027937_004.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00027937_004.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0742",
+      "title": "Nodule - Learning Case 0742",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 60,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 210.217989417989,
+            "y": 319.661375661376,
+            "width": 58.514285714285705,
+            "height": 57.4306878306878
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013674_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013674_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013674_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0743",
+      "title": "Nodule - Learning Case 0743",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 53,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 676.165079365079,
+            "y": 610.065608465609,
+            "width": 89.93862433862441,
+            "height": 89.93862433862441
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013751_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013751_003.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013751_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0744",
+      "title": "Nodule - Learning Case 0744",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Incidental finding on routine chest X-ray",
+      "demographics": {
+        "age": 74,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 343.500529100529,
+            "y": 412.850793650794,
+            "width": 41.176719576719606,
+            "height": 45.5111111111111
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00010103_014.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00010103_014.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00010103_014.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0745",
+      "title": "Nodule - Learning Case 0745",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Screening chest X-ray, asymptomatic",
+      "demographics": {
+        "age": 70,
+        "sex": "M"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 206.967195767196,
+            "y": 582.975661375661,
+            "width": 46.594708994708995,
+            "height": 41.176719576719606
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011576_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011576_000.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011576_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-nodule-0746",
+      "title": "Nodule - Learning Case 0746",
+      "description": "Chest X-ray demonstrating nodule",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "advanced",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Follow-up for previously identified nodule",
+      "demographics": {
+        "age": 34,
+        "sex": "F"
+      },
+      "diagnosis": "Nodule",
+      "findings": [
+        {
+          "name": "Nodule",
+          "roi": {
+            "x": 255.729100529101,
+            "y": 237.307936507937,
+            "width": 88.85502645502649,
+            "height": 76.93544973544971
+          }
+        }
+      ],
+      "differential": [
+        "Granuloma",
+        "Primary lung cancer",
+        "Metastasis"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00030413_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00030413_003.png"
+      },
+      "tags": [
+        "nodule",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00030413_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    }
+  ]
+}

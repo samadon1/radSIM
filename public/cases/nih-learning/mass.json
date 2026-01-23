@@ -1,0 +1,4685 @@
+{
+  "metadata": {
+    "name": "RADSIM Mass Learning Cases",
+    "version": "1.0.0",
+    "description": "NIH chest X-ray cases with Mass",
+    "lastUpdated": "2026-01-08"
+  },
+  "cases": [
+    {
+      "id": "nih-mass-0583",
+      "title": "Mass - Learning Case 0583",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 31,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 239.50222222222197,
+            "y": 535.077934027778,
+            "width": 72.81777777777779,
+            "height": 65.9911111111111
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00023075_033.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00023075_033.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00023075_033.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0584",
+      "title": "Mass - Learning Case 0584",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 24,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 609.28,
+            "y": 189.19348958333305,
+            "width": 73.95555555555549,
+            "height": 71.68
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00029579_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00029579_005.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00029579_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0585",
+      "title": "Mass - Learning Case 0585",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 62,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 559.217777777778,
+            "y": 167.57571180555598,
+            "width": 102.4,
+            "height": 136.533333333333
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013659_019.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013659_019.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013659_019.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0586",
+      "title": "Mass - Learning Case 0586",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 33 pack-years",
+      "demographics": {
+        "age": 65,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 311.182222222222,
+            "y": 241.531267361111,
+            "width": 146.773333333333,
+            "height": 256.0
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00010815_006.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00010815_006.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00010815_006.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0587",
+      "title": "Mass - Learning Case 0587",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 27,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 341.902222222222,
+            "y": 197.15793402777803,
+            "width": 117.191111111111,
+            "height": 131.982222222222
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026695_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026695_000.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026695_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0588",
+      "title": "Mass - Learning Case 0588",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 51,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 147.342222222222,
+            "y": 301.833489583333,
+            "width": 65.9911111111111,
+            "height": 87.60888888888891
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00010125_004.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00010125_004.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00010125_004.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0589",
+      "title": "Mass - Learning Case 0589",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 46,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 196.266666666667,
+            "y": 281.35348958333304,
+            "width": 237.795555555556,
+            "height": 238.93333333333305
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026261_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026261_001.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026261_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0590",
+      "title": "Mass - Learning Case 0590",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 60,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 297.528888888889,
+            "y": 310.93571180555597,
+            "width": 540.444444444444,
+            "height": 277.61777777777803
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00010277_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00010277_000.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00010277_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0591",
+      "title": "Mass - Learning Case 0591",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 30,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 325.973333333333,
+            "y": 363.273489583333,
+            "width": 50.0622222222222,
+            "height": 52.337777777777795
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00002106_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00002106_000.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00002106_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0592",
+      "title": "Mass - Learning Case 0592",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 36 pack-years",
+      "demographics": {
+        "age": 67,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 749.226666666667,
+            "y": 615.86015625,
+            "width": 97.84888888888892,
+            "height": 106.951111111111
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00019313_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00019313_000.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00019313_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0593",
+      "title": "Mass - Learning Case 0593",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 31 pack-years",
+      "demographics": {
+        "age": 54,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 277.048888888889,
+            "y": 498.66904513888903,
+            "width": 612.124444444444,
+            "height": 258.27555555555597
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018623_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018623_001.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018623_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0594",
+      "title": "Mass - Learning Case 0594",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 63,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 361.244444444444,
+            "y": 284.76682291666697,
+            "width": 106.951111111111,
+            "height": 135.395555555556
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00020124_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00020124_003.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00020124_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0595",
+      "title": "Mass - Learning Case 0595",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 64,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 393.102222222222,
+            "y": 490.704600694444,
+            "width": 83.0577777777778,
+            "height": 80.7822222222222
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00026196_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00026196_001.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00026196_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0596",
+      "title": "Mass - Learning Case 0596",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 46,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 850.488888888889,
+            "y": 404.233489583333,
+            "width": 61.44,
+            "height": 169.528888888889
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00028698_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00028698_001.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00028698_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0597",
+      "title": "Mass - Learning Case 0597",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 43,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 698.026666666667,
+            "y": 539.629045138889,
+            "width": 44.3733333333333,
+            "height": 51.2
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00016184_040.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00016184_040.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00016184_040.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0598",
+      "title": "Mass - Learning Case 0598",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 55,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 613.831111111111,
+            "y": 349.62015625,
+            "width": 79.6444444444444,
+            "height": 143.36
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00017214_015.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00017214_015.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00017214_015.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0599",
+      "title": "Mass - Learning Case 0599",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 64,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 818.631111111111,
+            "y": 316.624600694444,
+            "width": 87.60888888888891,
+            "height": 141.08444444444402
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00020065_008.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00020065_008.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00020065_008.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0600",
+      "title": "Mass - Learning Case 0600",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 54,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 377.173333333333,
+            "y": 254.046822916667,
+            "width": 161.564444444444,
+            "height": 405.048888888889
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011925_072.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011925_072.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011925_072.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0601",
+      "title": "Mass - Learning Case 0601",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 65,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 715.093333333333,
+            "y": 191.46904513888904,
+            "width": 155.875555555556,
+            "height": 317.44
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021201_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021201_010.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021201_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0602",
+      "title": "Mass - Learning Case 0602",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 66,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 99.5555555555556,
+            "y": 243.806822916667,
+            "width": 698.5955555555561,
+            "height": 538.168888888889
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013911_021.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013911_021.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013911_021.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0603",
+      "title": "Mass - Learning Case 0603",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 50,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 124.586666666667,
+            "y": 173.264600694444,
+            "width": 354.986666666667,
+            "height": 666.737777777778
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021179_011.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021179_011.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021179_011.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0604",
+      "title": "Mass - Learning Case 0604",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 66,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 121.173333333333,
+            "y": 85.6557118055556,
+            "width": 381.155555555556,
+            "height": 674.702222222222
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00006821_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00006821_002.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00006821_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0605",
+      "title": "Mass - Learning Case 0605",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 59,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 331.662222222222,
+            "y": 207.397934027778,
+            "width": 375.46666666666704,
+            "height": 365.22666666666703
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011151_004.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011151_004.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011151_004.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0606",
+      "title": "Mass - Learning Case 0606",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 27 pack-years",
+      "demographics": {
+        "age": 50,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 300.942222222222,
+            "y": 305.246822916667,
+            "width": 590.506666666667,
+            "height": 442.595555555556
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00027833_022.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00027833_022.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00027833_022.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0607",
+      "title": "Mass - Learning Case 0607",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 55,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 741.262222222222,
+            "y": 210.811267361111,
+            "width": 125.155555555556,
+            "height": 423.253333333333
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012376_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012376_010.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012376_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0608",
+      "title": "Mass - Learning Case 0608",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 39 pack-years",
+      "demographics": {
+        "age": 53,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 299.804444444444,
+            "y": 383.75348958333296,
+            "width": 98.9866666666667,
+            "height": 109.226666666667
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00020274_007.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00020274_007.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00020274_007.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0609",
+      "title": "Mass - Learning Case 0609",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 40 pack-years",
+      "demographics": {
+        "age": 62,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 799.288888888889,
+            "y": 606.757934027778,
+            "width": 85.3333333333333,
+            "height": 100.124444444444
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00028265_007.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00028265_007.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00028265_007.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0610",
+      "title": "Mass - Learning Case 0610",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 34,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 575.146666666667,
+            "y": 247.22015625,
+            "width": 118.328888888889,
+            "height": 144.497777777778
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00028027_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00028027_000.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00028027_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0611",
+      "title": "Mass - Learning Case 0611",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 55,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 683.2355555555561,
+            "y": 662.5090451388891,
+            "width": 81.92,
+            "height": 77.3688888888889
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018762_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018762_001.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018762_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0612",
+      "title": "Mass - Learning Case 0612",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 26 pack-years",
+      "demographics": {
+        "age": 65,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 713.955555555556,
+            "y": 293.869045138889,
+            "width": 133.12,
+            "height": 199.111111111111
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018366_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018366_010.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018366_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0613",
+      "title": "Mass - Learning Case 0613",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 66,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 748.088888888889,
+            "y": 353.033489583333,
+            "width": 97.84888888888892,
+            "height": 118.328888888889
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00022837_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00022837_005.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00022837_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0614",
+      "title": "Mass - Learning Case 0614",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 23,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 646.826666666667,
+            "y": 488.429045138889,
+            "width": 95.5733333333333,
+            "height": 103.537777777778
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00008008_027.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00008008_027.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00008008_027.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0615",
+      "title": "Mass - Learning Case 0615",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 29 pack-years",
+      "demographics": {
+        "age": 51,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 261.12,
+            "y": 466.811267361111,
+            "width": 446.00888888888903,
+            "height": 223.004444444444
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00001787_008.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00001787_008.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00001787_008.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0616",
+      "title": "Mass - Learning Case 0616",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 41,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 426.937566137566,
+            "y": 225.38835978836,
+            "width": 317.49417989418,
+            "height": 350.00211640211603
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00017257_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00017257_001.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00017257_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0617",
+      "title": "Mass - Learning Case 0617",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 56,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 228.63915343915295,
+            "y": 428.021164021164,
+            "width": 120.279365079365,
+            "height": 122.446560846561
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00029105_015.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00029105_015.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00029105_015.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0618",
+      "title": "Mass - Learning Case 0618",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 39 pack-years",
+      "demographics": {
+        "age": 41,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 572.139682539683,
+            "y": 266.565079365079,
+            "width": 131.115343915344,
+            "height": 143.034920634921
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011269_019.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011269_019.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011269_019.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0619",
+      "title": "Mass - Learning Case 0619",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 55,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 770.4380952380949,
+            "y": 480.033862433862,
+            "width": 74.768253968254,
+            "height": 78.0190476190476
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012376_011.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012376_011.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012376_011.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0620",
+      "title": "Mass - Learning Case 0620",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 38 pack-years",
+      "demographics": {
+        "age": 47,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 286.069841269841,
+            "y": 516.87619047619,
+            "width": 89.93862433862441,
+            "height": 93.189417989418
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013508_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013508_001.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013508_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0621",
+      "title": "Mass - Learning Case 0621",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 52,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 206.967195767196,
+            "y": 237.307936507937,
+            "width": 206.967195767196,
+            "height": 202.632804232804
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012975_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012975_003.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012975_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0622",
+      "title": "Mass - Learning Case 0622",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 24,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 201.549206349206,
+            "y": 491.95343915343904,
+            "width": 125.697354497355,
+            "height": 120.279365079365
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011157_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011157_001.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011157_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0623",
+      "title": "Mass - Learning Case 0623",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 25 pack-years",
+      "demographics": {
+        "age": 50,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 336.998941798942,
+            "y": 389.01164021164,
+            "width": 139.784126984127,
+            "height": 114.861375661376
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00001836_082.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00001836_082.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00001836_082.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0624",
+      "title": "Mass - Learning Case 0624",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 32 pack-years",
+      "demographics": {
+        "age": 21,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 215.63597883597905,
+            "y": 678.332275132275,
+            "width": 94.2730158730159,
+            "height": 123.530158730159
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00023168_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00023168_000.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00023168_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0625",
+      "title": "Mass - Learning Case 0625",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 38,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 690.2518518518519,
+            "y": 400.93121693121697,
+            "width": 108.359788359788,
+            "height": 123.530158730159
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00016568_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00016568_010.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00016568_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0626",
+      "title": "Mass - Learning Case 0626",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 54,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 773.688888888889,
+            "y": 265.48148148148204,
+            "width": 112.69417989418,
+            "height": 140.867724867725
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014731_028.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014731_028.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014731_028.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0627",
+      "title": "Mass - Learning Case 0627",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 35,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 703.2550264550259,
+            "y": 389.01164021164,
+            "width": 110.526984126984,
+            "height": 128.948148148148
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00025529_018.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00025529_018.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00025529_018.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0628",
+      "title": "Mass - Learning Case 0628",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 56,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 591.6444444444451,
+            "y": 457.27830687830703,
+            "width": 114.861375661376,
+            "height": 113.777777777778
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00003440_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00003440_000.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00003440_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0629",
+      "title": "Mass - Learning Case 0629",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 24,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 628.486772486773,
+            "y": 341.33333333333303,
+            "width": 199.382010582011,
+            "height": 200.465608465608
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00019651_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00019651_002.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00019651_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0630",
+      "title": "Mass - Learning Case 0630",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 32 pack-years",
+      "demographics": {
+        "age": 64,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 70.43386243386242,
+            "y": 196.131216931217,
+            "width": 170.12486772486798,
+            "height": 236.224338624339
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00027556_007.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00027556_007.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00027556_007.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0631",
+      "title": "Mass - Learning Case 0631",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 31,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 693.502645502646,
+            "y": 146.285714285714,
+            "width": 188.546031746032,
+            "height": 203.716402116402
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011291_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011291_003.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011291_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0632",
+      "title": "Mass - Learning Case 0632",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 25 pack-years",
+      "demographics": {
+        "age": 56,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 723.8433862433859,
+            "y": 312.07619047619096,
+            "width": 111.610582010582,
+            "height": 97.5238095238095
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00019499_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00019499_000.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00019499_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0633",
+      "title": "Mass - Learning Case 0633",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 32 pack-years",
+      "demographics": {
+        "age": 41,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 683.750264550265,
+            "y": 235.140740740741,
+            "width": 70.43386243386242,
+            "height": 58.514285714285705
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00005532_019.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00005532_019.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00005532_019.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0634",
+      "title": "Mass - Learning Case 0634",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 64,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 532.046560846561,
+            "y": 328.330158730159,
+            "width": 107.27619047619,
+            "height": 100.774603174603
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018427_004.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018427_004.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018427_004.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0635",
+      "title": "Mass - Learning Case 0635",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 35 pack-years",
+      "demographics": {
+        "age": 31,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 615.483597883598,
+            "y": 423.686772486772,
+            "width": 225.38835978836,
+            "height": 290.404232804233
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00030323_015.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00030323_015.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00030323_015.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0636",
+      "title": "Mass - Learning Case 0636",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 12,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 649.075132275132,
+            "y": 383.59365079365097,
+            "width": 170.12486772486798,
+            "height": 170.12486772486798
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014014_013.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014014_013.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014014_013.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0637",
+      "title": "Mass - Learning Case 0637",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 54,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 280.651851851852,
+            "y": 196.131216931217,
+            "width": 301.240211640212,
+            "height": 471.36507936507894
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011925_077.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011925_077.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011925_077.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0638",
+      "title": "Mass - Learning Case 0638",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 39,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 189.62962962963,
+            "y": 389.01164021164,
+            "width": 126.780952380952,
+            "height": 231.889947089947
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014177_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014177_010.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014177_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0639",
+      "title": "Mass - Learning Case 0639",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 28 pack-years",
+      "demographics": {
+        "age": 20,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 626.3195767195771,
+            "y": 339.166137566138,
+            "width": 104.025396825397,
+            "height": 84.5206349206349
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00028628_020.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00028628_020.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00028628_020.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0640",
+      "title": "Mass - Learning Case 0640",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 39 pack-years",
+      "demographics": {
+        "age": 30,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 192.880423280423,
+            "y": 565.638095238095,
+            "width": 106.192592592593,
+            "height": 86.6878306878307
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021420_027.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021420_027.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021420_027.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0641",
+      "title": "Mass - Learning Case 0641",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 26 pack-years",
+      "demographics": {
+        "age": 34,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 172.29206349206402,
+            "y": 184.21164021163997,
+            "width": 258.979894179894,
+            "height": 323.995767195767
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00018101_012.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00018101_012.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00018101_012.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0642",
+      "title": "Mass - Learning Case 0642",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 42,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 374.924867724868,
+            "y": 225.38835978836,
+            "width": 105.108994708995,
+            "height": 134.366137566138
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012892_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012892_010.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012892_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0643",
+      "title": "Mass - Learning Case 0643",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 37,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 368.42328042327995,
+            "y": 590.560846560847,
+            "width": 120.279365079365,
+            "height": 148.45291005291
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00017670_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00017670_005.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00017670_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0644",
+      "title": "Mass - Learning Case 0644",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 38,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 325.079365079365,
+            "y": 330.497354497355,
+            "width": 123.530158730159,
+            "height": 157.121693121693
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00019373_058.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00019373_058.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00019373_058.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0645",
+      "title": "Mass - Learning Case 0645",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 58,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 344.58412698412695,
+            "y": 397.680423280423,
+            "width": 110.526984126984,
+            "height": 137.616931216931
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014004_038.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014004_038.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014004_038.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0646",
+      "title": "Mass - Learning Case 0646",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 34,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 209.134391534392,
+            "y": 439.940740740741,
+            "width": 146.285714285714,
+            "height": 195.047619047619
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00028330_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00028330_003.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00028330_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0647",
+      "title": "Mass - Learning Case 0647",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 33 pack-years",
+      "demographics": {
+        "age": 43,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 641.489947089947,
+            "y": 299.073015873016,
+            "width": 84.5206349206349,
+            "height": 74.768253968254
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00015649_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00015649_000.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00015649_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0648",
+      "title": "Mass - Learning Case 0648",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 30,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 166.874074074074,
+            "y": 690.2518518518519,
+            "width": 92.1058201058201,
+            "height": 91.0222222222222
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00021420_020.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00021420_020.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00021420_020.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0649",
+      "title": "Mass - Learning Case 0649",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 40 pack-years",
+      "demographics": {
+        "age": 54,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 215.63597883597905,
+            "y": 475.69947089947095,
+            "width": 76.93544973544971,
+            "height": 53.0962962962963
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00015300_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00015300_000.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00015300_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0650",
+      "title": "Mass - Learning Case 0650",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 73,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 175.54285714285703,
+            "y": 221.053968253968,
+            "width": 262.230687830688,
+            "height": 303.407407407407
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00022192_003.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00022192_003.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00022192_003.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0651",
+      "title": "Mass - Learning Case 0651",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 69,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 269.81587301587297,
+            "y": 472.448677248677,
+            "width": 126.780952380952,
+            "height": 101.858201058201
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00022237_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00022237_002.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00022237_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0652",
+      "title": "Mass - Learning Case 0652",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 45,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 688.0846560846561,
+            "y": 400.93121693121697,
+            "width": 127.86455026455,
+            "height": 120.279365079365
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00022726_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00022726_002.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00022726_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0653",
+      "title": "Mass - Learning Case 0653",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 51,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 309.908994708995,
+            "y": 398.764021164021,
+            "width": 96.4402116402116,
+            "height": 120.279365079365
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00000830_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00000830_000.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00000830_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0654",
+      "title": "Mass - Learning Case 0654",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 47,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 175.54285714285703,
+            "y": 293.655026455026,
+            "width": 307.741798941799,
+            "height": 514.708994708995
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00015440_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00015440_000.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00015440_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0655",
+      "title": "Mass - Learning Case 0655",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 54,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 123.530158730159,
+            "y": 106.192592592593,
+            "width": 295.82222222222197,
+            "height": 374.924867724868
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011925_076.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011925_076.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011925_076.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0656",
+      "title": "Mass - Learning Case 0656",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 60,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 258.979894179894,
+            "y": 449.693121693122,
+            "width": 162.539682539683,
+            "height": 148.45291005291
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00017611_002.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00017611_002.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00017611_002.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0657",
+      "title": "Mass - Learning Case 0657",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 33 pack-years",
+      "demographics": {
+        "age": 59,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 844.122751322751,
+            "y": 524.461375661376,
+            "width": 161.45608465608498,
+            "height": 193.964021164021
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00029469_007.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00029469_007.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00029469_007.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0658",
+      "title": "Mass - Learning Case 0658",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 19,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 587.3100529100531,
+            "y": 410.683597883598,
+            "width": 157.121693121693,
+            "height": 179.877248677249
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00014551_010.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00014551_010.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00014551_010.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0659",
+      "title": "Mass - Learning Case 0659",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 14 pack-years",
+      "demographics": {
+        "age": 24,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 158.205291005291,
+            "y": 489.786243386243,
+            "width": 310.992592592593,
+            "height": 210.217989417989
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00027697_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00027697_001.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00027697_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0660",
+      "title": "Mass - Learning Case 0660",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 36,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 723.8433862433859,
+            "y": 547.216931216931,
+            "width": 68.2666666666667,
+            "height": 73.6846560846561
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00009229_007.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00009229_007.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00009229_007.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0661",
+      "title": "Mass - Learning Case 0661",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 29,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 743.3481481481481,
+            "y": 235.140740740741,
+            "width": 112.69417989418,
+            "height": 111.610582010582
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012270_005.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012270_005.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012270_005.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0662",
+      "title": "Mass - Learning Case 0662",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 56,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 381.426455026455,
+            "y": 370.590476190476,
+            "width": 106.192592592593,
+            "height": 95.35661375661378
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00013991_000.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00013991_000.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00013991_000.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0663",
+      "title": "Mass - Learning Case 0663",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 65,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 287.15343915343897,
+            "y": 380.342857142857,
+            "width": 147.369312169312,
+            "height": 151.703703703704
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012048_007.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012048_007.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012048_007.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0664",
+      "title": "Mass - Learning Case 0664",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "PA",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Hemoptysis, smoking history 40 pack-years",
+      "demographics": {
+        "age": 59,
+        "sex": "F"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 290.404232804233,
+            "y": 326.162962962963,
+            "width": 153.870899470899,
+            "height": 198.29841269841305
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00001075_024.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00001075_024.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00001075_024.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0665",
+      "title": "Mass - Learning Case 0665",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Chest mass on screening, further evaluation needed",
+      "demographics": {
+        "age": 43,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 341.33333333333303,
+            "y": 473.532275132275,
+            "width": 137.616931216931,
+            "height": 136.533333333333
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00012175_008.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00012175_008.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00012175_008.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0666",
+      "title": "Mass - Learning Case 0666",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 70,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 169.04126984126998,
+            "y": 454.027513227513,
+            "width": 187.462433862434,
+            "height": 300.156613756614
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00011814_031.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00011814_031.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00011814_031.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    },
+    {
+      "id": "nih-mass-0667",
+      "title": "Mass - Learning Case 0667",
+      "description": "Chest X-ray demonstrating mass",
+      "modality": "DX",
+      "viewPosition": "AP",
+      "skillLevel": "intermediate",
+      "anatomicalRegion": "Chest",
+      "clinicalHistory": "Weight loss, chronic cough",
+      "demographics": {
+        "age": 61,
+        "sex": "M"
+      },
+      "diagnosis": "Mass",
+      "findings": [
+        {
+          "name": "Mass",
+          "roi": {
+            "x": 351.08571428571406,
+            "y": 634.98835978836,
+            "width": 88.85502645502649,
+            "height": 84.5206349206349
+          }
+        }
+      ],
+      "differential": [
+        "Lung cancer",
+        "Abscess",
+        "Vascular lesion"
+      ],
+      "hints": [],
+      "teachingPoints": [],
+      "files": {
+        "imagePath": "cases/nih-learning/images/00000902_001.png",
+        "thumbnailPath": "cases/nih-learning/thumbnails/00000902_001.png"
+      },
+      "tags": [
+        "mass",
+        "chest",
+        "xray",
+        "learning",
+        "nih"
+      ],
+      "source": {
+        "dataset": "NIH Chest X-Ray Dataset",
+        "originalId": "00000902_001.png",
+        "license": "CC0 1.0 Universal",
+        "attribution": "NIH Clinical Center"
+      },
+      "metadata": {
+        "dateAdded": "2026-01-08",
+        "curator": "RADSIM Learning Pipeline",
+        "version": "1.0"
+      }
+    }
+  ]
+}
