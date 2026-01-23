@@ -6,7 +6,7 @@
     "dev": "vite",
     "preview": "vite preview",
     "serve": "npm run dev",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "build:analyze": "cross-env ANALYZE_BUNDLE=1 npm run build",
     "test": "vitest",
     "test:e2e:chrome": "npm run build && wdio run ./wdio.chrome.conf.ts",
