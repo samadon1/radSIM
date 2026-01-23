@@ -336,11 +336,15 @@ export const useLearningStore = defineStore('learning', () => {
     const overdue = allCases
       .filter(c => {
         const data = learningData.value[c.id];
-        return data && data.nextReviewDate < today;
+        if (!data || !data.nextReviewDate) return false;
+        const nextReview = new Date(data.nextReviewDate);
+        return nextReview < today;
       })
       .sort((a, b) => {
-        const aDate = learningData.value[a.id].nextReviewDate;
-        const bDate = learningData.value[b.id].nextReviewDate;
+        const aData = learningData.value[a.id];
+        const bData = learningData.value[b.id];
+        const aDate = aData?.nextReviewDate ? new Date(aData.nextReviewDate) : new Date();
+        const bDate = bData?.nextReviewDate ? new Date(bData.nextReviewDate) : new Date();
         return aDate.getTime() - bDate.getTime(); // Oldest first
       });
 
@@ -351,7 +355,9 @@ export const useLearningStore = defineStore('learning', () => {
       const dueToday = allCases
         .filter(c => {
           const data = learningData.value[c.id];
-          return data && isSameDay(data.nextReviewDate, today) && !selected.includes(c);
+          if (!data || !data.nextReviewDate) return false;
+          const nextReview = new Date(data.nextReviewDate);
+          return isSameDay(nextReview, today) && !selected.includes(c);
         });
       selected.push(...dueToday.slice(0, count - selected.length));
     }
