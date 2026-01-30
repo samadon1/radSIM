@@ -22,6 +22,17 @@
       </div>
     </teleport>
 
+    <!-- Review Mistakes Modal -->
+    <teleport to="body">
+      <Transition name="modal-fade">
+        <ReviewMistakes
+          v-if="showReviewMistakes"
+          :cases="missedCasesForReview"
+          @exit-review="handleExitReview"
+        />
+      </Transition>
+    </teleport>
+
     <!-- Welcome Modal for New Users -->
     <welcome-modal
       v-if="showWelcomeModal"
@@ -35,6 +46,14 @@
       @close="handleUpgradeClose"
       @upgrade-success="handleUpgradeSuccess"
     />
+
+    <!-- Toast Message -->
+    <Transition name="toast">
+      <div v-if="toastMessage" class="toast-notification">
+        <v-icon size="18" class="toast-icon">mdi-information-outline</v-icon>
+        <span>{{ toastMessage }}</span>
+      </div>
+    </Transition>
 
     <!-- Shared App Header -->
     <AppHeader />
@@ -109,6 +128,7 @@
                   min="20"
                   max="500"
                   class="goal-input-small"
+                  aria-label="Weekly goal"
                   @blur="saveWeeklyGoal"
                   @keyup.enter="saveWeeklyGoal"
                   ref="weeklyGoalInputRef"
@@ -219,8 +239,7 @@
                 :key="finding.name"
                 class="finding-row"
                 :class="{ 'finding-row-locked': !hasCompletedBaseline }"
-                :disabled="!hasCompletedBaseline"
-                @click="hasCompletedBaseline && startFocusedPractice(finding.name)"
+                @click="handleFindingClick(finding.name)"
               >
                 <div class="finding-info">
                   <span class="finding-name">{{ finding.name }}</span>
@@ -318,7 +337,6 @@
           <div class="mastery-content">
             <div class="mastery-total">
               <span class="mastery-big">{{ masteryStats.seen > 0 ? masteryStats.seen : '-' }}</span>
-              <span class="mastery-of">/ {{ masteryStats.totalCases }}</span>
               <span class="mastery-label">cases seen</span>
             </div>
             <div class="mastery-bar">
@@ -334,7 +352,30 @@
             <div class="mastery-legend">
               <span class="legend-item"><span class="dot mastered"></span>{{ masteryStats.mastered > 0 ? masteryStats.mastered : '-' }} mastered</span>
               <span class="legend-item"><span class="dot learning"></span>{{ masteryStats.learning > 0 ? masteryStats.learning : '-' }} learning</span>
-              <span class="legend-item"><span class="dot not-started"></span>{{ masteryStats.notStarted }} new</span>
+            </div>
+
+            <!-- Additional useful stats -->
+            <div class="mastery-stats-grid">
+              <div class="mastery-stat">
+                <span class="mastery-stat-value" :style="{ color: stats.accuracy >= 70 ? '#22c55e' : stats.accuracy > 0 ? '#fbbf24' : 'rgba(255,255,255,0.4)' }">
+                  {{ stats.accuracy > 0 ? stats.accuracy + '%' : '--' }}
+                </span>
+                <span class="mastery-stat-label">Accuracy</span>
+              </div>
+              <div class="mastery-stat">
+                <span class="mastery-stat-value" :style="{ color: retentionRate > 70 ? '#22c55e' : retentionRate > 0 ? '#fbbf24' : 'rgba(255,255,255,0.4)' }">
+                  {{ retentionRate > 0 ? retentionRate + '%' : '--' }}
+                </span>
+                <span class="mastery-stat-label">Retention</span>
+              </div>
+              <div class="mastery-stat">
+                <span class="mastery-stat-value">{{ avgResponseTime > 0 ? avgResponseTime + 's' : '--' }}</span>
+                <span class="mastery-stat-label">Avg Time</span>
+              </div>
+              <div class="mastery-stat" v-if="weakestFinding">
+                <span class="mastery-stat-value weakest">{{ weakestFinding.name }}</span>
+                <span class="mastery-stat-label">Needs Work</span>
+              </div>
             </div>
           </div>
         </div>
@@ -344,19 +385,21 @@
 </template>
 
 <script setup lang="ts">
+/* eslint-disable no-use-before-define, @typescript-eslint/no-unused-vars */
 import { ref, computed, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import AppHeader from './AppHeader.vue';
-import SessionSummary from './learning/SessionSummary.vue';
-import WelcomeModal from './modals/WelcomeModal.vue';
-import UpgradeModal from './modals/UpgradeModal.vue';
 import { useAuthStore } from '@/src/store/auth';
 import { useLearningStore } from '@/src/store/learning';
 import { useCaseLibraryStore } from '@/src/store/case-library';
 import { loadUrls } from '@/src/actions/loadUserFiles';
 import { getUserData } from '@/src/firebase/userDataService';
-import type { SessionStats } from '@/src/store/learning';
+import type { SessionStats, MissedCase } from '@/src/store/learning';
 import type { UserData } from '@/src/firebase/userDataService';
+import AppHeader from './AppHeader.vue';
+import SessionSummary from './learning/SessionSummary.vue';
+import ReviewMistakes from './learning/ReviewMistakes.vue';
+import WelcomeModal from './modals/WelcomeModal.vue';
+import UpgradeModal from './modals/UpgradeModal.vue';
 
 const router = useRouter();
 const authStore = useAuthStore();
@@ -369,6 +412,10 @@ const isLoadingCase = ref(false);
 // Baseline summary modal state
 const showBaselineSummary = ref(false);
 
+// Review mistakes modal state
+const showReviewMistakes = ref(false);
+const missedCasesForReview = ref<MissedCase[]>([]);
+
 // Weekly goal state (session size is always 20)
 const weeklyGoal = ref(100); // Default to 100 cases per week
 const weeklyGoalInput = ref(100);
@@ -379,6 +426,18 @@ const SESSION_SIZE = 20; // Fixed session size
 // Modal states
 const showWelcomeModal = ref(false);
 const showUpgradeModal = ref(false);
+
+// Toast notification state
+const toastMessage = ref('');
+let toastTimeout: ReturnType<typeof setTimeout> | null = null;
+
+function showToast(message: string, duration = 3000) {
+  if (toastTimeout) clearTimeout(toastTimeout);
+  toastMessage.value = message;
+  toastTimeout = setTimeout(() => {
+    toastMessage.value = '';
+  }, duration);
+}
 
 // User data from Firestore
 const userData = ref<UserData | null>(null);
@@ -433,7 +492,6 @@ const stats = computed(() => {
 
   // Filter history based on selected period
   let filteredHistory = allHistory;
-  const now = new Date();
 
   if (period.value === 'week') {
     const weekAgo = new Date();
@@ -570,19 +628,19 @@ const findings = computed(() => {
         cases: storedStats.totalCases,
         completed: storedStats.reviewedCases
       };
-    } else {
-      // No stored stats yet - show placeholder
-      const casesWithThisFinding = cases.filter(c =>
-        c.findings?.some(f => f.name.toLowerCase() === name.toLowerCase())
-      );
-
-      return {
-        name,
-        accuracy: null, // null will show "--" in UI
-        cases: casesWithThisFinding.length,
-        completed: 0
-      };
     }
+
+    // No stored stats yet - show placeholder
+    const casesWithThisFinding = cases.filter(c =>
+      c.findings?.some(f => f.name.toLowerCase() === name.toLowerCase())
+    );
+
+    return {
+      name,
+      accuracy: null, // null will show "--" in UI
+      cases: casesWithThisFinding.length,
+      completed: 0
+    };
   });
 });
 
@@ -623,11 +681,11 @@ const masteryStats = computed(() => {
 });
 
 // Calendar days - computed from actual activity history
+// Properly aligned to day of week (M T W T F S S)
 const calendarDays = computed(() => {
   const learningData = learningStore.learningData;
   const allHistory = Object.values(learningData).flatMap(d => d.performanceHistory || []);
 
-  // Get activity dates for the last 35 days
   const today = new Date();
   const activityByDate = new Map<string, number>();
 
@@ -637,18 +695,28 @@ const calendarDays = computed(() => {
     activityByDate.set(dateStr, (activityByDate.get(dateStr) || 0) + 1);
   });
 
-  // Generate calendar grid (5 weeks)
+  // Find the Monday of the first week (4 weeks ago + current week = 5 weeks)
+  // getDay() returns 0=Sunday, 1=Monday, ..., 6=Saturday
+  // We want Monday=0, so adjust: (getDay() + 6) % 7 gives Mon=0, Tue=1, ..., Sun=6
+  const todayDayOfWeek = (today.getDay() + 6) % 7; // 0=Mon, 1=Tue, ..., 6=Sun
+
+  // Start from the Monday of 4 weeks ago
+  const startDate = new Date(today);
+  startDate.setDate(today.getDate() - todayDayOfWeek - 28); // Go back to Monday, then 4 more weeks
+
+  // Generate calendar grid (5 weeks × 7 days = 35 cells)
   return Array(35).fill(null).map((_, i) => {
-    const date = new Date();
-    date.setDate(today.getDate() - (34 - i)); // Start from 34 days ago
+    const date = new Date(startDate);
+    date.setDate(startDate.getDate() + i);
     const dateStr = date.toDateString();
     const activity = activityByDate.get(dateStr) || 0;
+    const isToday = date.toDateString() === today.toDateString();
 
     return {
       date: true,
       active: activity > 0,
       intensity: Math.min(activity / 10, 1), // Normalize intensity (max 10 cases = full intensity)
-      today: i === 34
+      today: isToday
     };
   });
 });
@@ -695,8 +763,56 @@ const bestFinding = computed(() => {
   return best.name;
 });
 
+// Weakest finding - lowest accuracy (for "Needs Work" display)
+const weakestFinding = computed(() => {
+  const findingsWithAccuracy = findings.value.filter(f => f.accuracy !== null && f.accuracy < 80);
+  if (findingsWithAccuracy.length === 0) return undefined;
+
+  const weakest = findingsWithAccuracy.reduce((prev, current) =>
+    (current.accuracy! < prev.accuracy!) ? current : prev
+  );
+
+  return { name: weakest.name, accuracy: weakest.accuracy };
+});
+
+// Retention rate - % of cases answered correctly on 2nd+ review (spaced repetition effectiveness)
+const retentionRate = computed(() => {
+  const learningData = learningStore.learningData;
+  const casesWithMultipleReviews = Object.values(learningData).filter(d =>
+    d.timesReviewed >= 2 && d.performanceHistory && d.performanceHistory.length >= 2
+  );
+
+  if (casesWithMultipleReviews.length === 0) return 0;
+
+  // Look at performance on 2nd+ reviews (not first attempt)
+  let totalRetained = 0;
+  let totalAttempts = 0;
+
+  casesWithMultipleReviews.forEach(caseData => {
+    // Skip first review, look at subsequent ones
+    const subsequentReviews = caseData.performanceHistory.slice(1);
+    subsequentReviews.forEach(review => {
+      totalAttempts++;
+      if (review.score >= 70) totalRetained++; // 70%+ = retained
+    });
+  });
+
+  return totalAttempts > 0 ? Math.round((totalRetained / totalAttempts) * 100) : 0;
+});
+
+// Average response time per case (in seconds)
+const avgResponseTime = computed(() => {
+  const learningData = learningStore.learningData;
+  const allHistory = Object.values(learningData).flatMap(d => d.performanceHistory || []);
+
+  if (allHistory.length === 0) return 0;
+
+  const totalTime = allHistory.reduce((sum, h) => sum + (h.timeSpent || 0), 0);
+  return Math.round(totalTime / allHistory.length);
+});
+
 // Methods
-function formatTime(seconds: number) {
+function _formatTime(seconds: number) {
   const mins = Math.floor(seconds / 60);
   const secs = seconds % 60;
   return `${mins}:${secs.toString().padStart(2, '0')}`;
@@ -787,16 +903,42 @@ async function startCalibration() {
 }
 
 function handleReviewMistakes() {
-  // For now, just close the modal
-  // TODO: Implement review mistakes feature for baseline
+  // Get baseline missed cases from learning store
+  const missedCases = learningStore.baselineMissedCases;
+
+  if (!missedCases || missedCases.length === 0) {
+    showToast('No missed cases to review');
+    return;
+  }
+
+  // Store the cases for the review component
+  missedCasesForReview.value = [...missedCases];
+
+  // Hide baseline summary and show review mistakes
   showBaselineSummary.value = false;
+  showReviewMistakes.value = true;
 }
 
-async function startScenario(scenarioName: string) {
+function handleExitReview() {
+  // Close review mistakes and show baseline summary again
+  showReviewMistakes.value = false;
+  showBaselineSummary.value = true;
+}
+
+async function _startScenario(scenarioName: string) {
   // Start timed scenario session
   // TODO: Implement scenario mode with timer
   console.log('Starting scenario:', scenarioName);
   await startLearning();
+}
+
+// Handle clicking on a finding row (checks baseline first, then subscription)
+function handleFindingClick(finding: string) {
+  if (!hasCompletedBaseline.value) {
+    showToast('Complete baseline first to unlock focused practice');
+    return;
+  }
+  startFocusedPractice(finding);
 }
 
 async function startFocusedPractice(finding: string) {
@@ -918,6 +1060,41 @@ onMounted(async () => {
 </script>
 
 <style scoped>
+/* Toast Notification */
+.toast-notification {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 9999;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.toast-icon {
+  color: #4263eb;
+}
+
+.toast-enter-active,
+.toast-leave-active {
+  transition: all 0.3s ease;
+}
+
+.toast-enter-from,
+.toast-leave-to {
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px);
+}
+
 .dashboard-page {
   width: 100%;
   height: 100vh;
@@ -1680,6 +1857,40 @@ onMounted(async () => {
 
 .legend-item .dot.not-started {
   background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mastery stats grid */
+.mastery-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mastery-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mastery-stat-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.mastery-stat-value.weakest {
+  font-size: 14px;
+  color: #ef4444;
+}
+
+.mastery-stat-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Scrollbar styling */

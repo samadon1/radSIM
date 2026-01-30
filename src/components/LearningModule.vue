@@ -3,7 +3,7 @@
     <!-- Exit Confirmation Modal -->
     <Teleport to="body">
       <Transition name="modal-fade">
-        <div v-if="showExitModal" class="exit-modal-overlay" @click.self="showExitModal = false">
+        <div v-if="showExitModal" class="exit-modal-overlay" role="dialog" @click.self="showExitModal = false" @keydown.escape="showExitModal = false">
           <div class="exit-modal">
             <div class="exit-modal-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -220,6 +220,7 @@
                 type="text"
                 :placeholder="diagnosticStep === 'diagnosis' ? 'Enter your diagnosis...' : 'Ask a question about the case...'"
                 class="message-input"
+                aria-label="Message input"
                 :disabled="isEvaluating || diagnosticStep === 'normal_abnormal'"
                 @keypress.enter="sendMessage"
               />
@@ -255,8 +256,10 @@
 </template>
 
 <script setup lang="ts">
+/* eslint-disable no-use-before-define, @typescript-eslint/no-unused-vars, no-nested-ternary, prefer-template */
 import { ref, computed, inject, watch, nextTick } from 'vue';
 import { useRouter } from 'vue-router';
+import { marked } from 'marked';
 import { useLearningStore } from '@/src/store/learning';
 import { useCaseLibraryStore } from '@/src/store/case-library';
 import { useAuthStore } from '@/src/store/auth';
@@ -271,8 +274,7 @@ const learningStore = useLearningStore();
 const caseLibraryStore = useCaseLibraryStore();
 const authStore = useAuthStore();
 const datasetStore = useDatasetStore();
-const { evaluateObservation, answerQuestion, generateExpertAnalysisStreaming, isLoading: isGeminiLoading } = useGemini();
-import { marked } from 'marked';
+const { evaluateObservation, answerQuestion, generateExpertAnalysisStreaming, isLoading: _isGeminiLoading } = useGemini();
 
 // Exit confirmation modal - sync with store state so it can be triggered from anywhere
 const showExitModal = computed({
@@ -706,6 +708,14 @@ function handleNormalAbnormal(classification: 'normal' | 'abnormal') {
         type: 'cubey',
         content: `Correct, ${firstName}! This is a normal study. Great job recognizing that there are no significant abnormalities.\n\n<strong>Score: 100%</strong>`
       });
+
+      // Record the user's response for tracking
+      learningStore.submitResponse({
+        findings: [],
+        diagnosis: 'Normal',
+        confidence: 3,
+        annotations: []
+      });
     } else {
       // Correct: identified as abnormal and it is abnormal
       diagnosticScore.value = 30;
@@ -735,6 +745,14 @@ function handleNormalAbnormal(classification: 'normal' | 'abnormal') {
         content: `Actually ${firstName}, this is a normal study. The features you may have noticed are within normal limits.`
       });
     }
+
+    // Record the user's incorrect response for tracking
+    learningStore.submitResponse({
+      findings: classification === 'abnormal' ? ['Abnormal (false positive)'] : [],
+      diagnosis: classification === 'normal' ? 'Normal' : 'Abnormal',
+      confidence: 3,
+      annotations: []
+    });
   }
 
   nextTick(() => scrollToBottom());
@@ -1172,17 +1190,26 @@ async function handleNextCase() {
   // Record the current case's performance BEFORE moving to next case
   if (currentCase.value) {
     const groundTruthFindings = currentCase.value.findings?.map(f => f.name.toLowerCase()) || [];
+    const isActuallyAbnormal = groundTruthFindings.length > 0;
 
     // Build assessment result from current diagnostic flow state
     // If diagnosis was never evaluated (null), treat as incorrect with low score
     const wasCorrect = diagnosisCorrect.value === true;
     const wasEvaluated = diagnosisCorrect.value !== null;
 
+    // Track classification errors as false positives
+    // If user said "Abnormal" on a normal case, that's a false positive
+    const hadClassificationError = classificationCorrect.value === false;
+    const falsePositives: string[] = [];
+    if (hadClassificationError && userClassification.value === 'abnormal' && !isActuallyAbnormal) {
+      falsePositives.push('Misclassified as abnormal');
+    }
+
     const assessment = {
       score: diagnosticScore.value || (wasCorrect ? 100 : wasEvaluated ? 30 : 0),
       correct: wasCorrect ? groundTruthFindings : [],
       missed: wasCorrect ? [] : groundTruthFindings,
-      falsePositives: [] as string[],
+      falsePositives,
       timeSpent: caseStartTime.value ? Math.round((Date.now() - caseStartTime.value) / 1000) : 60,
       confidence: 3 // Default confidence for chat-based flow
     };

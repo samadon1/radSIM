@@ -19,27 +19,17 @@
                 <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-            <button class="btn-hero secondary" @click="openVideoModal">
-              Watch overview
+            <button class="btn-hero secondary" @click="scrollToSection('features')">
+              Learn more
             </button>
           </div>
         </div>
 
         <div class="hero-visual">
-          <!-- Premium Video Card -->
-          <div class="video-card-premium">
-            <div class="video-thumbnail">
-              <div class="play-button">
-                <div class="play-button-inner">
-                  <svg width="20" height="24" viewBox="0 0 20 24" fill="none">
-                    <path d="M0 0L20 12L0 24V0Z" fill="currentColor"/>
-                  </svg>
-                </div>
-              </div>
-              <div class="video-overlay">
-                <span class="video-duration">2:30</span>
-              </div>
-            </div>
+          <!-- Product Screenshot -->
+          <div class="hero-screenshot">
+            <img src="/sim_screen.png" alt="RADSIM Learning Interface" class="screenshot-image" />
+            <div class="screenshot-glow"></div>
           </div>
         </div>
       </div>
@@ -88,6 +78,86 @@
           <div class="feature-card floating-card card-bottom-right">
             <h3>Progress Tracking</h3>
             <p>Detailed analytics on accuracy, speed, and areas for improvement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Adaptive Learning Section -->
+    <section id="learning" class="adaptive-learning-section">
+      <div class="adaptive-container">
+        <div class="adaptive-header">
+          <span class="section-tag">Science-Backed Learning</span>
+          <h2>Learn smarter, not harder</h2>
+          <p>Powered by spaced repetition and adaptive algorithms that optimize your retention and accelerate mastery.</p>
+        </div>
+
+        <div class="learning-showcase">
+          <!-- Left column: stacked cards -->
+          <div class="showcase-stack">
+            <div class="stack-card main-card">
+              <img src="/mastery.png" alt="Mastery Progress" />
+            </div>
+            <div class="stack-card offset-card">
+              <img src="/progress.png" alt="Performance Tracking" />
+            </div>
+          </div>
+
+          <!-- Center: main feature -->
+          <div class="showcase-center">
+            <div class="center-card">
+              <img src="/sim_results.png" alt="Session Results" />
+            </div>
+          </div>
+
+          <!-- Right column: feature cards -->
+          <div class="showcase-features">
+            <div class="feature-image-card">
+              <img src="/findings.png" alt="Practice by Findings" />
+            </div>
+            <div class="feature-image-card">
+              <img src="/review.png" alt="Review Mistakes" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Learning principles -->
+        <div class="learning-principles">
+          <div class="principle-item">
+            <div class="principle-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h4>Spaced Repetition</h4>
+            <p>Cases resurface at optimal intervals to cement long-term memory</p>
+          </div>
+          <div class="principle-item">
+            <div class="principle-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </div>
+            <h4>Adaptive Difficulty</h4>
+            <p>Algorithm adjusts to your skill level, focusing on weak areas</p>
+          </div>
+          <div class="principle-item">
+            <div class="principle-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h4>Active Recall</h4>
+            <p>Diagnose first, then learn—proven to boost retention by 50%</p>
+          </div>
+          <div class="principle-item">
+            <div class="principle-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h4>Instant Feedback</h4>
+            <p>AI-powered analysis explains what you missed and why</p>
           </div>
         </div>
       </div>
@@ -144,7 +214,7 @@
       </div>
     </section>
 
-    <!-- Testimonial Section -->
+    <!-- Testimonial Section (hidden for now)
     <section id="testimonials" class="testimonial-section">
       <div class="testimonial-container">
         <div class="testimonial-content">
@@ -164,6 +234,7 @@
         </div>
       </div>
     </section>
+    -->
 
     <!-- Pricing Section -->
     <section id="pricing" class="pricing-section">
@@ -225,7 +296,7 @@
               </svg>
             </button>
             <button class="btn-cta secondary">
-              Contact Sales
+              Contact Us
             </button>
           </div>
         </div>
@@ -254,8 +325,8 @@
           <div class="footer-legal">
             <span>&copy; 2026 RADSIM. All rights reserved.</span>
             <div class="footer-legal-links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms of Service</a>
+              <router-link to="/privacy">Privacy Policy</router-link>
+              <router-link to="/terms">Terms of Service</router-link>
             </div>
           </div>
         </div>
@@ -263,7 +334,7 @@
     </footer>
 
     <!-- Video Modal -->
-    <div v-if="showVideoModal" class="video-modal" @click="closeVideoModal">
+    <div v-if="showVideoModal" class="video-modal" role="dialog" @click="closeVideoModal" @keydown.escape="closeVideoModal">
       <div class="modal-overlay"></div>
       <div class="modal-content" @click.stop>
         <button class="modal-close" @click="closeVideoModal">
@@ -288,11 +359,12 @@
 </template>
 
 <script setup lang="ts">
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
-import AppHeader from './AppHeader.vue';
 import { useAuthStore } from '@/src/store/auth';
 import { PRICING_TIERS, formatPrice } from '@/src/config/pricing';
+import AppHeader from './AppHeader.vue';
 
 const router = useRouter();
 const authStore = useAuthStore();
@@ -350,15 +422,22 @@ const handleGetStarted = () => {
 };
 
 const handleContactSales = () => {
-  window.location.href = 'mailto:sales@radsim.ai?subject=RADSIM Pro Inquiry';
+  window.location.href = 'mailto:calvinsamueldonkor@gmail.com?subject=RADSIM Inquiry';
 };
 
-const openVideoModal = () => {
+const _openVideoModal = () => {
   showVideoModal.value = true;
 };
 
 const closeVideoModal = () => {
   showVideoModal.value = false;
+};
+
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
 };
 </script>
 
@@ -407,16 +486,17 @@ body {
 
 .hero-container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1400px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 120px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 60px;
 }
 
 .hero-content {
-  max-width: 600px;
+  max-width: 900px;
+  text-align: center;
 }
 
 .hero-badge {
@@ -460,8 +540,9 @@ body {
 
 .hero-actions {
   display: flex;
+  justify-content: center;
   gap: 16px;
-  margin-bottom: 64px;
+  margin-bottom: 0;
 }
 
 .btn-hero {
@@ -530,85 +611,43 @@ body {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Premium Video Card */
-.video-card-premium {
+/* Hero Screenshot */
+.hero-screenshot {
   width: 100%;
+  max-width: 1300px;
   position: relative;
 }
 
-.video-thumbnail {
+.screenshot-image {
   width: 100%;
-  aspect-ratio: 16/10;
-  background: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
-  border-radius: 24px;
-  position: relative;
-  overflow: hidden;
+  height: auto;
+  border-radius: 20px;
   box-shadow:
-    0 2px 8px rgba(0, 0, 0, 0.04),
-    0 8px 24px rgba(0, 0, 0, 0.06),
-    0 16px 48px rgba(0, 0, 0, 0.08);
+    0 4px 16px rgba(0, 0, 0, 0.2),
+    0 16px 48px rgba(0, 0, 0, 0.3),
+    0 32px 80px rgba(0, 0, 0, 0.2);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.video-card-premium:hover .video-thumbnail {
-  transform: translateY(-4px);
+.hero-screenshot:hover .screenshot-image {
+  transform: translateY(-8px);
   box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.06),
-    0 12px 32px rgba(0, 0, 0, 0.08),
-    0 24px 64px rgba(0, 0, 0, 0.1);
+    0 8px 24px rgba(0, 0, 0, 0.25),
+    0 24px 64px rgba(0, 0, 0, 0.35),
+    0 48px 100px rgba(0, 0, 0, 0.25);
 }
 
-.play-button {
+.screenshot-glow {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.play-button-inner {
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #000000;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-.play-button-inner:hover {
-  transform: scale(1.05);
-  background: #FFFFFF;
-}
-
-.play-button-inner svg {
-  margin-left: 3px;
-}
-
-.video-overlay {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
-
-.video-duration {
-  padding: 6px 12px;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(20px);
-  border-radius: 6px;
-  color: #FFFFFF;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0.01em;
+  width: 80%;
+  height: 60%;
+  background: radial-gradient(ellipse at center, rgba(10, 132, 255, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* Features Section */
@@ -864,6 +903,196 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: #98989D;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+/* Adaptive Learning Section */
+.adaptive-learning-section {
+  padding: 140px 48px;
+  background: linear-gradient(180deg, #000000 0%, #0A0A0A 50%, #000000 100%);
+  overflow: hidden;
+}
+
+.adaptive-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.adaptive-header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.section-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(10, 132, 255, 0.1);
+  border: 1px solid rgba(10, 132, 255, 0.2);
+  border-radius: 980px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #0A84FF;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+
+.adaptive-header h2 {
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.adaptive-header p {
+  font-size: 21px;
+  font-weight: 400;
+  color: #86868B;
+  letter-spacing: -0.01em;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* Learning Showcase - Bento Grid */
+.learning-showcase {
+  display: grid;
+  grid-template-columns: 280px 1fr 280px;
+  gap: 24px;
+  margin-bottom: 80px;
+  min-height: 500px;
+}
+
+.showcase-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stack-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.stack-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+
+.stack-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.main-card {
+  flex: 1;
+}
+
+.offset-card {
+  flex: 0 0 auto;
+}
+
+.showcase-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-card {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.center-card:hover {
+  border-color: rgba(10, 132, 255, 0.3);
+  box-shadow: 0 16px 64px rgba(10, 132, 255, 0.1);
+}
+
+.center-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.showcase-features {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feature-image-card {
+  flex: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.feature-image-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+}
+
+.feature-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Learning Principles */
+.learning-principles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.principle-item {
+  text-align: center;
+}
+
+.principle-icon {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.principle-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.principle-item h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.principle-item p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #86868B;
   line-height: 1.5;
   letter-spacing: -0.01em;
 }
@@ -1378,8 +1607,7 @@ blockquote {
   }
 
   .hero-container {
-    grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 40px;
   }
 
   .hero-title {
@@ -1447,6 +1675,25 @@ blockquote {
   .model-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
+  }
+
+  .adaptive-learning-section {
+    padding: 100px 48px;
+  }
+
+  .adaptive-header h2 {
+    font-size: 44px;
+  }
+
+  .learning-showcase {
+    grid-template-columns: 220px 1fr 220px;
+    gap: 16px;
+    min-height: 400px;
+  }
+
+  .learning-principles {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 
   .testimonial-section {
@@ -1574,6 +1821,65 @@ blockquote {
 
   .model-org {
     font-size: 12px;
+  }
+
+  .adaptive-learning-section {
+    padding: 80px 24px;
+  }
+
+  .adaptive-header h2 {
+    font-size: 32px;
+  }
+
+  .adaptive-header p {
+    font-size: 17px;
+  }
+
+  .learning-showcase {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    min-height: auto;
+    margin-bottom: 48px;
+  }
+
+  .showcase-stack {
+    flex-direction: row;
+  }
+
+  .showcase-center {
+    order: -1;
+  }
+
+  .showcase-features {
+    flex-direction: row;
+  }
+
+  .learning-principles {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .principle-item {
+    text-align: left;
+  }
+
+  .principle-icon {
+    margin: 0 0 10px 0;
+    width: 28px;
+    height: 28px;
+  }
+
+  .principle-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .principle-item h4 {
+    font-size: 15px;
+  }
+
+  .principle-item p {
+    font-size: 13px;
   }
 
   .testimonial-section {

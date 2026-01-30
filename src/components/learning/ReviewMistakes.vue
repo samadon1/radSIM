@@ -48,24 +48,40 @@
             </p>
           </div>
 
-          <!-- Diagnosis -->
+          <!-- Your Answer (what user selected - shown in red) -->
+          <div class="info-card user-answer-card">
+            <h3>Your Answer</h3>
+            <div class="user-answer-value">
+              <template v-if="userAnswer">
+                <!-- Show classification if it was Normal/Abnormal flow -->
+                <template v-if="userAnswer.diagnosis === 'Normal'">
+                  Classified as Normal
+                </template>
+                <template v-else-if="userAnswer.diagnosis === 'Abnormal'">
+                  Classified as Abnormal
+                </template>
+                <!-- Show specific diagnosis if user typed one -->
+                <template v-else-if="userAnswer.diagnosis">
+                  {{ userAnswer.diagnosis }}
+                </template>
+                <!-- Fallback -->
+                <template v-else>
+                  No findings selected
+                </template>
+              </template>
+              <template v-else>
+                <span class="answer-not-recorded">Answer not recorded</span>
+              </template>
+            </div>
+          </div>
+
+          <!-- Correct Answer -->
           <div class="info-card diagnosis-card">
             <h3>Correct Answer</h3>
             <div class="diagnosis-value">{{ currentCase.diagnosis }}</div>
             <div class="diagnosis-type" v-if="currentCase.findings?.length">
               {{ currentCase.findings.length }} finding{{ currentCase.findings.length > 1 ? 's' : '' }} present
             </div>
-          </div>
-
-          <!-- Findings List -->
-          <div class="info-card" v-if="currentCase.findings?.length">
-            <h3>Key Findings</h3>
-            <ul class="findings-list">
-              <li v-for="(finding, idx) in currentCase.findings" :key="idx">
-                <strong>{{ finding.name }}</strong>
-                <span v-if="finding.location"> - {{ finding.location }}</span>
-              </li>
-            </ul>
           </div>
 
           <!-- Expert Analysis Button -->
@@ -116,16 +132,17 @@
 </template>
 
 <script setup lang="ts">
+/* eslint-disable no-use-before-define */
 import { ref, computed, watch } from 'vue';
-import type { RadiologyCaseMetadata } from '@/src/types/caseLibrary';
+import type { MissedCase } from '@/src/store/learning';
 import { useGemini } from '@/src/composables/useGemini';
 import { marked } from 'marked';
 
 const props = defineProps<{
-  cases: RadiologyCaseMetadata[];
+  cases: MissedCase[];
 }>();
 
-const emit = defineEmits(['exit-review']);
+defineEmits(['exit-review']);
 
 const { generateExpertAnalysisStreaming } = useGemini();
 
@@ -135,7 +152,14 @@ const expertAnalysisShown = ref(false);
 const isLoadingExpert = ref(false);
 const imageLoaded = ref(false);
 
-const currentCase = computed(() => props.cases[currentIndex.value]);
+// Get the current missed case entry (contains both caseData and userAnswer)
+const currentMissedCase = computed(() => props.cases[currentIndex.value]);
+
+// Get the case data for display
+const currentCase = computed(() => currentMissedCase.value?.caseData);
+
+// Get what the user answered
+const userAnswer = computed(() => currentMissedCase.value?.userAnswer);
 
 const imageUrl = computed(() => {
   if (!currentCase.value?.files?.imagePath) return '';
@@ -147,14 +171,22 @@ function onImageLoad() {
   imageLoaded.value = true;
 }
 
+// NIH chest X-rays are 1024x1024 pixels
+const ORIGINAL_IMAGE_SIZE = 1024;
+
 function getOverlayStyle(finding: any) {
-  // If finding has ROI coordinates, position the overlay
+  // If finding has ROI coordinates (in pixels), convert to percentages
   if (finding.roi) {
+    const leftPct = (finding.roi.x / ORIGINAL_IMAGE_SIZE) * 100;
+    const topPct = (finding.roi.y / ORIGINAL_IMAGE_SIZE) * 100;
+    const widthPct = (finding.roi.width / ORIGINAL_IMAGE_SIZE) * 100;
+    const heightPct = (finding.roi.height / ORIGINAL_IMAGE_SIZE) * 100;
+
     return {
-      left: `${finding.roi.x}%`,
-      top: `${finding.roi.y}%`,
-      width: `${finding.roi.width}%`,
-      height: `${finding.roi.height}%`
+      left: `${leftPct}%`,
+      top: `${topPct}%`,
+      width: `${widthPct}%`,
+      height: `${heightPct}%`
     };
   }
   // Default: show label at bottom
@@ -233,7 +265,7 @@ watch(() => props.cases, () => {
   background: #000;
   color: #fff;
   overflow-y: auto;
-  z-index: 1000;
+  z-index: 20000; /* Higher than LearningModule (10000) to cover entire screen */
   font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
 }
 
@@ -362,6 +394,26 @@ watch(() => props.cases, () => {
   color: rgba(255, 255, 255, 0.8);
 }
 
+/* User's wrong answer (red) */
+.user-answer-card {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.user-answer-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ef4444;
+}
+
+.answer-not-recorded {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Correct answer (green) */
 .diagnosis-card {
   background: rgba(34, 197, 94, 0.08);
   border-color: rgba(34, 197, 94, 0.2);

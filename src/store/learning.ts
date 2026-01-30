@@ -1,8 +1,8 @@
+/* eslint-disable no-use-before-define, no-restricted-syntax, @typescript-eslint/no-unused-vars */
 import { defineStore } from 'pinia';
 import { ref, computed, watch } from 'vue';
+import { doc, updateDoc, serverTimestamp } from 'firebase/firestore';
 import type { RadiologyCaseMetadata } from '@/src/types/caseLibrary';
-import { useCaseLibraryStore } from './case-library';
-import { useAuthStore } from './auth';
 import {
   getUserData,
   createUserData,
@@ -10,8 +10,9 @@ import {
   updateStreak,
   addSessionToHistory
 } from '@/src/firebase/userDataService';
-import { doc, updateDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/src/firebase/config';
+import { useCaseLibraryStore } from './case-library';
+import { useAuthStore } from './auth';
 
 // ============================================================================
 // Types
@@ -74,6 +75,15 @@ export interface AssessmentResult {
 // Alias for Firestore compatibility
 export type CaseProgress = CaseLearningData;
 
+// Missed case with user's answer for Review Mistakes feature
+export interface MissedCase {
+  caseData: RadiologyCaseMetadata;
+  userAnswer: {
+    findings: string[];
+    diagnosis: string;
+  };
+}
+
 // ============================================================================
 // Spaced Repetition Algorithm (SM-2)
 // ============================================================================
@@ -121,7 +131,7 @@ function calculateNextReview(
 
   // Update ease factor based on quality
   // EF' = EF + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02))
-  easeFactor = easeFactor + (0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02));
+  easeFactor += 0.1 - (5 - quality) * (0.08 + (5 - quality) * 0.02);
   easeFactor = Math.max(1.3, easeFactor); // Minimum ease factor
 
   // Calculate next review date
@@ -212,8 +222,11 @@ export const useLearningStore = defineStore('learning', () => {
   // Saved baseline session stats (persisted to localStorage and Firestore)
   const baselineSessionStats = ref<SessionStats | null>(null);
 
+  // Saved baseline missed cases (persisted for Review Mistakes from dashboard)
+  const baselineMissedCases = ref<MissedCase[]>([]);
+
   // Track cases that were answered incorrectly in this session (for Review Mistakes)
-  const sessionMissedCases = ref<RadiologyCaseMetadata[]>([]);
+  const sessionMissedCases = ref<MissedCase[]>([]);
 
   // Learning progress (persisted to localStorage)
   const learningData = ref<{ [caseId: string]: CaseLearningData }>({});
@@ -254,9 +267,9 @@ export const useLearningStore = defineStore('learning', () => {
     showExitConfirmation.value = false;
   }
 
-  // Resume session modal state
-  const showResumeSessionModal = ref(false);
-  const savedSessionData = ref<{
+  // Resume session modal state (reserved for future use)
+  const _showResumeSessionModal = ref(false);
+  const _savedSessionData = ref<{
     mode: LearningMode;
     findingType: string | null;
     cases: RadiologyCaseMetadata[];
@@ -475,6 +488,10 @@ export const useLearningStore = defineStore('learning', () => {
       // Save the current session stats as baseline stats
       baselineSessionStats.value = { ...sessionStats.value };
 
+      // Save the missed cases for later review from dashboard
+      baselineMissedCases.value = [...sessionMissedCases.value];
+      console.log('[LearningStore] Saved baseline missed cases:', baselineMissedCases.value.length);
+
       // Persist to localStorage and Firestore
       saveLearningData();
       syncToFirestore();
@@ -660,10 +677,17 @@ export const useLearningStore = defineStore('learning', () => {
     } else {
       // Had errors (missed findings or false positives)
       sessionStats.value.missedFindings++;
-      // Track this case for "Review Mistakes" feature
+      // Track this case for "Review Mistakes" feature (with user's answer)
       const currentCaseData = currentCase.value;
-      if (currentCaseData && !sessionMissedCases.value.find(c => c.id === currentCaseData.id)) {
-        sessionMissedCases.value.push(currentCaseData);
+      const currentUserResponse = userResponse.value;
+      if (currentCaseData && currentUserResponse && !sessionMissedCases.value.find(c => c.caseData.id === currentCaseData.id)) {
+        sessionMissedCases.value.push({
+          caseData: currentCaseData,
+          userAnswer: {
+            findings: [...currentUserResponse.findings],
+            diagnosis: currentUserResponse.diagnosis
+          }
+        });
       }
     }
     sessionStats.value.falsePositives += assessment.falsePositives.length;
@@ -706,7 +730,8 @@ export const useLearningStore = defineStore('learning', () => {
       const data = {
         learningData: learningData.value,
         findingStats: findingStats.value,
-        baselineSessionStats: baselineSessionStats.value
+        baselineSessionStats: baselineSessionStats.value,
+        baselineMissedCases: baselineMissedCases.value
       };
       localStorage.setItem(getStorageKey(), JSON.stringify(data, (key, value) => {
         // Convert Dates to ISO strings for storage
@@ -829,16 +854,16 @@ export const useLearningStore = defineStore('learning', () => {
         saveLearningDataToLocalStorage();
         console.log('[LearningStore] Loaded from Firestore');
         return true;
-      } else {
-        // Create new user document
-        await createUserData(authStore.userProfile.uid, {
-          email: authStore.userProfile.email,
-          displayName: authStore.userProfile.displayName,
-          photoURL: authStore.userProfile.photoURL
-        });
-        console.log('[LearningStore] Created new Firestore user document');
-        return true;
       }
+
+      // Create new user document
+      await createUserData(authStore.userProfile.uid, {
+        email: authStore.userProfile.email,
+        displayName: authStore.userProfile.displayName,
+        photoURL: authStore.userProfile.photoURL
+      });
+      console.log('[LearningStore] Created new Firestore user document');
+      return true;
     } catch (error) {
       console.error('Failed to load from Firestore:', error);
       return false;
@@ -850,7 +875,8 @@ export const useLearningStore = defineStore('learning', () => {
       const data = {
         learningData: learningData.value,
         findingStats: findingStats.value,
-        baselineSessionStats: baselineSessionStats.value
+        baselineSessionStats: baselineSessionStats.value,
+        baselineMissedCases: baselineMissedCases.value
       };
       localStorage.setItem(getStorageKey(), JSON.stringify(data, (key, value) => {
         if (value instanceof Date) {
@@ -878,11 +904,31 @@ export const useLearningStore = defineStore('learning', () => {
         learningData.value = data.learningData || {};
         findingStats.value = data.findingStats || {};
         baselineSessionStats.value = data.baselineSessionStats || null;
+
+        // Handle backwards compatibility for baselineMissedCases
+        // Old format: RadiologyCaseMetadata[]
+        // New format: MissedCase[] (with caseData and userAnswer)
+        const rawMissedCases = data.baselineMissedCases || [];
+        baselineMissedCases.value = rawMissedCases.map((item: any) => {
+          // Check if it's already in new format (has caseData property)
+          if (item.caseData) {
+            return item as MissedCase;
+          }
+          // Convert old format to new format (userAnswer not recorded for old data)
+          return {
+            caseData: item,
+            userAnswer: {
+              findings: [],
+              diagnosis: ''
+            }
+          } as MissedCase;
+        });
       } else {
         // No data for this user - start fresh
         learningData.value = {};
         findingStats.value = {};
         baselineSessionStats.value = null;
+        baselineMissedCases.value = [];
       }
     } catch (error) {
       console.error('Failed to load learning data:', error);
@@ -1152,6 +1198,7 @@ export const useLearningStore = defineStore('learning', () => {
     hasCommitted,
     sessionStats,
     baselineSessionStats,
+    baselineMissedCases,
     learningData,
     findingStats,
     annotationAttachment,

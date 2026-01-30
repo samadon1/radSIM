@@ -15,7 +15,7 @@
         <!-- Navigation links (shown on landing page) -->
         <div v-if="isLandingPage" class="header-nav">
           <a href="#features" class="nav-link" @click.prevent="scrollToSection('features')">Features</a>
-          <a href="#testimonials" class="nav-link" @click.prevent="scrollToSection('testimonials')">Testimonials</a>
+          <a href="#learning" class="nav-link" @click.prevent="scrollToSection('learning')">Learning</a>
           <a href="#pricing" class="nav-link" @click.prevent="scrollToSection('pricing')">Pricing</a>
         </div>
       </div>
@@ -33,7 +33,7 @@
             {{ planLabel }}
           </span>
 
-          <div class="user-profile" @click="toggleDropdown">
+          <div class="user-profile" role="button" tabindex="0" @click="toggleDropdown" @keydown.enter="toggleDropdown" @keydown.space.prevent="toggleDropdown">
             <img
               v-if="authStore.userProfile?.photoURL"
               :src="authStore.userProfile.photoURL"
@@ -80,12 +80,13 @@
           </Transition>
 
           <!-- Click outside to close dropdown -->
-          <div v-if="showDropdown" class="dropdown-overlay" @click="showDropdown = false"></div>
+          <div v-if="showDropdown" class="dropdown-overlay" role="presentation" @click="showDropdown = false" @keydown.escape="showDropdown = false"></div>
         </template>
 
-        <!-- Show sign in button if not signed in -->
+        <!-- Show sign in/sign up buttons if not signed in -->
         <template v-else>
-          <button class="btn-login" @click="handleSignIn">Sign in</button>
+          <button class="btn-login" @click="handleSignIn">Login</button>
+          <button class="btn-signup" @click="handleSignUp">Sign up</button>
         </template>
       </div>
     </div>
@@ -119,7 +120,7 @@ const isPro = computed(() => {
 });
 
 const planLabel = computed(() => {
-  return isPro.value ? 'Pro' : 'Free';
+  return isPro.value ? 'Pro' : 'Basic';
 });
 
 const planBadgeClass = computed(() => {
@@ -149,6 +150,11 @@ function scrollToSection(sectionId: string) {
 function handleSignIn() {
   // Navigate to login page where user can choose auth method
   router.push('/login');
+}
+
+function handleSignUp() {
+  // Navigate to login page with signup mode
+  router.push('/login?mode=signup');
 }
 
 async function handleSignOut() {
@@ -445,6 +451,23 @@ onMounted(() => {
 
 .btn-login:hover {
   background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-signup {
+  background: #FFFFFF;
+  border: none;
+  color: #000000;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 980px;
+}
+
+.btn-signup:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
 }
 
 /* Plan badge */

@@ -42,6 +42,7 @@
 </template>
 
 <script lang="ts">
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Component, computed, defineComponent, ref, watch, provide } from 'vue';
 
 import { ConnectionState, useServerStore } from '@/src/store/server-1';
@@ -50,7 +51,6 @@ import CaseBrowser from './CaseBrowser.vue';
 import RenderingModule from './RenderingModule.vue';
 import AnnotationsModule from './AnnotationsModule.vue';
 // import ServerModule from './ServerModule.vue';
-import EducationModule from './EducationModule.vue';
 import LearningModule from './LearningModule.vue';
 // Removed NVIDIA modules - not needed for RADSIM
 // import NVSegmentCTModule from './NVSegmentCTModule.vue';

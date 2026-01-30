@@ -30,7 +30,7 @@ export interface PricingTier {
 export const PRICING_TIERS: PricingTier[] = [
   {
     id: 'free',
-    name: 'Free',
+    name: 'Basic',
     description: 'Get started with radiology training',
     price: {
       monthly: 0,
