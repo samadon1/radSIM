@@ -21,16 +21,63 @@
     <!-- Right Panel - Auth Form -->
     <div class="auth-form-panel">
       <div class="auth-form-container">
-        <!-- Back to home link -->
-        <router-link to="/" class="back-link">
+        <!-- Back link -->
+        <router-link v-if="!showVerificationSent" to="/" class="back-link">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           Back to home
         </router-link>
+        <button v-else class="back-link" @click="goBackFromVerification">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Back
+        </button>
 
-        <!-- Auth Card -->
-        <div class="auth-card">
+        <!-- Email Verification Sent -->
+        <div v-if="showVerificationSent" class="auth-card">
+          <div class="verification-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <rect x="6" y="12" width="36" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M6 14L24 26L42 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h2 class="auth-title">Check your email</h2>
+          <p class="verification-subtitle">
+            We sent a verification link to<br>
+            <strong>{{ email }}</strong>
+          </p>
+          <p class="verification-info">
+            Click the link in the email to verify your account. You can close this page.
+          </p>
+
+          <!-- Error Message -->
+          <div v-if="error" class="auth-error">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8 4.5V8.5M8 11V11.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            {{ error }}
+          </div>
+
+          <div class="resend-section">
+            <span v-if="resendCooldown > 0" class="resend-cooldown">
+              Resend email in {{ resendCooldown }}s
+            </span>
+            <button
+              v-else
+              class="resend-btn"
+              @click="handleResendVerification"
+              :disabled="isLoading"
+            >
+              Didn't receive it? Resend email
+            </button>
+          </div>
+        </div>
+
+        <!-- Auth Card (Login/Signup) -->
+        <div v-else class="auth-card">
           <h2 class="auth-title">{{ isSignUp ? 'Create account' : 'Welcome back' }}</h2>
 
           <!-- Error Message -->
@@ -44,7 +91,7 @@
 
           <!-- Auth Options -->
           <div class="auth-options">
-            <!-- Email Sign In (placeholder for future) -->
+            <!-- Email Sign In -->
             <div class="auth-email-section">
               <div class="input-group">
                 <label for="email">Email Address</label>
@@ -54,6 +101,7 @@
                   v-model="email"
                   placeholder="you@institution.edu"
                   :disabled="isLoading"
+                  @keydown.enter="handleEmailAuth"
                 />
               </div>
               <div class="input-group">
@@ -65,6 +113,7 @@
                     v-model="password"
                     placeholder="Enter your password"
                     :disabled="isLoading"
+                    @keydown.enter="handleEmailAuth"
                   />
                   <button type="button" class="password-toggle" @click="showPassword = !showPassword">
                     <svg v-if="!showPassword" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -83,7 +132,7 @@
                 @click="handleEmailAuth"
                 :disabled="!email || !password || isLoading"
               >
-                {{ isLoading ? 'Please wait...' : (isSignUp ? 'Create Account' : 'Login') }}
+                {{ isLoading ? 'Please wait...' : (isSignUp ? 'Continue' : 'Login') }}
               </button>
             </div>
 
@@ -124,7 +173,7 @@
         <!-- Terms -->
         <p class="auth-terms">
           By signing up, you agree to our
-          <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+          <router-link to="/terms">Terms of Service</router-link> and <router-link to="/privacy">Privacy Policy</router-link>.
         </p>
       </div>
     </div>
@@ -132,25 +181,60 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { ref, onUnmounted } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
 import { useAuthStore } from '@/src/store/auth';
+import { sendEmailVerification } from 'firebase/auth';
+import { auth } from '@/src/firebase/config';
 
 const router = useRouter();
+const route = useRoute();
 const authStore = useAuthStore();
 
+// Form state
 const email = ref('');
 const password = ref('');
 const showPassword = ref(false);
 const isLoading = ref(false);
 const error = ref<string | null>(null);
-const isSignUp = ref(false);
+const isSignUp = ref(route.query.mode === 'signup');
+
+// Verification state
+const showVerificationSent = ref(false);
+const resendCooldown = ref(0);
+let cooldownInterval: ReturnType<typeof setInterval> | null = null;
 
 const toggleAuthMode = () => {
   isSignUp.value = !isSignUp.value;
   error.value = null;
 };
 
+const goBackFromVerification = async () => {
+  // Sign out the unverified user
+  await authStore.signOut();
+  showVerificationSent.value = false;
+  error.value = null;
+};
+
+const startResendCooldown = () => {
+  resendCooldown.value = 60;
+  if (cooldownInterval) clearInterval(cooldownInterval);
+  cooldownInterval = setInterval(() => {
+    resendCooldown.value--;
+    if (resendCooldown.value <= 0 && cooldownInterval) {
+      clearInterval(cooldownInterval);
+      cooldownInterval = null;
+    }
+  }, 1000);
+};
+
+// Get the verification email action settings
+const getActionCodeSettings = () => ({
+  url: `${window.location.origin}/verify-email`,
+  handleCodeInApp: true,
+});
+
+// Handle email auth (login or signup)
 const handleEmailAuth = async () => {
   if (!email.value || !password.value) return;
 
@@ -159,14 +243,57 @@ const handleEmailAuth = async () => {
 
   try {
     if (isSignUp.value) {
-      await authStore.signUpWithEmail(email.value, password.value);
+      // Create the account
+      const user = await authStore.signUpWithEmail(email.value, password.value);
+
+      // Send verification email
+      await sendEmailVerification(user, getActionCodeSettings());
+
+      // Show verification sent screen
+      showVerificationSent.value = true;
+      startResendCooldown();
     } else {
-      await authStore.signInWithEmail(email.value, password.value);
+      // Regular login
+      const user = await authStore.signInWithEmail(email.value, password.value);
+
+      // Check if email is verified
+      if (!user.emailVerified) {
+        // Send a new verification email and show the verification screen
+        await sendEmailVerification(user, getActionCodeSettings());
+        showVerificationSent.value = true;
+        startResendCooldown();
+        error.value = 'Please verify your email before signing in.';
+      } else {
+        router.push('/dashboard');
+      }
     }
-    router.push('/dashboard');
   } catch (e: any) {
-    // Error is already set by the auth store with user-friendly message
-    error.value = authStore.error || 'Authentication failed';
+    const errorMessage = e.message || e.details || 'Authentication failed';
+    error.value = errorMessage.replace('Firebase: ', '');
+  } finally {
+    isLoading.value = false;
+  }
+};
+
+// Resend verification email
+const handleResendVerification = async () => {
+  if (resendCooldown.value > 0) return;
+
+  isLoading.value = true;
+  error.value = null;
+
+  try {
+    const user = auth.currentUser;
+    if (user) {
+      await sendEmailVerification(user, getActionCodeSettings());
+      startResendCooldown();
+    } else {
+      error.value = 'Session expired. Please sign up again.';
+      showVerificationSent.value = false;
+    }
+  } catch (e: any) {
+    const errorMessage = e.message || 'Failed to resend verification email';
+    error.value = errorMessage.replace('Firebase: ', '');
   } finally {
     isLoading.value = false;
   }
@@ -178,7 +305,6 @@ const handleGoogleSignIn = async () => {
 
   try {
     await authStore.signInWithGoogle();
-    // Popup completed successfully, navigate to dashboard
     router.push('/dashboard');
   } catch (e: any) {
     error.value = e.message || 'Failed to sign in with Google';
@@ -188,9 +314,14 @@ const handleGoogleSignIn = async () => {
 };
 
 const handleSSOLogin = () => {
-  // Placeholder for SSO - would redirect to institution's IdP
   error.value = 'Institutional SSO coming soon. Please use Google or email sign-in for now.';
 };
+
+onUnmounted(() => {
+  if (cooldownInterval) {
+    clearInterval(cooldownInterval);
+  }
+});
 </script>
 
 <style scoped>
@@ -294,6 +425,9 @@ const handleSSOLogin = () => {
   letter-spacing: -0.01em;
   transition: color 0.2s ease;
   margin-bottom: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .back-link:hover {
@@ -312,6 +446,32 @@ const handleSSOLogin = () => {
   letter-spacing: -0.02em;
 }
 
+.verification-subtitle {
+  font-size: 16px;
+  color: #86868B;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+.verification-subtitle strong {
+  color: #FFFFFF;
+}
+
+.verification-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: #0A84FF;
+}
+
+.verification-info {
+  font-size: 14px;
+  color: #6E6E73;
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
 .auth-error {
   display: flex;
   align-items: center;
@@ -323,6 +483,34 @@ const handleSSOLogin = () => {
   color: #FF453A;
   font-size: 14px;
   margin-bottom: 24px;
+}
+
+.resend-section {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.resend-cooldown {
+  font-size: 14px;
+  color: #6E6E73;
+}
+
+.resend-btn {
+  background: none;
+  border: none;
+  color: #0A84FF;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.resend-btn:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+.resend-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .auth-options {

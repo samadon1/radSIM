@@ -7,7 +7,11 @@ import {
   type DocumentData
 } from 'firebase/firestore';
 import { db } from './config';
-import type { CaseProgress, SessionStats } from '@/src/store/learning';
+import type { CaseProgress, SessionStats, FindingPerformance } from '@/src/store/learning';
+
+// Subscription tier types
+export type SubscriptionTier = 'free' | 'pro' | 'enterprise';
+export type SubscriptionStatus = 'active' | 'canceled' | 'past_due' | 'trialing' | null;
 
 // User document structure in Firestore
 export interface UserData {
@@ -20,6 +24,8 @@ export interface UserData {
   // Learning data
   caseProgress: Record<string, CaseProgress>;
   sessionHistory: SessionStats[];
+  findingStats?: Record<string, FindingPerformance>;
+  baselineSessionStats?: SessionStats;
 
   // Stats
   totalCasesReviewed: number;
@@ -27,6 +33,17 @@ export interface UserData {
   currentStreak: number;
   longestStreak: number;
   lastActiveDate: string | null;
+
+  // Onboarding
+  hasSeenWelcome?: boolean;
+
+  // Subscription
+  subscriptionTier?: SubscriptionTier;
+  subscriptionStatus?: SubscriptionStatus;
+  paystackCustomerCode?: string | null;
+  paystackSubscriptionCode?: string | null;
+  subscriptionStartDate?: any;
+  subscriptionEndDate?: any;
 
   // Timestamps
   createdAt: any;

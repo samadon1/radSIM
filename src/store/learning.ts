@@ -10,6 +10,8 @@ import {
   updateStreak,
   addSessionToHistory
 } from '@/src/firebase/userDataService';
+import { doc, updateDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '@/src/firebase/config';
 
 // ============================================================================
 // Types
@@ -45,9 +47,9 @@ export interface FindingPerformance {
 
 export interface SessionStats {
   casesReviewed: number;
-  correctFindings: number;
-  missedFindings: number;
-  falsePositives: number;
+  correctFindings: number;   // Number of cases answered correctly
+  missedFindings: number;    // Number of cases answered incorrectly
+  falsePositives: number;    // Reserved for future use
   averageConfidence: number;
   averageTime: number;
   averageScore: number;
@@ -207,6 +209,12 @@ export const useLearningStore = defineStore('learning', () => {
     averageScore: 0
   });
 
+  // Saved baseline session stats (persisted to localStorage and Firestore)
+  const baselineSessionStats = ref<SessionStats | null>(null);
+
+  // Track cases that were answered incorrectly in this session (for Review Mistakes)
+  const sessionMissedCases = ref<RadiologyCaseMetadata[]>([]);
+
   // Learning progress (persisted to localStorage)
   const learningData = ref<{ [caseId: string]: CaseLearningData }>({});
 
@@ -303,9 +311,9 @@ export const useLearningStore = defineStore('learning', () => {
     const libraryPath = `/cases/nih-learning/${findingType.toLowerCase()}.json`;
     await caseLibrary.loadLibrary(libraryPath);
 
-    // Select cases (for now, random selection - can enhance with difficulty matching)
+    // Use spaced repetition for focused sessions too
     const allCases = caseLibrary.cases;
-    sessionCases.value = randomSample(allCases, caseCount);
+    sessionCases.value = selectCasesWithSpacedRepetition(allCases, caseCount);
 
     // Reset session state
     currentCaseIndex.value = 0;
@@ -315,28 +323,36 @@ export const useLearningStore = defineStore('learning', () => {
     startCase();
   }
 
-  async function startMixedSession(caseCount: number = 20) {
-    currentMode.value = 'mixed';
-    currentFindingType.value = null;
-
-    // Load master index
-    await caseLibrary.loadLibrary('/cases/nih-learning/master-index.json');
-
-    // Select cases using spaced repetition
-    sessionCases.value = selectCasesForMixedMode(caseCount);
-
-    // Reset session state
-    currentCaseIndex.value = 0;
-    resetSessionStats();
-
-    // Start timing the first case
-    startCase();
-  }
-
-  function selectCasesForMixedMode(count: number): RadiologyCaseMetadata[] {
-    const allCases = caseLibrary.cases;
-    const today = new Date();
+  /**
+   * Select cases using spaced repetition algorithm
+   * Works for both mixed and focused sessions
+   */
+  function selectCasesWithSpacedRepetition(allCases: RadiologyCaseMetadata[], count: number): RadiologyCaseMetadata[] {
     const selected: RadiologyCaseMetadata[] = [];
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    // Check if user is still in baseline phase
+    const reviewedCases = Object.values(learningData.value).filter(
+      data => data.timesReviewed > 0
+    ).length;
+    const isBaselinePhase = reviewedCases < BASELINE_REQUIRED_CASES;
+
+    // During baseline: prioritize new cases to build up initial data
+    if (isBaselinePhase) {
+      const newCases = allCases.filter(c => !learningData.value[c.id] || learningData.value[c.id].timesReviewed === 0);
+      selected.push(...randomSample(newCases, Math.min(count, newCases.length)));
+
+      // If we don't have enough new cases, fill with any unselected cases
+      if (selected.length < count) {
+        const remaining = allCases.filter(c => !selected.includes(c));
+        selected.push(...randomSample(remaining, count - selected.length));
+      }
+
+      return shuffle(selected.slice(0, count));
+    }
+
+    // After baseline: use spaced repetition algorithm
 
     // Priority 1: Overdue cases (past due date)
     const overdue = allCases
@@ -351,7 +367,7 @@ export const useLearningStore = defineStore('learning', () => {
         const bData = learningData.value[b.id];
         const aDate = aData?.nextReviewDate ? new Date(aData.nextReviewDate) : new Date();
         const bDate = bData?.nextReviewDate ? new Date(bData.nextReviewDate) : new Date();
-        return aDate.getTime() - bDate.getTime(); // Oldest first
+        return aDate.getTime() - bDate.getTime();
       });
 
     selected.push(...overdue.slice(0, count));
@@ -378,14 +394,14 @@ export const useLearningStore = defineStore('learning', () => {
         .sort((a, b) => {
           const aAvg = averageScore(learningData.value[a.id].performanceHistory);
           const bAvg = averageScore(learningData.value[b.id].performanceHistory);
-          return aAvg - bAvg; // Lowest scores first
+          return aAvg - bAvg;
         });
       selected.push(...struggling.slice(0, count - selected.length));
     }
 
     // Priority 4: New cases (never reviewed) - limit to 25%
     if (selected.length < count) {
-      const newCases = allCases.filter(c => !learningData.value[c.id]);
+      const newCases = allCases.filter(c => !learningData.value[c.id] && !selected.includes(c));
       const newCasesLimit = Math.min(
         Math.floor(count * 0.25),
         count - selected.length
@@ -400,6 +416,24 @@ export const useLearningStore = defineStore('learning', () => {
     }
 
     return shuffle(selected.slice(0, count));
+  }
+
+  async function startMixedSession(caseCount: number = 20) {
+    currentMode.value = 'mixed';
+    currentFindingType.value = null;
+
+    // Load master index
+    await caseLibrary.loadLibrary('/cases/nih-learning/master-index.json');
+
+    // Select cases using spaced repetition
+    sessionCases.value = selectCasesWithSpacedRepetition(caseLibrary.cases, caseCount);
+
+    // Reset session state
+    currentCaseIndex.value = 0;
+    resetSessionStats();
+
+    // Start timing the first case
+    startCase();
   }
 
   function endSession() {
@@ -422,6 +456,49 @@ export const useLearningStore = defineStore('learning', () => {
       averageTime: 0,
       averageScore: 0
     };
+    sessionMissedCases.value = [];
+  }
+
+  /**
+   * Check if baseline just completed and save session stats
+   * Called after updateLearningProgress to check if we hit 20 cases
+   */
+  function checkAndSaveBaselineCompletion() {
+    const reviewedCases = Object.values(learningData.value).filter(
+      data => data.timesReviewed > 0
+    ).length;
+
+    // If we just completed exactly 20 cases and haven't saved baseline stats yet
+    if (reviewedCases === BASELINE_REQUIRED_CASES && !baselineSessionStats.value) {
+      console.log('[LearningStore] Baseline complete! Saving session stats:', sessionStats.value);
+
+      // Save the current session stats as baseline stats
+      baselineSessionStats.value = { ...sessionStats.value };
+
+      // Persist to localStorage and Firestore
+      saveLearningData();
+      syncToFirestore();
+    }
+  }
+
+  // Start a review session with only the missed cases
+  function startReviewMistakesSession() {
+    if (sessionMissedCases.value.length === 0) return false;
+
+    // Copy missed cases before resetting
+    const casesToReview = [...sessionMissedCases.value];
+
+    // Reset stats for new session
+    resetSessionStats();
+
+    // Start new session with missed cases
+    currentMode.value = 'mixed';
+    sessionCases.value = casesToReview;
+    currentCaseIndex.value = 0;
+    hasCommitted.value = false;
+    userResponse.value = null;
+
+    return true;
   }
 
   // -------------------------------------------------------------------------
@@ -472,6 +549,64 @@ export const useLearningStore = defineStore('learning', () => {
     };
   }
 
+  /**
+   * Update finding-level statistics based on case completion
+   */
+  function updateFindingStats(caseData: RadiologyCaseMetadata, assessment: AssessmentResult) {
+    // Get all findings in this case
+    const findingsInCase = caseData.findings?.map(f => f.name) || [];
+
+    // Update stats for each finding type in this case
+    findingsInCase.forEach(findingType => {
+      const existing = findingStats.value[findingType];
+
+      if (!existing) {
+        // Initialize new finding stats
+        const caseLibraryStore = useCaseLibraryStore();
+        const totalCasesWithFinding = caseLibraryStore.cases.filter(c =>
+          c.findings?.some(f => f.name.toLowerCase() === findingType.toLowerCase())
+        ).length;
+
+        findingStats.value[findingType] = {
+          findingType,
+          totalCases: totalCasesWithFinding,
+          reviewedCases: 1,
+          accuracy: assessment.score,
+          averageConfidence: assessment.confidence,
+          masteryLevel: getMasteryLevel(1, assessment.score)
+        };
+      } else {
+        // Update existing stats
+        const newReviewedCases = existing.reviewedCases + 1;
+
+        // Recalculate accuracy as running average
+        const newAccuracy = ((existing.accuracy * existing.reviewedCases) + assessment.score) / newReviewedCases;
+
+        // Recalculate average confidence
+        const newAvgConfidence = ((existing.averageConfidence * existing.reviewedCases) + assessment.confidence) / newReviewedCases;
+
+        findingStats.value[findingType] = {
+          ...existing,
+          reviewedCases: newReviewedCases,
+          accuracy: Math.round(newAccuracy),
+          averageConfidence: Math.round(newAvgConfidence * 10) / 10, // Round to 1 decimal
+          masteryLevel: getMasteryLevel(newReviewedCases, newAccuracy)
+        };
+      }
+    });
+  }
+
+  /**
+   * Determine mastery level based on cases reviewed and accuracy
+   */
+  function getMasteryLevel(reviewedCases: number, accuracy: number): 'novice' | 'learning' | 'competent' | 'proficient' | 'expert' {
+    if (reviewedCases < 3) return 'novice';
+    if (reviewedCases < 10) return 'learning';
+    if (accuracy < 70) return 'competent';
+    if (accuracy < 85) return 'proficient';
+    return 'expert';
+  }
+
   function updateLearningProgress(assessment: AssessmentResult) {
     if (!currentCase.value) return;
 
@@ -504,12 +639,33 @@ export const useLearningStore = defineStore('learning', () => {
 
     // Save
     learningData.value[caseId] = existing;
+
+    // Update finding-level stats
+    updateFindingStats(currentCase.value, assessment);
+
     saveLearningData();
 
-    // Update session stats
+    // Update session stats - count cases not individual findings
     sessionStats.value.casesReviewed++;
-    sessionStats.value.correctFindings += assessment.correct.length;
-    sessionStats.value.missedFindings += assessment.missed.length;
+    // A case is considered "correct" if:
+    // - All findings were identified (no missed findings)
+    // - No false positives were identified
+    // This handles both cases with findings and normal cases (no findings)
+    const hasMissedFindings = assessment.missed.length > 0;
+    const hasFalsePositives = assessment.falsePositives.length > 0;
+
+    if (!hasMissedFindings && !hasFalsePositives) {
+      // Perfect response - got everything right
+      sessionStats.value.correctFindings++;
+    } else {
+      // Had errors (missed findings or false positives)
+      sessionStats.value.missedFindings++;
+      // Track this case for "Review Mistakes" feature
+      const currentCaseData = currentCase.value;
+      if (currentCaseData && !sessionMissedCases.value.find(c => c.id === currentCaseData.id)) {
+        sessionMissedCases.value.push(currentCaseData);
+      }
+    }
     sessionStats.value.falsePositives += assessment.falsePositives.length;
 
     const totalReviewed = sessionStats.value.casesReviewed;
@@ -519,6 +675,9 @@ export const useLearningStore = defineStore('learning', () => {
       (sessionStats.value.averageTime * (totalReviewed - 1) + assessment.timeSpent) / totalReviewed;
     sessionStats.value.averageScore =
       (sessionStats.value.averageScore * (totalReviewed - 1) + assessment.score) / totalReviewed;
+
+    // Check if baseline just completed and save stats
+    checkAndSaveBaselineCompletion();
   }
 
   function nextCase() {
@@ -535,14 +694,21 @@ export const useLearningStore = defineStore('learning', () => {
   const isSyncing = ref(false);
   const lastSyncTime = ref<Date | null>(null);
 
+  function getStorageKey() {
+    const authStore = useAuthStore();
+    const userId = authStore.userProfile?.uid || 'anonymous';
+    return `radsim_learning_data_${userId}`;
+  }
+
   function saveLearningData() {
-    // Save to localStorage (offline-first)
+    // Save to localStorage (offline-first) with user-specific key
     try {
       const data = {
         learningData: learningData.value,
-        findingStats: findingStats.value
+        findingStats: findingStats.value,
+        baselineSessionStats: baselineSessionStats.value
       };
-      localStorage.setItem('radsim_learning_data', JSON.stringify(data, (key, value) => {
+      localStorage.setItem(getStorageKey(), JSON.stringify(data, (key, value) => {
         // Convert Dates to ISO strings for storage
         if (value instanceof Date) {
           return value.toISOString();
@@ -592,6 +758,24 @@ export const useLearningStore = defineStore('learning', () => {
       }
 
       await syncCaseProgress(authStore.userProfile.uid, caseProgress);
+
+      // Sync baseline session stats and finding stats to user document
+      const userRef = doc(db, 'users', authStore.userProfile.uid);
+      const userUpdateData: any = {
+        updatedAt: serverTimestamp()
+      };
+
+      if (baselineSessionStats.value) {
+        userUpdateData.baselineSessionStats = baselineSessionStats.value;
+      }
+
+      // Sync finding stats if they exist
+      if (Object.keys(findingStats.value).length > 0) {
+        userUpdateData.findingStats = findingStats.value;
+      }
+
+      await updateDoc(userRef, userUpdateData);
+
       await updateStreak(authStore.userProfile.uid);
       lastSyncTime.value = new Date();
       console.log('[LearningStore] Synced to Firestore');
@@ -636,6 +820,11 @@ export const useLearningStore = defineStore('learning', () => {
           }
         }
 
+        // Also load baseline session stats if it exists
+        if (userData.baselineSessionStats) {
+          baselineSessionStats.value = userData.baselineSessionStats;
+        }
+
         // Save merged data back to localStorage
         saveLearningDataToLocalStorage();
         console.log('[LearningStore] Loaded from Firestore');
@@ -660,9 +849,10 @@ export const useLearningStore = defineStore('learning', () => {
     try {
       const data = {
         learningData: learningData.value,
-        findingStats: findingStats.value
+        findingStats: findingStats.value,
+        baselineSessionStats: baselineSessionStats.value
       };
-      localStorage.setItem('radsim_learning_data', JSON.stringify(data, (key, value) => {
+      localStorage.setItem(getStorageKey(), JSON.stringify(data, (key, value) => {
         if (value instanceof Date) {
           return value.toISOString();
         }
@@ -675,7 +865,7 @@ export const useLearningStore = defineStore('learning', () => {
 
   function loadLearningData() {
     try {
-      const stored = localStorage.getItem('radsim_learning_data');
+      const stored = localStorage.getItem(getStorageKey());
       if (stored) {
         const data = JSON.parse(stored, (key, value) => {
           // Convert ISO strings back to Dates
@@ -687,6 +877,12 @@ export const useLearningStore = defineStore('learning', () => {
 
         learningData.value = data.learningData || {};
         findingStats.value = data.findingStats || {};
+        baselineSessionStats.value = data.baselineSessionStats || null;
+      } else {
+        // No data for this user - start fresh
+        learningData.value = {};
+        findingStats.value = {};
+        baselineSessionStats.value = null;
       }
     } catch (error) {
       console.error('Failed to load learning data:', error);
@@ -696,7 +892,7 @@ export const useLearningStore = defineStore('learning', () => {
   function clearLearningData() {
     learningData.value = {};
     findingStats.value = {};
-    localStorage.removeItem('radsim_learning_data');
+    localStorage.removeItem(getStorageKey());
   }
 
   // Save session to Firestore when completed
@@ -715,11 +911,15 @@ export const useLearningStore = defineStore('learning', () => {
   // Session Persistence (survives page refresh)
   // -------------------------------------------------------------------------
 
-  const SESSION_STORAGE_KEY = 'radsim_active_session';
+  function getSessionStorageKey() {
+    const authStore = useAuthStore();
+    const userId = authStore.userProfile?.uid || 'anonymous';
+    return `radsim_active_session_${userId}`;
+  }
 
   function saveActiveSession() {
     if (!isSessionActive.value) {
-      localStorage.removeItem(SESSION_STORAGE_KEY);
+      localStorage.removeItem(getSessionStorageKey());
       return;
     }
 
@@ -733,7 +933,7 @@ export const useLearningStore = defineStore('learning', () => {
         hasCommitted: hasCommitted.value,
         timestamp: new Date().toISOString()
       };
-      localStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(sessionData));
+      localStorage.setItem(getSessionStorageKey(), JSON.stringify(sessionData));
       console.log('[LearningStore] Active session saved');
     } catch (error) {
       console.error('Failed to save active session:', error);
@@ -742,7 +942,7 @@ export const useLearningStore = defineStore('learning', () => {
 
   function loadActiveSession(): boolean {
     try {
-      const stored = localStorage.getItem(SESSION_STORAGE_KEY);
+      const stored = localStorage.getItem(getSessionStorageKey());
       if (!stored) return false;
 
       const sessionData = JSON.parse(stored);
@@ -753,7 +953,7 @@ export const useLearningStore = defineStore('learning', () => {
       const hoursDiff = (now.getTime() - timestamp.getTime()) / (1000 * 60 * 60);
       if (hoursDiff > 24) {
         console.log('[LearningStore] Saved session expired, clearing');
-        localStorage.removeItem(SESSION_STORAGE_KEY);
+        localStorage.removeItem(getSessionStorageKey());
         return false;
       }
 
@@ -774,13 +974,13 @@ export const useLearningStore = defineStore('learning', () => {
       return true;
     } catch (error) {
       console.error('Failed to load active session:', error);
-      localStorage.removeItem(SESSION_STORAGE_KEY);
+      localStorage.removeItem(getSessionStorageKey());
       return false;
     }
   }
 
   function clearSavedSession() {
-    localStorage.removeItem(SESSION_STORAGE_KEY);
+    localStorage.removeItem(getSessionStorageKey());
   }
 
   // Watch for session changes and auto-save
@@ -851,8 +1051,46 @@ export const useLearningStore = defineStore('learning', () => {
   }
 
   // -------------------------------------------------------------------------
-  // Initialization
+  // Initialization & Auth State Handling
   // -------------------------------------------------------------------------
+
+  // Function to reload data when user changes (login/logout/switch)
+  async function onAuthStateChange() {
+    console.log('[LearningStore] Auth state changed, reloading user data');
+    // Clear current session data
+    endSession();
+    resetSessionStats();
+    // Load user-specific data from localStorage first
+    loadLearningData();
+    // Then load from Firestore if authenticated
+    await loadFromFirestore();
+  }
+
+  // Load finding stats and baseline stats from Firestore
+  async function loadFromFirestore() {
+    const authStore = useAuthStore();
+    if (!authStore.isAuthenticated || !authStore.userProfile) return;
+
+    try {
+      const userData = await getUserData(authStore.userProfile.uid);
+      if (userData) {
+        // Load finding stats from Firestore if available
+        if (userData.findingStats) {
+          findingStats.value = userData.findingStats;
+          console.log('[LearningStore] Loaded findingStats from Firestore:', userData.findingStats);
+        }
+        // Load baseline session stats from Firestore if available
+        if (userData.baselineSessionStats) {
+          baselineSessionStats.value = userData.baselineSessionStats;
+          console.log('[LearningStore] Loaded baselineSessionStats from Firestore');
+        }
+        // Save to localStorage to keep in sync
+        saveLearningDataToLocalStorage();
+      }
+    } catch (error) {
+      console.error('[LearningStore] Failed to load from Firestore:', error);
+    }
+  }
 
   // Load persisted data on store creation
   loadLearningData();
@@ -913,6 +1151,7 @@ export const useLearningStore = defineStore('learning', () => {
     userResponse,
     hasCommitted,
     sessionStats,
+    baselineSessionStats,
     learningData,
     findingStats,
     annotationAttachment,
@@ -941,12 +1180,15 @@ export const useLearningStore = defineStore('learning', () => {
     saveLearningData,
     loadLearningData,
     clearLearningData,
+    onAuthStateChange,
     setAnnotationAttachment,
     clearAnnotationAttachment,
     showGroundTruthAnnotations,
     clearGroundTruthAnnotations,
     requestExitConfirmation,
     cancelExitConfirmation,
+    sessionMissedCases,
+    startReviewMistakesSession,
 
     // Firestore sync
     syncToFirestore,

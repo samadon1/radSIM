@@ -140,3 +140,34 @@ export interface EducationalSession {
   progress: LearningProgress;
   tutorConversation: TutorMessage[];
 }
+
+// Diagnostic conversation flow types
+export type DiagnosticStep =
+  | 'initial'           // Starting state
+  | 'normal_abnormal'   // Waiting for normal/abnormal classification
+  | 'diagnosis'         // Waiting for diagnosis (after abnormal)
+  | 'feedback'          // Showing feedback/score
+  | 'complete';         // Flow finished
+
+export interface DiagnosticConversationState {
+  step: DiagnosticStep;
+  userClassification?: 'normal' | 'abnormal';
+  userDiagnosis?: string;
+  userFindings?: string[];
+  userAnnotation?: {
+    x: number;
+    y: number;
+    width: number;
+    height: number;
+  };
+  classificationCorrect?: boolean;
+  diagnosisCorrect?: boolean;
+  score: number;
+  showingExplanation: boolean;
+  feedback?: {
+    correct: string[];
+    missed: string[];
+    incorrect: string[];
+    explanation: string;
+  };
+}

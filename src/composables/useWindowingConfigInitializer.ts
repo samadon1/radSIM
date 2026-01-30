@@ -27,6 +27,23 @@ export function useWindowingConfigInitializer(
     return undefined;
   });
 
+  // Compute window/level from image data range for non-DICOM images
+  const imageDataRange = computed(() => {
+    const image = imageData.value;
+    if (!image) return undefined;
+    const scalars = image.getPointData()?.getScalars();
+    if (!scalars) return undefined;
+    const range = scalars.getRange(0);
+    if (range) {
+      const [min, max] = range;
+      return {
+        width: max - min,
+        level: (max + min) / 2,
+      };
+    }
+    return undefined;
+  });
+
   function resetWidthLevel() {
     const imageIdVal = unref(imageID);
     const viewIdVal = unref(viewID);
@@ -44,6 +61,15 @@ export function useWindowingConfigInitializer(
         width: firstTagVal.width,
         level: firstTagVal.level,
       });
+    } else {
+      // For non-DICOM images, use computed data range as fallback
+      const dataRange = unref(imageDataRange);
+      if (dataRange) {
+        store.updateConfig(viewIdVal, imageIdVal, {
+          width: dataRange.width,
+          level: dataRange.level,
+        });
+      }
     }
 
     const widthLevel = store.runtimeConfigWindowLevel;

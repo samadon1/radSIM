@@ -43,14 +43,15 @@ export function useLoadingNotifications() {
   let toastID: Maybe<ToastID> = null;
 
   const showLoadingToast = () => {
-    if (toastID == null) {
-      toastID = toast.info(NotificationMessages.Loading, LoadingToastOptions);
-    } else {
-      toast.update(toastID, {
-        content: NotificationMessages.Loading,
-        options: LoadingToastOptions,
-      });
-    }
+    // Commented out - too noisy for learning mode
+    // if (toastID == null) {
+    //   toastID = toast.info(NotificationMessages.Loading, LoadingToastOptions);
+    // } else {
+    //   toast.update(toastID, {
+    //     content: NotificationMessages.Loading,
+    //     options: LoadingToastOptions,
+    //   });
+    // }
   };
 
   const showResults = () => {
@@ -63,18 +64,21 @@ export function useLoadingNotifications() {
       toast.dismiss(toastID);
       messageStore.addError(NotificationMessages.Error, error);
     } else {
-      toast.update(toastID, {
-        content: NotificationMessages.Done,
-        options: {
-          type: TYPE.SUCCESS,
-          timeout: 3000,
-          closeButton: 'button',
-          closeOnClick: true,
-          onClose() {
-            toastID = null;
-          },
-        },
-      });
+      // Comment out success toast - too noisy for learning mode
+      // toast.update(toastID, {
+      //   content: NotificationMessages.Done,
+      //   options: {
+      //     type: TYPE.SUCCESS,
+      //     timeout: 3000,
+      //     closeButton: 'button',
+      //     closeOnClick: true,
+      //     onClose() {
+      //       toastID = null;
+      //     },
+      //   },
+      // });
+      toast.dismiss(toastID);
+      toastID = null;
     }
   };
 

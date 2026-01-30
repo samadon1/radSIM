@@ -46,6 +46,17 @@
       </Transition>
     </Teleport>
 
+    <!-- Review Mistakes Modal -->
+    <Teleport to="body">
+      <Transition name="modal-fade">
+        <ReviewMistakes
+          v-if="showReviewMistakes"
+          :cases="missedCasesForReview"
+          @exit-review="handleExitReview"
+        />
+      </Transition>
+    </Teleport>
+
     <div class="learning-container">
       <!-- No Active Session - Show Prompt -->
       <div v-if="!learningStore.isSessionActive" class="empty-state">
@@ -128,14 +139,14 @@
               </button>
             </div>
 
-            <!-- Diagnostic Flow: See Explanation Button (for incorrect classification) -->
+            <!-- Diagnostic Flow: See Answer Button (for incorrect classification) -->
             <div v-if="diagnosticStep === 'feedback' && classificationCorrect === false && !showChatSuggestions" class="explanation-prompt">
               <button
                 class="explanation-btn"
-                @click="handleShowExplanation"
+                @click="handleShowAnswer"
                 :disabled="isThinking"
               >
-                See Explanation
+                See Answer
               </button>
             </div>
 
@@ -157,14 +168,19 @@
                 >
                   Expert Analysis
                 </button>
-                <button
-                  class="action-btn"
-                  @click="handleGenerateReport"
-                  :disabled="isThinking"
-                >
-                  View Report
-                </button>
               </div>
+            </div>
+
+            <!-- Expert Answer Button (after See Answer is clicked) -->
+            <div v-if="answerShown && diagnosticStep === 'complete' && !showChatSuggestions" class="expert-answer-prompt">
+              <button
+                class="expert-answer-btn"
+                @click="handleExpertAnswer"
+                :disabled="expertAnswerLoading"
+              >
+                <span v-if="expertAnswerLoading">Thinking...</span>
+                <span v-else>Show Expert Answer</span>
+              </button>
             </div>
 
             <!-- Diagnostic Flow: Next Case Button -->
@@ -248,13 +264,15 @@ import { useDatasetStore } from '@/src/store/datasets';
 import { loadUrls } from '@/src/actions/loadUserFiles';
 import { useGemini } from '@/src/composables/useGemini';
 import SessionSummary from '@/src/components/learning/SessionSummary.vue';
+import ReviewMistakes from '@/src/components/learning/ReviewMistakes.vue';
 
 const router = useRouter();
 const learningStore = useLearningStore();
 const caseLibraryStore = useCaseLibraryStore();
 const authStore = useAuthStore();
 const datasetStore = useDatasetStore();
-const { evaluateObservation, answerQuestion, isLoading: isGeminiLoading } = useGemini();
+const { evaluateObservation, answerQuestion, generateExpertAnalysisStreaming, isLoading: isGeminiLoading } = useGemini();
+import { marked } from 'marked';
 
 // Exit confirmation modal - sync with store state so it can be triggered from anywhere
 const showExitModal = computed({
@@ -317,10 +335,68 @@ const classificationCorrect = ref<boolean | null>(null);
 const diagnosisCorrect = ref<boolean | null>(null);
 const showChatSuggestions = ref(false);
 const groundTruthShown = ref(false);
+const caseStartTime = ref<number | null>(null);
+const answerShown = ref(false);
+const expertAnswerLoading = ref(false);
 
 // Session summary state
 const showSessionSummary = ref(false);
-const sessionStats = computed(() => learningStore.sessionStats);
+
+// Session stats - use active session stats or compute from baseline if viewing from dashboard
+const sessionStats = computed(() => {
+  // If we have active session stats (casesReviewed > 0), use those
+  if (learningStore.sessionStats.casesReviewed > 0) {
+    return learningStore.sessionStats;
+  }
+
+  // Otherwise, compute baseline stats from all learning data (for viewing from dashboard)
+  const learningData = learningStore.learningData;
+  const allReviews = Object.values(learningData);
+
+  if (allReviews.length === 0) {
+    // No data at all, return empty stats
+    return learningStore.sessionStats;
+  }
+
+  // Calculate stats from all reviewed cases
+  let totalScore = 0;
+  let totalTime = 0;
+  let totalConfidence = 0;
+  let correctCount = 0;
+  let missedCount = 0;
+
+  allReviews.forEach(caseData => {
+    if (caseData.performanceHistory && caseData.performanceHistory.length > 0) {
+      // Use most recent review for each case
+      const latestReview = caseData.performanceHistory[caseData.performanceHistory.length - 1];
+      totalScore += latestReview.score || 0;
+      totalTime += latestReview.timeSpent || 0;
+      totalConfidence += latestReview.confidence || 3;
+
+      if (latestReview.score >= 100) {
+        correctCount++;
+      } else {
+        missedCount++;
+      }
+    }
+  });
+
+  const casesReviewed = allReviews.length;
+
+  return {
+    casesReviewed,
+    correctFindings: correctCount,
+    missedFindings: missedCount,
+    falsePositives: 0,
+    averageScore: casesReviewed > 0 ? totalScore / casesReviewed : 0,
+    averageTime: casesReviewed > 0 ? totalTime / casesReviewed : 0,
+    averageConfidence: casesReviewed > 0 ? totalConfidence / casesReviewed : 3
+  };
+});
+
+// Review mistakes state
+const showReviewMistakes = ref(false);
+const missedCasesForReview = ref<any[]>([]);
 
 // Get annotation attachment from learning store
 const annotationAttachment = computed(() => learningStore.annotationAttachment);
@@ -356,6 +432,7 @@ function initializeChat() {
 
   // Start timing this case
   learningStore.startCase();
+  caseStartTime.value = Date.now();
 
   // Reset diagnostic flow state
   diagnosticStep.value = 'normal_abnormal';
@@ -365,6 +442,8 @@ function initializeChat() {
   diagnosisCorrect.value = null;
   showChatSuggestions.value = false;
   groundTruthShown.value = false;
+  answerShown.value = false;
+  expertAnswerLoading.value = false;
 
   // Start with personalized greeting and normal/abnormal question
   const firstName = getUserFirstName();
@@ -661,50 +740,175 @@ function handleNormalAbnormal(classification: 'normal' | 'abnormal') {
   nextTick(() => scrollToBottom());
 }
 
-function handleShowExplanation() {
+function handleShowAnswer() {
   if (!currentCase.value) return;
 
-  let explanationHTML = '<strong>Explanation</strong><br><br>';
-
-  // Diagnosis
-  explanationHTML += `<strong>Diagnosis:</strong> ${currentCase.value.diagnosis}<br><br>`;
-
-  // Findings
-  if (currentCase.value.findings && currentCase.value.findings.length > 0) {
-    explanationHTML += '<strong>Findings:</strong><br>';
-    currentCase.value.findings.forEach((finding: any) => {
-      explanationHTML += `• <strong>${finding.name}</strong>`;
-      if (finding.location) {
-        explanationHTML += ` - ${finding.location}`;
-      }
-      if (finding.description) {
-        explanationHTML += `: ${finding.description}`;
-      }
-      explanationHTML += '<br>';
-    });
-    explanationHTML += '<br>';
-  }
-
-  // Description
-  if (currentCase.value.description) {
-    explanationHTML += `<strong>Case Description:</strong><br>${currentCase.value.description}<br><br>`;
-  }
-
-  // Teaching points
-  if (currentCase.value.teachingPoints && currentCase.value.teachingPoints.length > 0) {
-    explanationHTML += '<strong>Teaching Points:</strong><br>';
-    currentCase.value.teachingPoints.forEach((point: any) => {
-      explanationHTML += `• ${point.text || point}<br>`;
-    });
-  }
+  // Show only the diagnosis
+  const answerHTML = `<strong>Answer:</strong> ${currentCase.value.diagnosis}`;
 
   chatMessages.value.push({
     type: 'cubey',
-    content: explanationHTML
+    content: answerHTML
   });
 
+  // Show ground truth annotations on the image
+  const findings = currentCase.value.findings || [];
+  const findingsWithROI = findings.filter((f: any) => f.roi);
+  if (findingsWithROI.length > 0) {
+    learningStore.showGroundTruthAnnotations(findingsWithROI);
+    groundTruthShown.value = true;
+  }
+
+  answerShown.value = true;
   diagnosticStep.value = 'complete';
   nextTick(() => scrollToBottom());
+}
+
+// Expert Answer - Try NVIDIA CXR Reason first, fall back to Gemini
+async function handleExpertAnswer() {
+  if (!currentCase.value) return;
+
+  expertAnswerLoading.value = true;
+
+  // Add user's request as a message
+  chatMessages.value.push({
+    type: 'user',
+    content: 'Show Expert Answer'
+  });
+  nextTick(() => scrollToBottom());
+
+  // Get the image path for the current case
+  const imagePath = currentCase.value.files?.imagePath;
+  if (!imagePath) {
+    expertAnswerLoading.value = false;
+    chatMessages.value.push({
+      type: 'cubey',
+      content: 'No image available for this case.'
+    });
+    nextTick(() => scrollToBottom());
+    return;
+  }
+
+  // Fetch the image as a blob
+  const imageFullPath = imagePath.startsWith('/') ? imagePath : `/${imagePath}`;
+  let imageBlob: Blob;
+  try {
+    const imageResponse = await fetch(imageFullPath);
+    if (!imageResponse.ok) {
+      throw new Error('Failed to load image');
+    }
+    imageBlob = await imageResponse.blob();
+  } catch (e) {
+    expertAnswerLoading.value = false;
+    chatMessages.value.push({
+      type: 'cubey',
+      content: 'Failed to load the image for analysis.'
+    });
+    nextTick(() => scrollToBottom());
+    return;
+  }
+
+  // Try NVIDIA CXR Reason first, fall back to Gemini
+  let nvidiaSuccess = false;
+
+  try {
+    console.log('[Expert Answer] Trying NVIDIA CXR Reason...');
+    const { Client } = await import('@gradio/client');
+
+    // Get HuggingFace token from environment variable
+    const hfToken = import.meta.env.VITE_HF_TOKEN;
+
+    // Use direct space URL to bypass metadata lookup issues
+    const client = await Client.connect("https://samwell-nv-reason-cxr.hf.space", {
+      hf_token: hfToken
+    });
+
+    const prompt = `Analyze this chest X-ray. Describe the key findings and provide your diagnosis.`;
+
+    const result = await client.predict("/predict", {
+      text: prompt,
+      image: imageBlob
+    });
+
+    // Parse the result
+    const responseData = result.data;
+    let expertAnswer = '';
+
+    if (responseData && Array.isArray(responseData) && responseData.length > 0) {
+      const firstResult = responseData[0];
+      if (typeof firstResult === 'string') {
+        expertAnswer = firstResult;
+      } else if (typeof firstResult === 'object') {
+        expertAnswer = firstResult.text || firstResult.response || JSON.stringify(firstResult, null, 2);
+      }
+    } else if (typeof responseData === 'string') {
+      expertAnswer = responseData;
+    }
+
+    if (expertAnswer) {
+      nvidiaSuccess = true;
+      expertAnswerLoading.value = false;
+      const htmlContent = marked.parse(expertAnswer) as string;
+      chatMessages.value.push({
+        type: 'cubey',
+        content: htmlContent
+      });
+      nextTick(() => scrollToBottom());
+      answerShown.value = false;
+    }
+  } catch (nvidiaError: any) {
+    console.warn('[Expert Answer] NVIDIA CXR Reason failed:', nvidiaError.message || nvidiaError.title);
+  }
+
+  // Fall back to Gemini if NVIDIA failed
+  if (!nvidiaSuccess) {
+    console.log('[Expert Answer] Using Gemini fallback...');
+
+    try {
+      const imageFile = new File([imageBlob], 'xray.png', { type: imageBlob.type || 'image/png' });
+
+      // Stream directly - add message only when first chunk arrives
+      let messageIndex = -1;
+      const finalText = await generateExpertAnalysisStreaming(
+        currentCase.value,
+        imageFile,
+        (chunk: string) => {
+          const htmlContent = marked.parse(chunk) as string;
+          if (messageIndex === -1) {
+            // First chunk - create the message and hide loading
+            expertAnswerLoading.value = false;
+            messageIndex = chatMessages.value.length;
+            chatMessages.value.push({
+              type: 'cubey',
+              content: htmlContent
+            });
+          } else {
+            chatMessages.value[messageIndex].content = htmlContent;
+          }
+          nextTick(() => scrollToBottom());
+        }
+      );
+
+      // Ensure final content is set
+      if (messageIndex >= 0) {
+        const finalHtml = marked.parse(finalText) as string;
+        chatMessages.value[messageIndex].content = finalHtml;
+      }
+
+      expertAnswerLoading.value = false;
+      answerShown.value = false;
+
+    } catch (geminiError: any) {
+      console.error('[Expert Answer] Gemini also failed:', geminiError);
+      expertAnswerLoading.value = false;
+
+      chatMessages.value.push({
+        type: 'cubey',
+        content: 'Unable to get expert analysis. Please try again later.'
+      });
+      nextTick(() => scrollToBottom());
+    }
+  }
 }
 
 // Ground Truth Handler - just show overlay on image, no chat bubble
@@ -753,32 +957,63 @@ async function handleExpertExplanation() {
   // Add user's selection as a message
   chatMessages.value.push({
     type: 'user',
-    content: 'Expert Explanation'
+    content: 'Expert Analysis'
   });
+  nextTick(() => scrollToBottom());
+
+  // Get the image for analysis
+  const imagePath = currentCase.value.files?.imagePath;
+  if (!imagePath) {
+    isThinking.value = false;
+    chatMessages.value.push({
+      type: 'cubey',
+      content: 'No image available for expert analysis.'
+    });
+    nextTick(() => scrollToBottom());
+    return;
+  }
 
   try {
-    // Use Gemini to generate expert explanation
-    const prompt = `As a senior radiologist, provide a detailed expert explanation for this case.
+    // Fetch the image as a blob
+    const imageFullPath = imagePath.startsWith('/') ? imagePath : `/${imagePath}`;
+    const imageResponse = await fetch(imageFullPath);
+    if (!imageResponse.ok) {
+      throw new Error('Failed to load image');
+    }
+    const imageBlob = await imageResponse.blob();
+    const imageFile = new File([imageBlob], 'xray.png', { type: imageBlob.type || 'image/png' });
 
-Case: ${currentCase.value.title || currentCase.value.diagnosis}
-Clinical History: ${currentCase.value.clinicalHistory || 'Not provided'}
-Diagnosis: ${currentCase.value.diagnosis}
-Findings: ${currentCase.value.findings?.map((f: any) => `${f.name}${f.location ? ' in ' + f.location : ''}`).join(', ')}
+    // Use the streaming expert analysis - add message only when first chunk arrives
+    let messageIndex = -1;
+    const finalText = await generateExpertAnalysisStreaming(
+      currentCase.value,
+      imageFile,
+      (chunk: string) => {
+        const htmlContent = marked.parse(chunk) as string;
+        if (messageIndex === -1) {
+          // First chunk - create the message and hide thinking indicator
+          isThinking.value = false;
+          messageIndex = chatMessages.value.length;
+          chatMessages.value.push({
+            type: 'cubey',
+            content: htmlContent
+          });
+        } else {
+          // Update existing message
+          chatMessages.value[messageIndex].content = htmlContent;
+        }
+        nextTick(() => scrollToBottom());
+      }
+    );
 
-Please explain:
-1. Key imaging findings and their significance
-2. Pathophysiology behind the findings
-3. Differential diagnoses to consider
-4. Clinical implications and management considerations`;
-
-    const response = await answerQuestion(prompt, currentCase.value);
+    // Ensure final content is set
+    if (messageIndex >= 0) {
+      const finalHtml = marked.parse(finalText) as string;
+      chatMessages.value[messageIndex].content = finalHtml;
+    }
 
     isThinking.value = false;
 
-    chatMessages.value.push({
-      type: 'cubey',
-      content: `<strong>Expert Analysis:</strong><br><br>${response}`
-    });
   } catch (error) {
     isThinking.value = false;
     console.error('Error generating expert explanation:', error);
@@ -804,10 +1039,6 @@ Please explain:
       currentCase.value.teachingPoints.forEach((point: any) => {
         explanationHTML += `• ${point.text || point}<br>`;
       });
-    }
-
-    if (currentCase.value.description) {
-      explanationHTML += `<br><strong>Additional Context:</strong><br>${currentCase.value.description}`;
     }
 
     chatMessages.value.push({
@@ -915,16 +1146,50 @@ function handleReturnDashboard() {
 }
 
 function handleReviewMistakes() {
-  // For now, just close summary and go to dashboard
-  // In the future, this could show a detailed breakdown of mistakes
+  // Get the missed cases from the store
+  const missedCases = learningStore.sessionMissedCases;
+
+  if (!missedCases || missedCases.length === 0) {
+    // No missed cases to review - shouldn't happen but handle it
+    return;
+  }
+
+  // Store the cases for the review component
+  missedCasesForReview.value = [...missedCases];
+
+  // Hide session summary and show review mistakes
   showSessionSummary.value = false;
-  learningStore.endSession();
-  caseLibraryStore.clearCurrentCase();
-  chatMessages.value = [];
-  router.push('/dashboard');
+  showReviewMistakes.value = true;
+}
+
+function handleExitReview() {
+  // Close review mistakes and show session summary again
+  showReviewMistakes.value = false;
+  showSessionSummary.value = true;
 }
 
 async function handleNextCase() {
+  // Record the current case's performance BEFORE moving to next case
+  if (currentCase.value) {
+    const groundTruthFindings = currentCase.value.findings?.map(f => f.name.toLowerCase()) || [];
+
+    // Build assessment result from current diagnostic flow state
+    // If diagnosis was never evaluated (null), treat as incorrect with low score
+    const wasCorrect = diagnosisCorrect.value === true;
+    const wasEvaluated = diagnosisCorrect.value !== null;
+
+    const assessment = {
+      score: diagnosticScore.value || (wasCorrect ? 100 : wasEvaluated ? 30 : 0),
+      correct: wasCorrect ? groundTruthFindings : [],
+      missed: wasCorrect ? [] : groundTruthFindings,
+      falsePositives: [] as string[],
+      timeSpent: caseStartTime.value ? Math.round((Date.now() - caseStartTime.value) / 1000) : 60,
+      confidence: 3 // Default confidence for chat-based flow
+    };
+
+    learningStore.updateLearningProgress(assessment);
+  }
+
   // Move to next case in the session
   learningStore.nextCase();
 
@@ -1164,6 +1429,47 @@ function getRadiologistReport(): string {
   margin: 0;
 }
 
+/* Markdown content styling */
+.message-content :deep(h1),
+.message-content :deep(h2),
+.message-content :deep(h3) {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.message-content :deep(h1) { font-size: 1.3em; }
+.message-content :deep(h2) { font-size: 1.15em; }
+.message-content :deep(h3) { font-size: 1.05em; }
+
+.message-content :deep(p) {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.message-content :deep(strong) {
+  color: #fff;
+  font-weight: 600;
+}
+
+.message-content :deep(ul),
+.message-content :deep(ol) {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.message-content :deep(li) {
+  margin: 4px 0;
+  line-height: 1.5;
+}
+
+.message-content :deep(hr) {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 16px 0;
+}
+
 /* Finding Checklist */
 .thinking-indicator {
   font-size: 13px;
@@ -1388,6 +1694,36 @@ function getRadiologistReport(): string {
   cursor: not-allowed;
 }
 
+/* Expert Answer Prompt */
+.expert-answer-prompt {
+  padding: 16px;
+  animation: fadeInUp 0.3s ease;
+}
+
+.expert-answer-btn {
+  width: 100%;
+  padding: 14px 24px;
+  background: rgba(118, 185, 0, 0.1);
+  border: 1px solid rgba(118, 185, 0, 0.3);
+  border-radius: 8px;
+  color: rgba(118, 185, 0, 0.9);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.expert-answer-btn:hover:not(:disabled) {
+  background: rgba(118, 185, 0, 0.2);
+  border-color: rgba(118, 185, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.expert-answer-btn:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
 /* Next Case Prompt */
 .next-case-prompt {
   padding: 16px;
@@ -1466,6 +1802,24 @@ function getRadiologistReport(): string {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Typing Indicator for Streaming */
+.typing-indicator {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+.typing-indicator::after {
+  content: '';
+  animation: typingDots 1.5s infinite;
+}
+
+@keyframes typingDots {
+  0%, 20% { content: ''; }
+  40% { content: '.'; }
+  60% { content: '..'; }
+  80%, 100% { content: '...'; }
 }
 
 /* Exit Confirmation Modal */

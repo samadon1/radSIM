@@ -42,14 +42,16 @@
 </template>
 
 <script lang="ts">
-import { Component, computed, defineComponent, ref, watch } from 'vue';
+import { Component, computed, defineComponent, ref, watch, provide } from 'vue';
 
 import { ConnectionState, useServerStore } from '@/src/store/server-1';
 import DataBrowser from './DataBrowser.vue';
+import CaseBrowser from './CaseBrowser.vue';
 import RenderingModule from './RenderingModule.vue';
 import AnnotationsModule from './AnnotationsModule.vue';
 // import ServerModule from './ServerModule.vue';
 import EducationModule from './EducationModule.vue';
+import LearningModule from './LearningModule.vue';
 // Removed NVIDIA modules - not needed for RADSIM
 // import NVSegmentCTModule from './NVSegmentCTModule.vue';
 // import NVReasonCXRModule from './NVReasonCXRModule.vue';
@@ -67,41 +69,14 @@ interface Module {
 
 const Modules: Module[] = [
   {
-    name: 'RADSIM AI',
-    icon: 'head-lightbulb',
-    component: EducationModule,
+    name: 'Learning',
+    icon: 'school',
+    component: LearningModule,
   },
-  // Removed Data tab - not needed for RADSIM
-  // {
-  //   name: 'Data',
-  //   icon: 'database',
-  //   component: DataBrowser,
-  // },
-  // Removed NVIDIA AI modules - not needed for RADSIM educational focus
-  // {
-  //   name: 'Segment',
-  //   icon: 'brain',
-  //   component: NVSegmentCTModule,
-  // },
-  // {
-  //   name: 'Reason',
-  //   icon: 'chat',
-  //   component: NVReasonCXRModule,
-  // },
-  // {
-  //   name: 'Generate',
-  //   icon: 'magic-staff',
-  //   component: NVGenerateCTModule,
-  // },
   {
     name: 'Annotations',
     icon: 'pencil',
     component: AnnotationsModule,
-  },
-  {
-    name: 'Rendering',
-    icon: 'cube',
-    component: RenderingModule,
   },
   // {
   //  name: 'Remote',
@@ -127,8 +102,11 @@ export default defineComponent({
     watch(
       () => toolStore.currentTool,
       (newTool) => {
-        if (autoSwitchToAnnotationsTools.includes(newTool))
-          selectedModuleIndex.value = 1; // Annotations is now at position 1 (Learn=0, Annotations=1)
+        console.log('[ModulePanel] Tool changed to:', newTool, 'Is annotation tool:', autoSwitchToAnnotationsTools.includes(newTool));
+        if (autoSwitchToAnnotationsTools.includes(newTool)) {
+          console.log('[ModulePanel] Switching to Annotations tab (index 1)');
+          selectedModuleIndex.value = 1; // Annotations is at position 1 (Learning=0, Annotations=1)
+        }
       }
     );
 
@@ -149,6 +127,12 @@ export default defineComponent({
         return m;
       });
     });
+
+    // Provide function to switch tabs (for CaseBrowser to switch to Learning tab)
+    const switchToTab = (tabIndex: number) => {
+      selectedModuleIndex.value = tabIndex;
+    };
+    provide('switchToTab', switchToTab);
 
     return {
       selectedModuleIndex,

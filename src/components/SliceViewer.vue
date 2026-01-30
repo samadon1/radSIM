@@ -145,6 +145,7 @@
           <svg class="overlay-no-events">
             <bounding-rectangle :points="selectionPoints" />
           </svg>
+          <ground-truth-overlay />
           <scalar-probe
             :base-rep="baseSliceRep"
             :layer-reps="layerSliceReps"
@@ -181,6 +182,7 @@ import RectangleTool from '@/src/components/tools/rectangle/RectangleTool.vue';
 import SelectTool from '@/src/components/tools/SelectTool.vue';
 import ScalarProbe from '@/src/components/tools/ScalarProbe.vue';
 import BoundingRectangle from '@/src/components/tools/BoundingRectangle.vue';
+import GroundTruthOverlay from '@/src/components/tools/GroundTruthOverlay.vue';
 import SliceSlider from '@/src/components/SliceSlider.vue';
 import SliceViewerOverlay from '@/src/components/SliceViewerOverlay.vue';
 import { useToolSelectionStore } from '@/src/store/tools/toolSelection';

@@ -10,6 +10,32 @@
       </div>
     </Transition>
 
+    <!-- Baseline Summary Modal -->
+    <teleport to="body">
+      <div v-if="showBaselineSummary" class="session-summary-overlay">
+        <session-summary
+          :stats="baselineStats"
+          :best-finding="bestFinding"
+          @return-dashboard="showBaselineSummary = false"
+          @review-mistakes="handleReviewMistakes"
+        />
+      </div>
+    </teleport>
+
+    <!-- Welcome Modal for New Users -->
+    <welcome-modal
+      v-if="showWelcomeModal"
+      @close="handleWelcomeClose"
+      @start-baseline="handleWelcomeStartBaseline"
+    />
+
+    <!-- Upgrade Modal for Payment -->
+    <upgrade-modal
+      v-if="showUpgradeModal"
+      @close="handleUpgradeClose"
+      @upgrade-success="handleUpgradeSuccess"
+    />
+
     <!-- Shared App Header -->
     <AppHeader />
 
@@ -70,10 +96,27 @@
                 {{ Math.abs(stats.accuracyTrend) }}%
               </div>
             </div>
-            <div class="stat-card">
+            <div class="stat-card editable-stat">
               <div class="stat-number">{{ stats.weeklyCompleted > 0 ? stats.weeklyCompleted : '-' }}</div>
               <div class="stat-label">This Week</div>
-              <div class="stat-benchmark">Goal: {{ stats.weeklyGoal }}</div>
+              <div class="stat-benchmark-editable">
+                <span>Goal: </span>
+                <span v-if="!editingWeeklyGoal">{{ weeklyGoal }}</span>
+                <input
+                  v-else
+                  v-model.number="weeklyGoalInput"
+                  type="number"
+                  min="20"
+                  max="500"
+                  class="goal-input-small"
+                  @blur="saveWeeklyGoal"
+                  @keyup.enter="saveWeeklyGoal"
+                  ref="weeklyGoalInputRef"
+                />
+                <button class="edit-btn-small" @click="editWeeklyGoal" :title="editingWeeklyGoal ? 'Save' : 'Edit'">
+                  <v-icon size="12">{{ editingWeeklyGoal ? 'mdi-check' : 'mdi-pencil' }}</v-icon>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -194,9 +237,12 @@
                       }"
                     ></div>
                   </div>
-                  <span class="finding-percent" :style="{ color: finding.accuracy !== null ? getColor(finding.accuracy) : 'rgba(255,255,255,0.3)' }">
-                    {{ finding.accuracy !== null ? finding.accuracy + '%' : '--' }}
-                  </span>
+                  <div class="finding-accuracy">
+                    <span class="finding-percent" :style="{ color: finding.accuracy !== null ? getColor(finding.accuracy) : 'rgba(255,255,255,0.3)' }">
+                      {{ finding.accuracy !== null ? finding.accuracy + '%' : '--' }}
+                    </span>
+                    <span class="finding-label">ACCURACY</span>
+                  </div>
                 </div>
                 <v-icon size="18" class="finding-arrow">{{ hasCompletedBaseline ? 'mdi-chevron-right' : 'mdi-lock' }}</v-icon>
               </button>
@@ -301,10 +347,16 @@
 import { ref, computed, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import AppHeader from './AppHeader.vue';
+import SessionSummary from './learning/SessionSummary.vue';
+import WelcomeModal from './modals/WelcomeModal.vue';
+import UpgradeModal from './modals/UpgradeModal.vue';
 import { useAuthStore } from '@/src/store/auth';
 import { useLearningStore } from '@/src/store/learning';
 import { useCaseLibraryStore } from '@/src/store/case-library';
 import { loadUrls } from '@/src/actions/loadUserFiles';
+import { getUserData } from '@/src/firebase/userDataService';
+import type { SessionStats } from '@/src/store/learning';
+import type { UserData } from '@/src/firebase/userDataService';
 
 const router = useRouter();
 const authStore = useAuthStore();
@@ -313,6 +365,39 @@ const caseLibraryStore = useCaseLibraryStore();
 
 // Loading state
 const isLoadingCase = ref(false);
+
+// Baseline summary modal state
+const showBaselineSummary = ref(false);
+
+// Weekly goal state (session size is always 20)
+const weeklyGoal = ref(100); // Default to 100 cases per week
+const weeklyGoalInput = ref(100);
+const editingWeeklyGoal = ref(false);
+const weeklyGoalInputRef = ref<HTMLInputElement | null>(null);
+const SESSION_SIZE = 20; // Fixed session size
+
+// Modal states
+const showWelcomeModal = ref(false);
+const showUpgradeModal = ref(false);
+
+// User data from Firestore
+const userData = ref<UserData | null>(null);
+
+// Computed: Check if user has active subscription
+const hasActiveSubscription = computed(() => {
+  if (!userData.value) return false;
+  const { subscriptionTier, subscriptionStatus } = userData.value;
+  // User has subscription if tier is 'pro' or 'enterprise' AND status is 'active' or 'trialing'
+  return (subscriptionTier === 'pro' || subscriptionTier === 'enterprise') &&
+         (subscriptionStatus === 'active' || subscriptionStatus === 'trialing');
+});
+
+// Computed: Check if user is new (hasn't seen welcome modal and hasn't started baseline)
+const isNewUser = computed(() => {
+  if (!userData.value) return false;
+  // User is new if they haven't seen welcome AND have no learning progress
+  return !userData.value.hasSeenWelcome && userData.value.totalCasesReviewed === 0;
+});
 
 // State
 const period = ref('week');
@@ -430,7 +515,7 @@ const stats = computed(() => {
     accuracyTrend,
     dueToday: learningStore.casesDueToday,
     weeklyCompleted: weekHistory.length,
-    weeklyGoal: 50
+    weeklyGoal: weeklyGoal.value
   };
 });
 
@@ -467,40 +552,37 @@ const calibration = computed(() => {
   };
 });
 
-// Findings data - computed from actual performance
+// Findings data - use stored findingStats from Firestore instead of calculating on-the-fly
 const findings = computed(() => {
   const findingTypes = ['Pneumonia', 'Cardiomegaly', 'Effusion', 'Atelectasis', 'Pneumothorax', 'Mass', 'Nodule'];
-  const learningData = learningStore.learningData;
+  const storedFindingStats = learningStore.findingStats;
   const cases = caseLibraryStore.cases;
 
   return findingTypes.map(name => {
-    // Find cases that have this specific finding
-    const casesWithThisFinding = cases.filter(c =>
-      c.findings?.some(f => f.name.toLowerCase() === name.toLowerCase())
-    );
+    // Check if we have stored stats for this finding
+    const storedStats = storedFindingStats[name];
 
-    // Get learning data for those specific cases
-    let totalScore = 0;
-    let reviewCount = 0;
+    if (storedStats) {
+      // Use stored stats from Firestore
+      return {
+        name,
+        accuracy: storedStats.accuracy,
+        cases: storedStats.totalCases,
+        completed: storedStats.reviewedCases
+      };
+    } else {
+      // No stored stats yet - show placeholder
+      const casesWithThisFinding = cases.filter(c =>
+        c.findings?.some(f => f.name.toLowerCase() === name.toLowerCase())
+      );
 
-    casesWithThisFinding.forEach(caseItem => {
-      const caseData = learningData[caseItem.id];
-      if (caseData?.performanceHistory) {
-        caseData.performanceHistory.forEach((h: any) => {
-          totalScore += h.score || 0;
-          reviewCount++;
-        });
-      }
-    });
-
-    const accuracy = reviewCount > 0 ? Math.round(totalScore / reviewCount) : null;
-
-    return {
-      name,
-      accuracy, // null if no data (will show "--" in UI)
-      cases: casesWithThisFinding.length, // Total available cases with this finding
-      completed: reviewCount // How many times reviewed
-    };
+      return {
+        name,
+        accuracy: null, // null will show "--" in UI
+        cases: casesWithThisFinding.length,
+        completed: 0
+      };
+    }
   });
 });
 
@@ -582,6 +664,37 @@ const progressOffset = computed(() => {
   return circumference - (progress * circumference);
 });
 
+// Baseline stats for viewing completed baseline - use saved stats if available
+const baselineStats = computed((): SessionStats => {
+  // If we have saved baseline stats, use those (this is the correct data from when baseline completed)
+  if (learningStore.baselineSessionStats) {
+    return learningStore.baselineSessionStats;
+  }
+
+  // Fallback: empty stats (shouldn't happen if baseline was completed)
+  return {
+    casesReviewed: 0,
+    correctFindings: 0,
+    missedFindings: 0,
+    falsePositives: 0,
+    averageScore: 0,
+    averageTime: 0,
+    averageConfidence: 3
+  };
+});
+
+// Best finding for baseline certificate
+const bestFinding = computed(() => {
+  const findingsWithAccuracy = findings.value.filter(f => f.accuracy !== null);
+  if (findingsWithAccuracy.length === 0) return undefined;
+
+  const best = findingsWithAccuracy.reduce((prev, current) =>
+    (current.accuracy! > prev.accuracy!) ? current : prev
+  );
+
+  return best.name;
+});
+
 // Methods
 function formatTime(seconds: number) {
   const mins = Math.floor(seconds / 60);
@@ -595,11 +708,47 @@ function getColor(accuracy: number) {
   return '#ef4444';
 }
 
+function editWeeklyGoal() {
+  if (editingWeeklyGoal.value) {
+    // Save
+    saveWeeklyGoal();
+  } else {
+    // Start editing
+    editingWeeklyGoal.value = true;
+    weeklyGoalInput.value = weeklyGoal.value;
+    // Focus input on next tick
+    setTimeout(() => {
+      weeklyGoalInputRef.value?.focus();
+      weeklyGoalInputRef.value?.select();
+    }, 50);
+  }
+}
+
+function saveWeeklyGoal() {
+  // Validate input
+  const value = weeklyGoalInput.value;
+  if (value >= 20 && value <= 500) {
+    weeklyGoal.value = value;
+    // Save to localStorage
+    localStorage.setItem('radsim_weekly_goal', value.toString());
+  } else {
+    // Reset to current value if invalid
+    weeklyGoalInput.value = weeklyGoal.value;
+  }
+  editingWeeklyGoal.value = false;
+}
+
 async function startLearning() {
+  // Check if user needs to upgrade (baseline complete but no subscription)
+  if (hasCompletedBaseline.value && !hasActiveSubscription.value) {
+    showUpgradeModal.value = true;
+    return;
+  }
+
   isLoadingCase.value = true;
   try {
-    // Start mixed practice session
-    await learningStore.startMixedSession();
+    // Start mixed practice session with fixed session size of 20
+    await learningStore.startMixedSession(SESSION_SIZE);
 
     // Load the current case
     const currentCaseData = learningStore.currentCase;
@@ -627,9 +776,20 @@ async function startLearning() {
 }
 
 async function startCalibration() {
-  // Start calibration - uses mixed session for now
-  // TODO: Implement dedicated calibration mode
+  // If baseline is already complete, show the baseline summary modal
+  if (hasCompletedBaseline.value) {
+    showBaselineSummary.value = true;
+    return;
+  }
+
+  // Start calibration for first-time users
   await startLearning();
+}
+
+function handleReviewMistakes() {
+  // For now, just close the modal
+  // TODO: Implement review mistakes feature for baseline
+  showBaselineSummary.value = false;
 }
 
 async function startScenario(scenarioName: string) {
@@ -640,6 +800,12 @@ async function startScenario(scenarioName: string) {
 }
 
 async function startFocusedPractice(finding: string) {
+  // Check if user needs to upgrade (focused practice requires subscription)
+  if (!hasActiveSubscription.value) {
+    showUpgradeModal.value = true;
+    return;
+  }
+
   isLoadingCase.value = true;
   try {
     // Start focused session on specific finding
@@ -670,11 +836,58 @@ async function startFocusedPractice(finding: string) {
   }
 }
 
+// Handle welcome modal close
+function handleWelcomeClose() {
+  showWelcomeModal.value = false;
+}
+
+// Handle welcome modal start baseline
+async function handleWelcomeStartBaseline() {
+  showWelcomeModal.value = false;
+  await startLearning();
+}
+
+// Handle upgrade modal close
+function handleUpgradeClose() {
+  showUpgradeModal.value = false;
+}
+
+// Handle upgrade success
+function handleUpgradeSuccess() {
+  showUpgradeModal.value = false;
+  // Refresh user data to get updated subscription status
+  loadUserData();
+}
+
+// Load user data from Firestore
+async function loadUserData() {
+  if (authStore.isAuthenticated && authStore.userProfile) {
+    try {
+      const data = await getUserData(authStore.userProfile.uid);
+      userData.value = data;
+    } catch (error) {
+      console.error('Failed to load user data:', error);
+    }
+  }
+}
+
 // Initialize case library on mount
 onMounted(async () => {
+  // Load saved weekly goal from localStorage
+  const savedGoal = localStorage.getItem('radsim_weekly_goal');
+  if (savedGoal) {
+    const parsed = parseInt(savedGoal, 10);
+    if (parsed >= 20 && parsed <= 500) {
+      weeklyGoal.value = parsed;
+      weeklyGoalInput.value = parsed;
+    }
+  }
+
   // Load learning progress from Firestore if authenticated
   if (authStore.isAuthenticated) {
     await learningStore.loadFromFirestore();
+    // Load user data for subscription and onboarding status
+    await loadUserData();
   }
 
   if (!caseLibraryStore.hasCases) {
@@ -693,6 +906,13 @@ onMounted(async () => {
   // Initialize learning store with cases
   if (caseLibraryStore.cases.length > 0) {
     learningStore.initializeFromCaseLibrary(caseLibraryStore.cases);
+  }
+
+  // Show welcome modal for new users (after a short delay for better UX)
+  if (isNewUser.value) {
+    setTimeout(() => {
+      showWelcomeModal.value = true;
+    }, 500);
   }
 });
 </script>
@@ -871,6 +1091,58 @@ onMounted(async () => {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 10px;
+}
+
+.stat-card.editable-stat {
+  position: relative;
+}
+
+.stat-benchmark-editable {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 4px;
+}
+
+.goal-input-small {
+  width: 32px;
+  font-size: 11px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  padding: 2px 4px;
+  color: #fff;
+  text-align: center;
+}
+
+.goal-input-small:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.edit-btn-small {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.edit-btn-small:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .stat-card .stat-number {
@@ -1163,11 +1435,26 @@ onMounted(async () => {
   border-radius: 2px;
 }
 
+.finding-accuracy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  min-width: 60px;
+}
+
 .finding-percent {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
-  min-width: 36px;
-  text-align: right;
+  line-height: 1;
+}
+
+.finding-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.3);
+  text-transform: uppercase;
 }
 
 .finding-arrow {
@@ -1501,5 +1788,16 @@ onMounted(async () => {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+/* Session Summary Overlay */
+.session-summary-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  z-index: 10000;
 }
 </style>

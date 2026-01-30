@@ -11,6 +11,7 @@ import { useAnnotationTracker } from '@/src/composables/useAnnotationTracker';
 import { useCaptureImage } from '@/src/composables/useCaptureImage';
 import { generateAnnotationDescription } from '@/src/utils/annotationDescriber';
 import { useEducationStore } from '@/src/store/education';
+import { useLearningStore } from '@/src/store/learning';
 import { useRulerStore } from '@/src/store/tools/rulers';
 
 interface Props {
@@ -50,6 +51,7 @@ async function addAnnotationsToChat() {
   const annotationTracker = useAnnotationTracker();
   const { captureCurrentView } = useCaptureImage();
   const educationStore = useEducationStore();
+  const learningStore = useLearningStore();
   const rulerStore = useRulerStore();
 
   console.log('[AddToChat] Starting annotation capture...');
@@ -84,31 +86,54 @@ async function addAnnotationsToChat() {
 
   console.log('[AddToChat] Generated description:', description);
 
-  // Add to education store for chat integration
-  educationStore.setAnnotationAttachment(screenshot, description);
+  // Check if we're in learning mode (active session)
+  const isLearningMode = learningStore.isSessionActive;
 
-  // Mark annotations as sent
-  annotationTracker.markAnnotationsAsSent();
+  if (isLearningMode) {
+    // Add to learning store for learning chat integration
+    learningStore.setAnnotationAttachment(screenshot, description);
 
-  // Switch to RADSIM AI tab (index 0)
-  const moduleTabs = document.querySelector('#module-switcher-tabs') as any;
-  if (moduleTabs) {
-    // Click on the first tab (RADSIM AI)
+    // Mark annotations as sent
+    annotationTracker.markAnnotationsAsSent();
+
+    // Switch to Learning tab (index 0)
+    const learningTab = document.querySelector('[data-testid="module-tab-Learning"]') as HTMLElement;
+    if (learningTab) {
+      console.log('[AddToChat] Switching to Learning tab');
+      learningTab.click();
+    }
+
+    // Focus on learning module input
+    setTimeout(() => {
+      const learningInput = document.querySelector('.learning-module .message-input') as HTMLInputElement;
+      if (learningInput) {
+        console.log('[AddToChat] Focusing learning input');
+        learningInput.focus();
+      }
+    }, 100);
+  } else {
+    // Add to education store for RADSIM AI chat integration
+    educationStore.setAnnotationAttachment(screenshot, description);
+
+    // Mark annotations as sent
+    annotationTracker.markAnnotationsAsSent();
+
+    // Switch to RADSIM AI tab
     const radsimTab = document.querySelector('[data-testid="module-tab-RADSIM AI"]') as HTMLElement;
     if (radsimTab) {
       console.log('[AddToChat] Switching to RADSIM AI tab');
       radsimTab.click();
     }
-  }
 
-  // Wait a bit for the tab to switch then focus on chat input
-  setTimeout(() => {
-    const chatInput = document.querySelector('.message-input') as HTMLInputElement;
-    if (chatInput) {
-      console.log('[AddToChat] Focusing chat input');
-      chatInput.focus();
-    }
-  }, 100);
+    // Focus on chat input
+    setTimeout(() => {
+      const chatInput = document.querySelector('.chat-input-field input') as HTMLInputElement;
+      if (chatInput) {
+        console.log('[AddToChat] Focusing chat input');
+        chatInput.focus();
+      }
+    }, 100);
+  }
 }
 </script>
 

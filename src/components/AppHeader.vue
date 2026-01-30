@@ -2,7 +2,7 @@
   <nav class="app-header">
     <div class="header-container">
       <div class="header-left">
-        <div class="header-brand" @click="goHome">
+        <button class="header-brand" @click="goHome" type="button" aria-label="Go to home page">
           <svg class="logo" viewBox="0 0 32 32" fill="none">
             <rect x="4" y="4" width="10" height="10" rx="2" fill="currentColor"/>
             <rect x="18" y="4" width="10" height="10" rx="2" fill="currentColor" opacity="0.7"/>
@@ -10,7 +10,7 @@
             <rect x="18" y="18" width="10" height="10" rx="2" fill="currentColor" opacity="0.3"/>
           </svg>
           <span class="brand-name">RADSIM</span>
-        </div>
+        </button>
 
         <!-- Navigation links (shown on landing page) -->
         <div v-if="isLandingPage" class="header-nav">
@@ -28,6 +28,11 @@
 
         <!-- Show user avatar if signed in -->
         <template v-else-if="authStore.isAuthenticated">
+          <!-- Plan badge -->
+          <span class="plan-badge" :class="planBadgeClass">
+            {{ planLabel }}
+          </span>
+
           <div class="user-profile" @click="toggleDropdown">
             <img
               v-if="authStore.userProfile?.photoURL"
@@ -107,6 +112,18 @@ const initials = computed(() => {
 const firstName = computed(() => {
   const name = authStore.userProfile?.displayName || '';
   return name.split(' ')[0] || 'User';
+});
+
+const isPro = computed(() => {
+  return authStore.userProfile?.subscriptionTier === 'pro';
+});
+
+const planLabel = computed(() => {
+  return isPro.value ? 'Pro' : 'Free';
+});
+
+const planBadgeClass = computed(() => {
+  return isPro.value ? 'plan-pro' : 'plan-free';
 });
 
 function toggleDropdown() {
@@ -202,6 +219,9 @@ onMounted(() => {
   gap: 12px;
   cursor: pointer;
   transition: opacity 0.2s ease;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .header-brand:hover {
@@ -425,6 +445,28 @@ onMounted(() => {
 
 .btn-login:hover {
   background: rgba(255, 255, 255, 0.1);
+}
+
+/* Plan badge */
+.plan-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 980px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.plan-free {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.plan-pro {
+  background: linear-gradient(135deg, #0A84FF 0%, #5E5CE6 100%);
+  color: #FFFFFF;
+  border: none;
 }
 
 /* Responsive */

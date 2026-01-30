@@ -1,0 +1,2 @@
+Image Index,Finding Labels,Follow-up #,Patient ID,Patient Age,Patient Gender,View Position,OriginalImage[Width,Height],OriginalImagePixelSpacing[x,y]
+CXR1_1_IM-0001-3001.png,Cardiomegaly|Pneumonia,0,P6500,65,F,AP,1024,1024,0.143,0.143

@@ -31,7 +31,9 @@ export const useServerStore = defineStore('server-3', () => {
       await client.connect(url.value);
       connState.value = ConnectionState.Connected;
     } catch (err) {
+      // Silently fail - server may not be available
       connState.value = ConnectionState.Disconnected;
+      console.debug('Server 3 connection failed:', url.value);
     }
   }
 

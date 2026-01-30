@@ -3,8 +3,18 @@ import { ref, computed, watch } from 'vue';
 import { useImageStore } from './datasets-images';
 import { useDICOMStore } from './datasets-dicom';
 import { useMedRAX } from '@/src/composables/useMedRAX';
+import { useGemini, type AssessmentFeedback, type MessageType } from '@/src/composables/useGemini';
 import { useDatasetStore } from './datasets';
 import { useCaseLibraryStore } from './case-library';
+import { useAuthStore } from './auth';
+import type { DiagnosticConversationState, DiagnosticStep } from '@/src/types/education';
+
+// Conversation state for progressive learning
+export interface ConversationState {
+  attempts: string[];          // All observation attempts made
+  hintLevel: number;           // Current hint level (0-3)
+  hasShownAnswer: boolean;     // Whether full answer has been revealed
+}
 
 export interface ChatMessage {
   id: string;
@@ -24,12 +34,15 @@ export interface ChatMessage {
     missed: string[];
     incorrect: string[];
     feedback: string;
-  }; // Evaluation results for checklist
+  }; // Evaluation results for checklist (legacy)
+  assessmentFeedback?: AssessmentFeedback; // Phase 1 assessment feedback from Gemini
+  showDeepDiveOptions?: boolean; // Show deep dive options after assessment
 }
 
 export const useEducationStore = defineStore('education', () => {
-  // Initialize MedRAX composable
+  // Initialize composables
   const medRAX = useMedRAX();
+  const gemini = useGemini();
 
   // Connection state
   const connected = computed(() => medRAX.connected.value);
@@ -40,6 +53,30 @@ export const useEducationStore = defineStore('education', () => {
   const messages = ref<ChatMessage[]>([]);
   const isTyping = ref(false);
   const waitingForResponse = ref(false);
+
+  // Conversation state for progressive learning (Cubey-style)
+  const conversationState = ref<ConversationState>({
+    attempts: [],
+    hintLevel: 0,
+    hasShownAnswer: false,
+  });
+
+  // Diagnostic conversation flow state
+  const diagnosticState = ref<DiagnosticConversationState>({
+    step: 'initial',
+    score: 0,
+    showingExplanation: false,
+  });
+
+  // Helper to get user's first name
+  const getUserFirstName = (): string => {
+    const authStore = useAuthStore();
+    const displayName = authStore.userProfile?.displayName;
+    if (displayName) {
+      return displayName.split(' ')[0];
+    }
+    return 'there'; // Fallback
+  };
 
   // Chat history for MedRAX (Gradio chat format)
   const chatHistory = ref<any[]>([]);
@@ -58,6 +95,7 @@ export const useEducationStore = defineStore('education', () => {
   const hasImage = computed(() => {
     const imageStore = useImageStore();
     const dicomStore = useDICOMStore();
+    const caseLibraryStore = useCaseLibraryStore();
 
     // Check for regular images
     const hasRegularImages = imageStore.idList.length > 0;
@@ -65,20 +103,30 @@ export const useEducationStore = defineStore('education', () => {
     // Check for DICOM volumes
     const hasDICOMImages = Object.keys(dicomStore.volumeInfo).length > 0;
 
-    return hasRegularImages || hasDICOMImages;
+    // Check for case library selection
+    const hasCaseSelected = !!caseLibraryStore.currentCase;
+
+    return hasRegularImages || hasDICOMImages || hasCaseSelected;
   });
 
   // Add initial welcome message
   const initializeChat = () => {
+    // Reset diagnostic state when initializing
+    diagnosticState.value = {
+      step: 'initial',
+      score: 0,
+      showingExplanation: false,
+    };
+
     if (hasImage.value) {
-      // Show checklist when image is loaded
+      // Show welcome message - the Start Practice button will appear via the UI
+      const firstName = getUserFirstName();
       messages.value = [
         {
           id: '1',
           role: 'assistant',
-          content: 'Welcome! Please review this chest X-ray and identify all findings. You can use the checklist below or annotate directly on the image and add comments.',
+          content: `Welcome ${firstName}! A case has been loaded. Click **Start Practice** below to begin a guided diagnostic assessment, or use the chat to ask questions about the image.`,
           timestamp: new Date(),
-          showChecklist: true, // This flag tells the UI to show the checklist
         }
       ];
     } else {
@@ -137,11 +185,23 @@ export const useEducationStore = defineStore('education', () => {
     }
   };
 
-  // Send a message
+  // Agentic message routing (Cubey-style progressive conversation)
   const sendMessage = async (content: string) => {
     if (!content.trim() && !annotationAttachment.value) return;
 
-    // Add user message with optional attachment
+    const caseLibraryStore = useCaseLibraryStore();
+    const currentCase = caseLibraryStore.currentCase;
+
+    if (!currentCase) {
+      console.warn('No case selected');
+      return;
+    }
+
+    // Classify the message type
+    const messageType = gemini.classifyMessage(content.trim());
+    console.log(`[Education Store] Message type: ${messageType}`);
+
+    // Add user message
     const userMessage: ChatMessage = {
       id: Date.now().toString(),
       role: 'user',
@@ -158,71 +218,137 @@ export const useEducationStore = defineStore('education', () => {
     isTyping.value = true;
 
     try {
-      // Determine which image to send
+      // Get image file
       let imageFile: File | null = null;
-
       if (annotationAttachment.value) {
-        // Use the annotated screenshot if available
         imageFile = annotationAttachment.value.image;
-        console.log('[Education Store] Using annotated screenshot');
       } else {
-        // Fall back to current image
-        console.log('[Education Store] Attempting to capture current image...');
         imageFile = await getCurrentImageFile();
       }
-
-      console.log('[Education Store] Image file captured:', imageFile);
-      if (imageFile) {
-        console.log('[Education Store] File details:', {
-          name: imageFile.name,
-          size: imageFile.size,
-          type: imageFile.type,
-        });
-      } else {
-        console.log('[Education Store] No image file captured (null)');
-      }
-      const files = imageFile ? [imageFile] : [];
-      console.log('[Education Store] Files array to send:', files);
 
       // Clear attachment after using it
       if (annotationAttachment.value) {
         annotationAttachment.value = null;
       }
 
-      // Call MedRAX2 API
-      const response = await medRAX.sendMessage(
-        { text: content.trim(), files },
-        chatHistory.value,
-        tutorMode.value
-      );
+      let assistantMessage: ChatMessage;
 
-      // Update chat history
-      chatHistory.value = response.chatHistory || [];
+      // Route based on message type
+      switch (messageType) {
+        case 'observation': {
+          // Student making an observation - evaluate it
+          console.log('[Education Store] Processing observation');
 
-      // Add assistant response
-      const assistantMessage: ChatMessage = {
-        id: (Date.now() + 1).toString(),
-        role: 'assistant',
-        content: response.message,
-        timestamp: new Date(),
-        visualization: response.visualization || undefined,
-      };
-      messages.value.push(assistantMessage);
-    } catch (error) {
-      console.error('MedRAX2 API error:', error);
+          // Track this attempt
+          conversationState.value.attempts.push(content.trim());
 
-      // Fallback response
-      let responseContent: string;
-      if (!hasImage.value) {
-        responseContent = 'No image is currently loaded. Please upload or select a medical image from the case library so I can help you analyze it.';
-      } else {
-        responseContent = 'I apologize, but I encountered an error connecting to the AI backend. Please try again or check your connection.';
+          // Evaluate against groundtruth
+          const feedback = await gemini.evaluateObservation(
+            content.trim(),
+            currentCase,
+            imageFile || undefined
+          );
+
+          // If they got it mostly right (score >= 80), show full answer
+          if (feedback.score >= 80) {
+            conversationState.value.hasShownAnswer = true;
+          }
+
+          assistantMessage = {
+            id: (Date.now() + 1).toString(),
+            role: 'assistant',
+            content: feedback.explanation,
+            timestamp: new Date(),
+            assessmentFeedback: feedback,
+          };
+          break;
+        }
+
+        case 'help_request': {
+          // Student asking for help - provide progressive hints
+          console.log('[Education Store] Processing help request');
+
+          // Increment hint level (max 3)
+          if (!conversationState.value.hasShownAnswer) {
+            conversationState.value.hintLevel = Math.min(conversationState.value.hintLevel + 1, 3);
+          }
+
+          const hintText = await gemini.provideHint(
+            conversationState.value.hintLevel,
+            currentCase,
+            conversationState.value.attempts,
+            imageFile || undefined
+          );
+
+          // If we've given the full answer (hint level 3), mark it
+          if (conversationState.value.hintLevel === 3) {
+            conversationState.value.hasShownAnswer = true;
+          }
+
+          assistantMessage = {
+            id: (Date.now() + 1).toString(),
+            role: 'assistant',
+            content: hintText,
+            timestamp: new Date(),
+          };
+          break;
+        }
+
+        case 'question': {
+          // Student asking a conceptual question - answer based on groundtruth
+          console.log('[Education Store] Processing question');
+
+          const answer = await gemini.answerQuestion(
+            content.trim(),
+            currentCase,
+            imageFile || undefined
+          );
+
+          assistantMessage = {
+            id: (Date.now() + 1).toString(),
+            role: 'assistant',
+            content: answer,
+            timestamp: new Date(),
+          };
+          break;
+        }
+
+        case 'visualization': {
+          // Student requesting visualization/advanced features - use MedRAX
+          console.log('[Education Store] Processing visualization request with MedRAX');
+
+          const files = imageFile ? [imageFile] : [];
+          const response = await medRAX.sendMessage(
+            { text: content.trim(), files },
+            chatHistory.value,
+            tutorMode.value
+          );
+
+          // Update chat history
+          chatHistory.value = response.chatHistory || [];
+
+          assistantMessage = {
+            id: (Date.now() + 1).toString(),
+            role: 'assistant',
+            content: response.message,
+            timestamp: new Date(),
+            visualization: response.visualization || undefined,
+          };
+          break;
+        }
+
+        default:
+          throw new Error(`Unknown message type: ${messageType}`);
       }
 
+      messages.value.push(assistantMessage);
+    } catch (error) {
+      console.error('[Education Store] Error processing message:', error);
+
       const assistantMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: responseContent,
+        content: 'I apologize, but I encountered an error. Please try again or rephrase your message.',
         timestamp: new Date(),
       };
       messages.value.push(assistantMessage);
@@ -236,6 +362,12 @@ export const useEducationStore = defineStore('education', () => {
   const clearChat = () => {
     chatHistory.value = [];
     annotationAttachment.value = null;
+    // Reset conversation state
+    conversationState.value = {
+      attempts: [],
+      hintLevel: 0,
+      hasShownAnswer: false,
+    };
     initializeChat();
   };
 
@@ -378,6 +510,308 @@ export const useEducationStore = defineStore('education', () => {
     }
   );
 
+  // ============================================
+  // DIAGNOSTIC CONVERSATION FLOW ACTIONS
+  // ============================================
+
+  // Start the diagnostic flow with personalized greeting
+  const startDiagnosticFlow = () => {
+    const firstName = getUserFirstName();
+    const caseLibraryStore = useCaseLibraryStore();
+    const currentCase = caseLibraryStore.currentCase;
+
+    if (!currentCase) {
+      console.warn('[Diagnostic Flow] No case selected');
+      return;
+    }
+
+    // Reset diagnostic state
+    diagnosticState.value = {
+      step: 'normal_abnormal',
+      score: 0,
+      showingExplanation: false,
+    };
+
+    // Clear existing messages and add personalized greeting
+    messages.value = [
+      {
+        id: Date.now().toString(),
+        role: 'assistant',
+        content: `Hi ${firstName}, let's analyze this case together. Take a moment to review the image.\n\nIs this image **normal** or **abnormal**?`,
+        timestamp: new Date(),
+      }
+    ];
+  };
+
+  // Handle user's normal/abnormal classification
+  const submitNormalAbnormal = async (classification: 'normal' | 'abnormal') => {
+    const caseLibraryStore = useCaseLibraryStore();
+    const currentCase = caseLibraryStore.currentCase;
+    const firstName = getUserFirstName();
+
+    if (!currentCase) return;
+
+    // Store user's classification
+    diagnosticState.value.userClassification = classification;
+
+    // Add user's response as a message
+    messages.value.push({
+      id: Date.now().toString(),
+      role: 'user',
+      content: classification === 'normal' ? 'Normal' : 'Abnormal',
+      timestamp: new Date(),
+    });
+
+    // Determine if the case is actually normal or abnormal
+    const isActuallyAbnormal = currentCase.findings && currentCase.findings.length > 0;
+    const correctClassification = isActuallyAbnormal ? 'abnormal' : 'normal';
+    const isCorrect = classification === correctClassification;
+
+    diagnosticState.value.classificationCorrect = isCorrect;
+
+    if (isCorrect) {
+      if (classification === 'normal') {
+        // Correct: identified as normal and it is normal
+        diagnosticState.value.score = 100; // Full score for normal cases
+        diagnosticState.value.step = 'feedback';
+
+        messages.value.push({
+          id: (Date.now() + 1).toString(),
+          role: 'assistant',
+          content: `Correct, ${firstName}! This is a normal study. Great job recognizing that there are no significant abnormalities.\n\n**Score: 100%**`,
+          timestamp: new Date(),
+        });
+
+        diagnosticState.value.step = 'complete';
+      } else {
+        // Correct: identified as abnormal and it is abnormal
+        diagnosticState.value.score = 30; // 30% for correct classification
+        diagnosticState.value.step = 'diagnosis';
+
+        messages.value.push({
+          id: (Date.now() + 1).toString(),
+          role: 'assistant',
+          content: `Good eye, ${firstName}! You're correct that this image shows abnormality.\n\nNow, **what's your diagnosis?** You can also mark the finding on the image if you'd like.`,
+          timestamp: new Date(),
+        });
+      }
+    } else {
+      // Incorrect classification
+      diagnosticState.value.score = 0;
+      diagnosticState.value.step = 'feedback';
+
+      if (classification === 'normal' && isActuallyAbnormal) {
+        // Said normal but it's abnormal
+        messages.value.push({
+          id: (Date.now() + 1).toString(),
+          role: 'assistant',
+          content: `Actually ${firstName}, this image shows abnormal findings. Don't worry - this is a learning opportunity!\n\nWould you like to see the explanation?`,
+          timestamp: new Date(),
+        });
+      } else {
+        // Said abnormal but it's normal
+        messages.value.push({
+          id: (Date.now() + 1).toString(),
+          role: 'assistant',
+          content: `Actually ${firstName}, this is a normal study. The features you may have noticed are within normal limits.\n\nWould you like to see the explanation?`,
+          timestamp: new Date(),
+        });
+      }
+    }
+  };
+
+  // Handle user's diagnosis submission
+  const submitDiagnosis = async (diagnosis: string, findings?: string[], annotation?: { x: number; y: number; width: number; height: number }) => {
+    const caseLibraryStore = useCaseLibraryStore();
+    const currentCase = caseLibraryStore.currentCase;
+    const firstName = getUserFirstName();
+
+    if (!currentCase) return;
+
+    // Store user's input
+    diagnosticState.value.userDiagnosis = diagnosis;
+    diagnosticState.value.userFindings = findings;
+    if (annotation) {
+      diagnosticState.value.userAnnotation = annotation;
+    }
+
+    // Add user's response as a message
+    const userContent = findings && findings.length > 0
+      ? `Diagnosis: ${diagnosis}\nFindings: ${findings.join(', ')}`
+      : `Diagnosis: ${diagnosis}`;
+
+    messages.value.push({
+      id: Date.now().toString(),
+      role: 'user',
+      content: userContent,
+      timestamp: new Date(),
+    });
+
+    isTyping.value = true;
+
+    try {
+      // Get the ground truth
+      const groundTruthDiagnosis = currentCase.diagnosis?.toLowerCase() || '';
+      const groundTruthFindings = currentCase.findings?.map(f => f.name.toLowerCase()) || [];
+
+      // Check diagnosis (fuzzy match)
+      const userDiagnosisLower = diagnosis.toLowerCase();
+      const diagnosisCorrect = groundTruthDiagnosis.includes(userDiagnosisLower) ||
+        userDiagnosisLower.includes(groundTruthDiagnosis) ||
+        // Check if diagnosis matches any finding name
+        groundTruthFindings.some(f => userDiagnosisLower.includes(f) || f.includes(userDiagnosisLower));
+
+      diagnosticState.value.diagnosisCorrect = diagnosisCorrect;
+
+      // Calculate findings score (partial credit)
+      let findingsScore = 0;
+      const userFindingsLower = (findings || []).map(f => f.toLowerCase());
+      const correctFindings: string[] = [];
+      const missedFindings: string[] = [];
+      const incorrectFindings: string[] = [];
+
+      if (groundTruthFindings.length > 0) {
+        groundTruthFindings.forEach(gtFinding => {
+          const found = userFindingsLower.some(uf =>
+            gtFinding.includes(uf) || uf.includes(gtFinding)
+          );
+          if (found) {
+            correctFindings.push(gtFinding);
+          } else {
+            missedFindings.push(gtFinding);
+          }
+        });
+
+        userFindingsLower.forEach(uf => {
+          const isCorrect = groundTruthFindings.some(gtf =>
+            gtf.includes(uf) || uf.includes(gtf)
+          );
+          if (!isCorrect) {
+            incorrectFindings.push(uf);
+          }
+        });
+
+        // Partial credit: 20% weight for findings
+        findingsScore = groundTruthFindings.length > 0
+          ? Math.round((correctFindings.length / groundTruthFindings.length) * 20)
+          : 0;
+      }
+
+      // Calculate total score
+      // 30% for classification (already added)
+      // 50% for diagnosis
+      // 20% for findings (partial credit)
+      const diagnosisScore = diagnosisCorrect ? 50 : 0;
+      diagnosticState.value.score = 30 + diagnosisScore + findingsScore;
+
+      // Store feedback details
+      diagnosticState.value.feedback = {
+        correct: correctFindings,
+        missed: missedFindings,
+        incorrect: incorrectFindings,
+        explanation: currentCase.description || '',
+      };
+
+      diagnosticState.value.step = 'feedback';
+
+      // Generate feedback message
+      if (diagnosisCorrect) {
+        let feedbackContent = `Excellent work, ${firstName}! Your diagnosis of **${diagnosis}** is correct.\n\n`;
+        feedbackContent += `**Score: ${diagnosticState.value.score}%**\n\n`;
+
+        if (correctFindings.length > 0) {
+          feedbackContent += `✓ Correctly identified: ${correctFindings.join(', ')}\n`;
+        }
+        if (missedFindings.length > 0) {
+          feedbackContent += `○ Also present: ${missedFindings.join(', ')}\n`;
+        }
+
+        messages.value.push({
+          id: (Date.now() + 1).toString(),
+          role: 'assistant',
+          content: feedbackContent,
+          timestamp: new Date(),
+        });
+
+        diagnosticState.value.step = 'complete';
+      } else {
+        messages.value.push({
+          id: (Date.now() + 1).toString(),
+          role: 'assistant',
+          content: `Not quite, ${firstName}. The correct diagnosis is **${currentCase.diagnosis}**.\n\n**Score: ${diagnosticState.value.score}%**\n\nWould you like to see the detailed explanation?`,
+          timestamp: new Date(),
+        });
+      }
+    } catch (error) {
+      console.error('[Diagnostic Flow] Error evaluating diagnosis:', error);
+    } finally {
+      isTyping.value = false;
+    }
+  };
+
+  // Show the ground truth explanation
+  const showExplanation = () => {
+    const caseLibraryStore = useCaseLibraryStore();
+    const currentCase = caseLibraryStore.currentCase;
+
+    if (!currentCase) return;
+
+    diagnosticState.value.showingExplanation = true;
+
+    // Build explanation content
+    let explanationContent = '## Explanation\n\n';
+
+    // Diagnosis
+    explanationContent += `**Diagnosis:** ${currentCase.diagnosis}\n\n`;
+
+    // Findings
+    if (currentCase.findings && currentCase.findings.length > 0) {
+      explanationContent += '**Findings:**\n';
+      currentCase.findings.forEach((finding: any) => {
+        explanationContent += `• **${finding.name}**`;
+        if (finding.location) {
+          explanationContent += ` - ${finding.location}`;
+        }
+        if (finding.description) {
+          explanationContent += `: ${finding.description}`;
+        }
+        explanationContent += '\n';
+      });
+      explanationContent += '\n';
+    }
+
+    // Description
+    if (currentCase.description) {
+      explanationContent += `**Case Description:**\n${currentCase.description}\n\n`;
+    }
+
+    // Teaching points
+    if (currentCase.teachingPoints && currentCase.teachingPoints.length > 0) {
+      explanationContent += '**Teaching Points:**\n';
+      currentCase.teachingPoints.forEach((point: any) => {
+        explanationContent += `• ${point.text || point}\n`;
+      });
+    }
+
+    messages.value.push({
+      id: Date.now().toString(),
+      role: 'assistant',
+      content: explanationContent,
+      timestamp: new Date(),
+    });
+
+    diagnosticState.value.step = 'complete';
+  };
+
+  // Reset diagnostic flow
+  const resetDiagnosticFlow = () => {
+    diagnosticState.value = {
+      step: 'initial',
+      score: 0,
+      showingExplanation: false,
+    };
+  };
+
   return {
     // State
     connected,
@@ -390,6 +824,8 @@ export const useEducationStore = defineStore('education', () => {
     tutorMode,
     chatHistory,
     annotationAttachment,
+    conversationState,
+    diagnosticState,
 
     // Actions
     sendMessage,
@@ -400,6 +836,13 @@ export const useEducationStore = defineStore('education', () => {
     setAnnotationAttachment,
     clearAnnotationAttachment,
     evaluateFindings,
+
+    // Diagnostic flow actions
+    startDiagnosticFlow,
+    submitNormalAbnormal,
+    submitDiagnosis,
+    showExplanation,
+    resetDiagnosticFlow,
 
     // Token management (empty for now, can be implemented later)
     setHfToken: () => {},

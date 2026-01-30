@@ -39,3 +39,8 @@ bundles/
 pyrightconfig.json
 tmp/
 .env
+
+# Firebase Functions
+functions/lib/
+functions/node_modules/
+functions/.env

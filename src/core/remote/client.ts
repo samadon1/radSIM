@@ -153,11 +153,15 @@ export default class RpcClient {
       },
       autoConnect: false,
       parser: ChunkedParser,
+      reconnection: false, // Don't auto-reconnect on failure
     });
 
     this.socket.on(RPC_CALL_EVENT, this.onRpcCallEvent);
     this.socket.on(RPC_RESULT_EVENT, this.onRpcResultEvent);
     this.socket.on(STREAM_RESULT_EVENT, this.onStreamResultEvent);
+
+    // Silence connection errors - they're handled in connect()
+    this.socket.on('connect_error', () => {});
   }
 
   protected serialize = flow(...this.serializers);

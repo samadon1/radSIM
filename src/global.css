@@ -9,6 +9,21 @@ body {
   user-select: none;
 }
 
+/* Fix for increased AppBar height - apply to all main content areas */
+.v-main {
+  padding-top: 80px !important;
+}
+
+/* Sidebar navigation drawer should start below the header */
+#left-nav.v-navigation-drawer--clipped {
+  top: 64px !important;
+}
+
+/* Add margin to the first element in navigation drawer */
+#left-nav > * {
+  margin-top: 16px;
+}
+
 .no-select {
   user-select: none;
 }

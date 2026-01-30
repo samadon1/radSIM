@@ -106,6 +106,13 @@ export const useAuthStore = defineStore('auth', () => {
     }
   }
 
+  // Callbacks to notify when auth state changes
+  const authStateCallbacks: Array<(user: User | null) => void> = [];
+
+  function onAuthChange(callback: (user: User | null) => void) {
+    authStateCallbacks.push(callback);
+  }
+
   // Initialize auth state listener
   async function initAuth() {
     console.log('[Auth] initAuth started');
@@ -113,8 +120,15 @@ export const useAuthStore = defineStore('auth', () => {
     return new Promise<User | null>((resolve) => {
       const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
         console.log('[Auth] onAuthStateChanged:', firebaseUser?.email || 'null');
+        const previousUser = user.value;
         user.value = firebaseUser;
         loading.value = false;
+
+        // Notify listeners if user changed
+        if (previousUser?.uid !== firebaseUser?.uid) {
+          authStateCallbacks.forEach(cb => cb(firebaseUser));
+        }
+
         resolve(firebaseUser);
       });
     });
@@ -133,6 +147,7 @@ export const useAuthStore = defineStore('auth', () => {
     signInWithEmail,
     signUpWithEmail,
     signOut,
-    initAuth
+    initAuth,
+    onAuthChange
   };
 });

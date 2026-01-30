@@ -162,6 +162,19 @@ async function handlePaymentFailed(data: {
 
 /**
  * Paystack Webhook Handler
+ *
+ * This function receives webhook events from Paystack and updates
+ * the user's subscription status in Firestore.
+ *
+ * Events handled:
+ * - charge.success: Payment successful
+ * - subscription.create: Subscription created
+ * - subscription.disable: Subscription canceled
+ * - invoice.payment_failed: Payment failed
+ *
+ * Setup:
+ * 1. Go to Paystack Dashboard → Settings → API Keys & Webhooks
+ * 2. Set webhook URL to: https://<your-region>-<project-id>.cloudfunctions.net/paystackWebhook
  */
 export const paystackWebhook = functions.https.onRequest(async (req, res) => {
   if (req.method !== 'POST') {
@@ -172,13 +185,21 @@ export const paystackWebhook = functions.https.onRequest(async (req, res) => {
   const rawBody = (req as functions.https.Request & { rawBody?: Buffer }).rawBody;
   const bodyString = rawBody ? rawBody.toString('utf8') : JSON.stringify(req.body);
 
+  console.log('Secret key length:', paystackSecretKey.length);
+  console.log('Body string length:', bodyString.length);
+  console.log('Received signature:', req.headers['x-paystack-signature']);
+
   const hash = crypto
     .createHmac('sha512', paystackSecretKey)
     .update(bodyString)
     .digest('hex');
 
+  console.log('Computed hash:', hash);
+
   if (hash !== req.headers['x-paystack-signature']) {
     console.error('Invalid Paystack webhook signature');
+    console.error('Expected:', req.headers['x-paystack-signature']);
+    console.error('Got:', hash);
     res.status(400).send('Invalid signature');
     return;
   }
@@ -188,22 +209,31 @@ export const paystackWebhook = functions.https.onRequest(async (req, res) => {
 
   try {
     switch (event.event) {
-      case 'charge.success':
+      case 'charge.success': {
         await handleChargeSuccess(event.data);
         break;
-      case 'subscription.create':
+      }
+
+      case 'subscription.create': {
         await handleSubscriptionCreate(event.data);
         break;
+      }
+
       case 'subscription.not_renew':
-      case 'subscription.disable':
+      case 'subscription.disable': {
         await handleSubscriptionDisable(event.data);
         break;
-      case 'invoice.payment_failed':
+      }
+
+      case 'invoice.payment_failed': {
         await handlePaymentFailed(event.data);
         break;
+      }
+
       default:
         console.log(`Unhandled event type: ${event.event}`);
     }
+
     res.status(200).send('OK');
   } catch (error) {
     console.error('Error processing webhook:', error);

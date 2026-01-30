@@ -8,7 +8,7 @@ import type { RadiologyCaseMetadata } from '@/src/types/caseLibrary';
 
 // Configuration
 const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
-const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent';
+const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent';
 
 // State
 const isLoading = ref(false);
@@ -461,6 +461,266 @@ const needsMedRAX = (question: string): boolean => {
 };
 
 /**
+ * Generate detailed expert analysis of a medical image with streaming
+ * Used for "Show Expert Answer" feature - provides comprehensive radiologist-level interpretation
+ * @param onChunk - callback function called with each chunk of streamed text
+ */
+const generateExpertAnalysisStreaming = async (
+  currentCase: RadiologyCaseMetadata,
+  imageFile: File,
+  onChunk: (text: string) => void
+): Promise<string> => {
+  isLoading.value = true;
+  error.value = null;
+
+  try {
+    console.log('[useGemini] Generating expert analysis (streaming) for case:', currentCase.id);
+
+    // Convert image to base64
+    const base64Image = await fileToBase64(imageFile);
+
+    const prompt = `You are a radiology educator teaching a medical student how to systematically analyze this image.
+
+CASE INFORMATION:
+- Modality: ${currentCase.modality || 'X-ray'}
+- Region: ${currentCase.anatomicalRegion || 'Chest'}
+- Clinical History: ${currentCase.clinicalHistory || 'Not provided'}
+
+Guide the student step-by-step:
+
+1. **Systematic Approach**: Briefly explain what areas/structures to check on this type of image
+
+2. **Key Findings**: Point out what's abnormal AND where exactly to look (e.g., "In the right lower zone, notice the...")
+
+3. **Pattern Recognition**: Explain what visual pattern or sign you're seeing and why it's significant
+
+4. **Diagnosis**: State your diagnosis and explain the reasoning - connect the findings to the conclusion
+
+5. **Learning Tip**: One practical tip they can apply next time they see a similar case
+
+Write as if you're teaching at the bedside - clear, educational, and helping them build diagnostic skills.`;
+
+    const requestBody = {
+      contents: [
+        {
+          parts: [
+            {
+              inlineData: {
+                mimeType: imageFile.type || 'image/png',
+                data: base64Image,
+              },
+            },
+            {
+              text: prompt,
+            },
+          ],
+        },
+      ],
+      generationConfig: {
+        temperature: 0.7,
+        topK: 40,
+        topP: 0.95,
+        maxOutputTokens: 2048,
+      },
+    };
+
+    // Use streaming endpoint
+    const streamUrl = GEMINI_API_URL.replace(':generateContent', ':streamGenerateContent') + `?key=${GEMINI_API_KEY}&alt=sse`;
+
+    const response = await fetch(streamUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestBody),
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('[useGemini] API error:', errorText);
+      throw new Error(`Gemini API error: ${response.statusText}`);
+    }
+
+    // Read the stream
+    const reader = response.body?.getReader();
+    if (!reader) {
+      throw new Error('No response body reader');
+    }
+
+    const decoder = new TextDecoder();
+    let fullText = '';
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      const chunk = decoder.decode(value, { stream: true });
+      const lines = chunk.split('\n');
+
+      for (const line of lines) {
+        if (line.startsWith('data: ')) {
+          try {
+            const jsonStr = line.slice(6);
+            if (jsonStr.trim() === '') continue;
+
+            const data = JSON.parse(jsonStr);
+            const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+
+            if (text) {
+              fullText += text;
+              onChunk(fullText); // Call with accumulated text
+            }
+          } catch (e) {
+            // Skip malformed JSON chunks
+          }
+        }
+      }
+    }
+
+    if (!fullText) {
+      throw new Error('No analysis generated from Gemini');
+    }
+
+    console.log('[useGemini] Expert analysis streaming complete');
+    return fullText;
+  } catch (err) {
+    console.error('[useGemini] Error:', err);
+    const errorMessage = err instanceof Error ? err.message : 'Unknown error';
+    error.value = errorMessage;
+    throw err;
+  } finally {
+    isLoading.value = false;
+  }
+};
+
+/**
+ * Generate personalized performance insight for session summary certificates
+ */
+const generatePerformanceInsight = async (stats: {
+  casesReviewed: number;
+  correctFindings: number;
+  missedFindings: number;
+  averageScore: number;
+}): Promise<string> => {
+  // If no API key, fall back to rule-based insights
+  if (!GEMINI_API_KEY) {
+    return generateRuleBasedInsight(stats);
+  }
+
+  isLoading.value = true;
+  error.value = null;
+
+  try {
+    const accuracy = calculateAccuracy(stats);
+    const averageScore = Math.round(stats.averageScore);
+    const accuracyGap = accuracy - averageScore;
+
+    const prompt = `As a radiology education expert, provide a brief, encouraging insight (2-3 sentences max) about this learner's performance:
+
+Cases Reviewed: ${stats.casesReviewed}
+Perfect Cases (100% correct): ${stats.correctFindings} (${accuracy}% accuracy)
+Cases with Errors: ${stats.missedFindings}
+Average Score (with partial credit): ${averageScore}%
+Accuracy Gap: ${accuracyGap} percentage points
+
+Focus on:
+1. What their performance pattern reveals about their learning stage
+2. One specific, actionable recommendation
+3. Keep it encouraging and concise
+
+Response should be conversational and direct, without using phrases like "Based on your performance" or "Looking at your stats". Just give the insight.`;
+
+    const requestBody = {
+      contents: [{
+        parts: [{
+          text: prompt
+        }]
+      }],
+      generationConfig: {
+        temperature: 0.7,
+        maxOutputTokens: 512,
+        topP: 0.8,
+      }
+    };
+
+    const response = await fetch(`${GEMINI_API_URL}?key=${GEMINI_API_KEY}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(requestBody)
+    });
+
+    if (!response.ok) {
+      throw new Error(`Gemini API error: ${response.statusText}`);
+    }
+
+    const data = await response.json();
+
+    if (!data.candidates?.[0]?.content?.parts?.[0]?.text) {
+      throw new Error('Invalid response from Gemini API');
+    }
+
+    return data.candidates[0].content.parts[0].text.trim();
+  } catch (err) {
+    console.error('[useGemini] Failed to generate performance insight:', err);
+    return generateRuleBasedInsight(stats);
+  } finally {
+    isLoading.value = false;
+  }
+};
+
+/**
+ * Calculate overall accuracy from stats
+ */
+function calculateAccuracy(stats: { correctFindings: number; missedFindings: number }): number {
+  const total = stats.correctFindings + stats.missedFindings;
+  if (total === 0) return 0;
+  return Math.round((stats.correctFindings / total) * 100);
+}
+
+/**
+ * Rule-based insight generation (fallback when no API key)
+ */
+function generateRuleBasedInsight(stats: {
+  correctFindings: number;
+  missedFindings: number;
+  averageScore: number;
+}): string {
+  const accuracy = calculateAccuracy(stats);
+  const averageScore = Math.round(stats.averageScore);
+  const accuracyGap = accuracy - averageScore;
+
+  // High performer
+  if (accuracy >= 80) {
+    return "Outstanding diagnostic skills! You're consistently identifying findings correctly. Keep practicing to maintain this high level of performance.";
+  }
+
+  // Good progress
+  if (accuracy >= 60) {
+    return "Solid progress! You're building a strong foundation in radiology interpretation. Focus on reviewing the cases you missed to identify any knowledge gaps.";
+  }
+
+  // Learning with pattern
+  if (accuracyGap > 15) {
+    return "You're showing strong pattern recognition on familiar cases, but struggling with unfamiliar findings. Review the cases you missed to identify specific pathologies you need to study more.";
+  }
+
+  // Moderate accuracy gap
+  if (accuracyGap > 5) {
+    return "Your performance shows you're getting some cases perfect while missing others entirely. This is normal in early learning. Focus on systematic review of each finding type.";
+  }
+
+  // Developing skills
+  if (accuracy >= 40) {
+    return "You're in the early stages of developing your diagnostic skills. Review each missed case carefully and focus on understanding the key imaging features of each pathology.";
+  }
+
+  // Beginning learner
+  return "Great start on your learning journey! Radiology interpretation takes time and practice. Focus on the fundamentals and review each case systematically to build your pattern recognition skills.";
+}
+
+/**
  * Export composable
  */
 export function useGemini() {
@@ -470,6 +730,8 @@ export function useGemini() {
     provideHint,
     classifyMessage,
     needsMedRAX,
+    generateExpertAnalysisStreaming,
+    generatePerformanceInsight,
     isLoading,
     error,
   };

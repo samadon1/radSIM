@@ -11,6 +11,7 @@
     "test": "vitest",
     "test:e2e:chrome": "npm run build && wdio run ./wdio.chrome.conf.ts",
     "test:e2e:dev": "concurrently -P \"npm run dev\"  \"wdio run ./wdio.dev.conf.ts --watch {@}\"",
+    "test:learning": "wdio run ./wdio.dev.conf.ts --spec tests/specs/learning-session.e2e.ts",
     "lint": "vue-tsc --noEmit && eslint \"src/**/*.{js,ts,vue}\" \"tests/**/*.{js,ts}\"",
     "build:all": "npm run build:dicom && npm run build:resample && npm run build",
     "build:dicom": "itk-wasm -s src/io/itk-dicom/ build ",
@@ -26,6 +27,7 @@
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.435.0",
+    "@gradio/client": "^2.0.3",
     "@itk-wasm/dicom": "7.6.0",
     "@itk-wasm/image-io": "1.6.0",
     "@itk-wasm/morphological-contour-interpolation": "2.0.0",
@@ -48,6 +50,7 @@
     "itk-wasm": "1.0.0-b.188",
     "jszip": "3.10.0",
     "markdown-it": "^14.1.0",
+    "marked": "^15.0.12",
     "mitt": "^3.0.0",
     "nanoid": "^4.0.1",
     "pako": "^2.1.0",

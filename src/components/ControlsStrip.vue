@@ -122,76 +122,10 @@ const { count: msgCount, badgeColor: msgBadgeColor } = useMessageBubble();
 <template>
   <div
     id="tools-strip"
-    class="bg-grey-darken-4 d-flex flex-column align-center"
+    class="bg-black d-flex flex-column align-center"
   >
-    <control-button
-      size="40"
-      icon="mdi-folder-open"
-      name="Open files"
-      @click="loadUserPromptedFiles"
-    />
-    <control-button
-      size="40"
-      icon="mdi-content-save-all"
-      name="Save session"
-      :loading="isSaving"
-      @click="handleSave"
-    />
-    <div class="my-1 tool-separator" />
-    <v-menu location="right" :close-on-content-click="true">
-      <template v-slot:activator="{ props }">
-        <div>
-          <control-button
-            v-bind="props"
-            size="40"
-            icon="mdi-view-dashboard"
-            name="Layouts"
-          />
-        </div>
-      </template>
-      <v-card>
-        <v-card-text>
-          <v-radio-group v-model="layoutName" class="mt-0" hide-details>
-            <v-radio
-              v-for="(value, key) in Layouts"
-              :key="key"
-              :label="value.name"
-              :value="key"
-            />
-          </v-radio-group>
-        </v-card-text>
-      </v-card>
-    </v-menu>
     <controls-strip-tools v-if="hasData" />
     <v-spacer />
-    <control-button
-      v-if="serverUrl"
-      size="40"
-      :icon="connIcon"
-      name="Open Server Settings"
-      @click="settingsDialog = true"
-    />
-    <v-badge
-      offset-x="10"
-      offset-y="10"
-      :content="msgCount"
-      :color="msgBadgeColor"
-      :model-value="msgCount > 0"
-      id="notifications"
-    >
-      <control-button
-        size="40"
-        icon="mdi-bell-outline"
-        name="Notifications"
-        @click="messageDialog = true"
-      />
-    </v-badge>
-    <control-button
-      size="40"
-      icon="mdi-cog"
-      name="Settings"
-      @click="settingsDialog = true"
-    />
   </div>
   <closeable-dialog v-model="saveDialog" max-width="30%">
     <template v-slot="{ close }">

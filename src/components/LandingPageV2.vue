@@ -174,170 +174,37 @@
         </div>
 
         <div class="pricing-grid">
-          <!-- Free Tier -->
-          <div class="pricing-card">
+          <div
+            v-for="tier in PRICING_TIERS"
+            :key="tier.id"
+            class="pricing-card"
+            :class="{ featured: tier.highlighted }"
+          >
+            <div v-if="tier.badge" class="featured-badge">{{ tier.badge }}</div>
             <div class="pricing-card-header">
-              <h3 class="plan-name">Free</h3>
-              <p class="plan-description">Get started with radiology training</p>
+              <h3 class="plan-name">{{ tier.name }}</h3>
+              <p class="plan-description">{{ tier.description }}</p>
             </div>
             <div class="pricing-card-price">
-              <span class="price-amount">$0</span>
-              <span class="price-period">/month</span>
+              <span class="price-amount">{{ formatPrice(tier.price.monthly) }}</span>
+              <span v-if="tier.price.monthly !== 'custom'" class="price-period">/month</span>
             </div>
+            <div v-if="tier.price.monthly === 'custom'" class="price-annual">Volume-based pricing</div>
             <ul class="pricing-features">
-              <li>
+              <li v-for="(feature, index) in tier.features" :key="index">
                 <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                 </svg>
-                10 cases per month
-              </li>
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                Chest X-ray cases
-              </li>
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                Basic AI feedback
-              </li>
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                Progress tracking
-              </li>
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                Community access
+                <strong v-if="feature.highlight">{{ feature.highlight }}</strong>
+                {{ feature.text }}
               </li>
             </ul>
-            <button class="pricing-btn secondary" @click="handleGetStarted">
-              Get Started
-            </button>
-          </div>
-
-          <!-- Pro Tier -->
-          <div class="pricing-card featured">
-            <div class="featured-badge">Most Popular</div>
-            <div class="pricing-card-header">
-              <h3 class="plan-name">Pro</h3>
-              <p class="plan-description">For serious exam preparation</p>
-            </div>
-            <div class="pricing-card-price">
-              <span class="price-amount">$9</span>
-              <span class="price-period">/month</span>
-            </div>
-            <div class="price-annual">$79/year (save 27%)</div>
-            <ul class="pricing-features">
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                <strong>Unlimited</strong> cases
-              </li>
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                All modalities (CT, MRI, US)
-              </li>
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                Full AI tutor & explanations
-              </li>
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                Spaced repetition scheduling
-              </li>
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                Board exam prep mode
-              </li>
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                Performance analytics
-              </li>
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                Priority support
-              </li>
-            </ul>
-            <button class="pricing-btn primary" @click="handleGetStarted">
-              Start Free Trial
-            </button>
-          </div>
-
-          <!-- Residency Tier -->
-          <div class="pricing-card">
-            <div class="pricing-card-header">
-              <h3 class="plan-name">Residency</h3>
-              <p class="plan-description">For programs & institutions</p>
-            </div>
-            <div class="pricing-card-price">
-              <span class="price-amount">Custom</span>
-            </div>
-            <div class="price-annual">Volume-based pricing</div>
-            <ul class="pricing-features">
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                Everything in Pro
-              </li>
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                Cohort management dashboard
-              </li>
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                Custom case uploads
-              </li>
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                Progress reports for directors
-              </li>
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                ACGME milestone tracking
-              </li>
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                SSO & LMS integration
-              </li>
-              <li>
-                <svg class="feature-check" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                </svg>
-                Dedicated account manager
-              </li>
-            </ul>
-            <button class="pricing-btn secondary">
-              Contact Sales
+            <button
+              class="pricing-btn"
+              :class="tier.highlighted ? 'primary' : 'secondary'"
+              @click="tier.cta.action === 'contact' ? handleContactSales() : handleGetStarted()"
+            >
+              {{ tier.cta.text }}
             </button>
           </div>
         </div>
@@ -352,7 +219,7 @@
           <p>Join thousands of radiology professionals training smarter.</p>
           <div class="cta-actions">
             <button class="btn-cta primary" @click="handleGetStarted">
-              {{ authStore.isAuthenticated ? 'Go to Dashboard' : 'Start Free Trial' }}
+              {{ authStore.isAuthenticated ? 'Go to Dashboard' : 'Get Started' }}
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
@@ -425,6 +292,7 @@ import { ref, onMounted, onUnmounted } from 'vue';
 import { useRouter } from 'vue-router';
 import AppHeader from './AppHeader.vue';
 import { useAuthStore } from '@/src/store/auth';
+import { PRICING_TIERS, formatPrice } from '@/src/config/pricing';
 
 const router = useRouter();
 const authStore = useAuthStore();
